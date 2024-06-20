@@ -3,41 +3,43 @@
 using namespace std; 
 #define maxm 1000
 #define maxn 1000
-void readfile(int a[maxm][maxn], int &soluong, int &prec, int &psum, int &amount) {
+//Reading and writing data platform
+void readfile(int a[maxm][maxn], int &job_amount, int &prec, int &psum, int &job_scale) {
 	FILE *f;
 	f=fopen("/Users/chibangnguyen/Documents/schedulang/data/data inp/na.inp","rt");
-    fscanf(f, "%d", &soluong);
+    fscanf(f, "%d", &job_amount);
     fscanf(f, "%d", &prec);
     fscanf(f, "%d", &psum);
-    fscanf(f, "%d", &amount);
-    for (int i=0; i<soluong; i++) {
+    fscanf(f, "%d", &job_scale);
+    for (int i=0; i<job_amount; i++) {
         for (int j=0; j<5; j++) {
             fscanf(f, "%d", &a[i][j]);
         }
     }
 	fclose(f);
 }
-void writefile(int a[maxm][maxn], int soluong, int prec, int psum, int amount) {
+void writefile(int a[maxm][maxn], int job_amount, int prec, int psum, int job_scale) {
 	FILE *f;
 	f=fopen("/Users/chibangnguyen/Documents/schedulang/data/data out/na.out","wt");
-	fprintf(f, "%d\n", soluong);
+	fprintf(f, "%d\n", job_amount);
     fprintf(f, "%d\n", prec);
     fprintf(f, "%d\n", psum);
-    fprintf(f, "%d\n", amount);
-    for (int i=0; i<soluong; i++) {
-        double p = (double) (a[i][1]*soluong)/amount;
+    fprintf(f, "%d\n", job_scale);
+    for (int i=0; i<job_amount; i++) {
+        double p = (double) (a[i][1]*job_amount)/job_scale;
+        double p_factor = (double) a[i][4]/p;
         for (int j=0; j<5; j++) {
             fprintf(f, "%d ", a[i][j]);
         }
-        fprintf(f, "%.4lf\n", p);
+        fprintf(f, "%.4lf %.4lf\n", p, p_factor);
     }
 	fclose(f);
 }
 int main () {
 	int a[maxm][maxn];
-    int soluong, psum, amount;
+    int job_amount, psum, job_scale;
     int prec;
-    readfile(a, soluong, prec, psum, amount);
-    writefile(a, soluong, prec, psum, amount);
+    readfile(a, job_amount, prec, psum, job_scale);
+    writefile(a, job_amount, prec, psum, job_scale);
 	return 0;
 } 
