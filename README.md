@@ -1,1 +1,1 @@
-# schedulang
+# ScheduLearn
