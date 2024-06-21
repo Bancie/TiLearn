@@ -1,9 +1,11 @@
 #include <iostream>
 #include <cmath>
+#include <algorithm>
+#include <vector>
 using namespace std; 
 #define maxm 1000
 #define maxn 1000
-#define var 5 // <-- Variables Summarizing in Data File
+#define var 5 // <-- sVariables Summarizing in Data File
 
 // Scanning Data File
 void readfile (int a[maxm][maxn], int &job_amount, int &prec, int &plan_time, int &job_scale) {
@@ -54,7 +56,6 @@ void writefile (int a[maxm][maxn], int job_amount, int prec, int plan_time, int 
     fprintf(f, "%d\n", plan_time);
     fprintf(f, "%d\n", job_scale);
     for (int i=0; i<job_amount; i++) {
-        //double p_factor_nonprec = (double) a[i][4]/p;
         for (int j=0; j<var; j++) {
             fprintf(f, "%d ", a[i][j]);
         }
@@ -67,6 +68,30 @@ void writefile (int a[maxm][maxn], int job_amount, int prec, int plan_time, int 
         }
     }
 	fclose(f);
+}
+
+// Sorting Job
+void writefile (int a[maxm][maxn], int job_amount, int prec, int plan_time, int job_scale) {
+    FILE *f;
+	f=fopen("/Users/chibangnguyen/Documents/schedulang/data/data out/na.out","r+");
+    fscanf(f, "%d", &job_amount);
+    fscanf(f, "%d", &prec);
+    fscanf(f, "%d", &plan_time);
+    fscanf(f, "%d", &job_scale);
+    for (int i=0; i<job_amount; i++) {
+        for (int j=0; j<var+1; j++) {
+            fscanf(f, "%d", &a[i][j]);
+        }
+    }
+    double max = a[0][6];
+    for (int i=0; i<job_amount; i++) {
+        for (int j=0; j<var+1; j++) {
+        }
+        if (a[i][6]>max) {
+            max=a[i][6];
+        }
+    }
+
 }
 
 int main () {
