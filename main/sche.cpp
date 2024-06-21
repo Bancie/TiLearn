@@ -35,13 +35,13 @@ double p_factor_nonprec (int i, int a[maxm][maxn], double p) {
 
 // Precedence p-factor Variable
 double p_factor_prec_tu (int i, int a[maxm][maxn], double p) {
-    if (i<=0) {
+    if (i<0) {
         return 0;
     }
-    return a[i][4] + p_factor_prec(i-1,a,p);
+    return a[i][4] + p_factor_prec_tu(i-1,a,p);
 }
 double p_factor_prec_mau (int i, int a[maxm][maxn], int job_amount, int job_scale, double p) {
-    if (i<=0) {
+    if (i<0) {
         return 0;
     }
     return process(i,a,job_amount,job_scale) + process(i-1,a,job_amount,job_scale);
@@ -67,7 +67,7 @@ void writefile (int a[maxm][maxn], int job_amount, int prec, int psum, int job_s
         if (prec==0) {
             fprintf(f, "%.4lf %.4lf\n", process(i,a,job_amount,job_scale), p_factor_nonprec(i,a,process(i,a,job_amount,job_scale)));
         } else if (prec==1) {
-            fprintf(f, "%.4lf %.4lf\n", process(i,a,job_amount,job_scale), p_factor_nonprec(i,a,process(i,a,job_amount,job_scale)));
+            fprintf(f, "%.4lf %.4lf\n", process(i,a,job_amount,job_scale), p_factor_prec(i,a,job_amount,job_scale,p_factor_prec_mau(i,a,job_amount,job_scale,process(i,a,job_amount,job_scale))));
         }
     }
 	fclose(f);
