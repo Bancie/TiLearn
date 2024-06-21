@@ -70,7 +70,7 @@ void writefile (int a[maxm][maxn], int job_amount, int prec, int plan_time, int 
 	fclose(f);
 }
 
-// Sorting Job
+/*/ Sorting Job
 void writefile (int a[maxm][maxn], int job_amount, int prec, int plan_time, int job_scale) {
     FILE *f;
 	f=fopen("/Users/chibangnguyen/Documents/schedulang/data/data out/na.out","r+");
@@ -92,7 +92,7 @@ void writefile (int a[maxm][maxn], int job_amount, int prec, int plan_time, int 
         }
     }
 
-}
+}*/
 
 int main () {
 	int a[maxm][maxn];
