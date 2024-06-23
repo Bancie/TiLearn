@@ -12,7 +12,7 @@
 </a>
 <h3></h3>
 
-Welcome to our open-source project focused on applying **machine learning (ML)** and **deep learning (DL)** techniques to **machine scheduling** and **time management**, often referred to as **optimal processing**. Our goal is to revolutionize the way tasks and processes are managed in various projects by leveraging advanced computational methods to optimize efficiency and productivity.
+Welcome to our open-source project focused on applying **Machine Learning (ML)** and **Deep Learning (DL)** techniques to **Machine Scheduling** and **Time Management**, often referred to as **Optimal Processing**. Our goal is to revolutionize the way tasks and processes are managed in various projects by leveraging advanced computational methods to optimize efficiency and productivity.
 
 ## Project Goals
 - Optimized Scheduling: Develop algorithms that can create optimal schedules for machines, minimizing downtime and maximizing throughput.
