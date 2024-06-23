@@ -10,7 +10,7 @@ using namespace std;
 // Scanning Data File
 void readfile (int a[maxm][maxn], int &job_amount, int &prec, int &plan_time, int &job_scale) {
 	FILE *f;
-	f=fopen("/Users/chibangnguyen/Documents/schedulang/data/data inp/na.inp","rt");
+	f=fopen("/Users/chibangnguyen/Documents/TiLearn/data/na.inp","rt");
     fscanf(f, "%d", &job_amount);
     fscanf(f, "%d", &prec);
     fscanf(f, "%d", &plan_time);
@@ -50,7 +50,7 @@ double p_factor_prec (int i, int a[maxm][maxn], int job_amount, int job_scale, d
 void writefile (int a[maxm][maxn], int job_amount, int prec, int plan_time, int job_scale) {
 	FILE *f;
     double sum=0;
-	f=fopen("/Users/chibangnguyen/Documents/schedulang/data/data out/na.out","wt");
+	f=fopen("/Users/chibangnguyen/Documents/TiLearn/data/na.out","wt");
 	fprintf(f, "%d\n", job_amount);
     fprintf(f, "%d\n", prec);
     fprintf(f, "%d\n", plan_time);
@@ -70,29 +70,6 @@ void writefile (int a[maxm][maxn], int job_amount, int prec, int plan_time, int 
 	fclose(f);
 }
 
-/*/ Sorting Job
-void writefile (int a[maxm][maxn], int job_amount, int prec, int plan_time, int job_scale) {
-    FILE *f;
-	f=fopen("/Users/chibangnguyen/Documents/schedulang/data/data out/na.out","r+");
-    fscanf(f, "%d", &job_amount);
-    fscanf(f, "%d", &prec);
-    fscanf(f, "%d", &plan_time);
-    fscanf(f, "%d", &job_scale);
-    for (int i=0; i<job_amount; i++) {
-        for (int j=0; j<var+1; j++) {
-            fscanf(f, "%d", &a[i][j]);
-        }
-    }
-    double max = a[0][6];
-    for (int i=0; i<job_amount; i++) {
-        for (int j=0; j<var+1; j++) {
-        }
-        if (a[i][6]>max) {
-            max=a[i][6];
-        }
-    }
-
-}*/
 
 int main () {
 	int a[maxm][maxn];
