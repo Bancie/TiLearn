@@ -4,7 +4,6 @@
 #include <vector>
 #include <string>
 using namespace std; 
-#define NULL __null
 #define maxm 1000
 #define maxn 1000
 #define var 5 // <-- Variable Summarized from Data File
