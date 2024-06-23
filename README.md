@@ -12,7 +12,7 @@
 </a>
 <h3></h3>
 
-Welcome to the GitHub repository for our open-source project focused on applying machine learning and deep learning techniques to machine scheduling and time management. Our goal is to revolutionize the way tasks and processes are managed in various industries by leveraging advanced computational methods to optimize efficiency and productivity.
+Welcome to our open-source project focused on applying **machine learning (ML)** and **deep learning (DL)** techniques to **machine scheduling** and **time management**, often referred to as **optimal processing**. Our goal is to revolutionize the way tasks and processes are managed in various projects by leveraging advanced computational methods to optimize efficiency and productivity.
 
 ## Project Goals
 - Optimized Scheduling: Develop algorithms that can create optimal schedules for machines, minimizing downtime and maximizing throughput.
