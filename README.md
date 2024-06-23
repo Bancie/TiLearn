@@ -15,20 +15,20 @@
 Welcome to our open-source project focused on applying **Machine Learning (ML)** and **Deep Learning (DL)** techniques to **Machine Scheduling** and **Time Management**, often referred to as **Optimal Processing**. Our goal is to revolutionize the way tasks and processes are managed in various projects by leveraging advanced computational methods to optimize efficiency and productivity.
 
 ## Project Goals
-- Optimized Scheduling: Develop algorithms that can create optimal schedules for machines, minimizing downtime and maximizing throughput.
-- Predictive Maintenance: Implement predictive models to foresee and mitigate potential machine failures, ensuring continuous and efficient operations.
-- Time Management: Utilize deep learning models to enhance time management practices, helping businesses allocate resources more effectively and meet deadlines.
-- Scalability: Design solutions that are scalable and adaptable to different industrial environments and varying sizes of operations.
+- **Optimized Scheduling**: Develop algorithms that can create optimal schedules for machines, minimizing downtime and maximizing throughput.
+- **Predictive Maintenance**: Implement predictive models to foresee and mitigate potential machine failures, ensuring continuous and efficient operations.
+- **Time Management**: Utilize deep learning models to enhance time management practices, helping businesses allocate resources more effectively and meet deadlines.
+- **Scalability**: Design solutions that are scalable and adaptable to different industrial environments and varying sizes of operations.
 
 ## Responsibilities
 
 As part of this open-source project, contributors are encouraged to:
 
-- Algorithm Development: Create and refine machine learning and deep learning algorithms tailored to scheduling and time management.
-- Data Collection and Preprocessing: Gather and preprocess data from various sources to train and validate models.
-- Model Training and Evaluation: Train models using the collected data and evaluate their performance to ensure accuracy and reliability.
-- Integration and Testing: Integrate developed models into real-world scheduling systems and conduct extensive testing to validate their effectiveness.
-- Documentation and Support: Maintain comprehensive documentation of the project, providing clear guidelines for usage and contribution. Assist users and other contributors through forums and issue tracking.
+- **Algorithm Development**: Create and refine machine learning and deep learning algorithms tailored to scheduling and time management.
+- **Data Collection and Preprocessing**: Gather and preprocess data from various sources to train and validate models.
+- **Model Training and Evaluation**: Train models using the collected data and evaluate their performance to ensure accuracy and reliability.
+- **Integration and Testing**: Integrate developed models into real-world scheduling systems and conduct extensive testing to validate their effectiveness.
+- **Documentation and Support**: Maintain comprehensive documentation of the project, providing clear guidelines for usage and contribution. Assist users and other contributors through forums and issue tracking.
 
 ## How to Contribute
 
