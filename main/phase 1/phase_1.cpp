@@ -71,10 +71,7 @@ void writefile (int a[maxm][maxn], int prec, int plan_time) {
 	FILE *f;
     double sum=0;
 	f=fopen("/Users/chibangnguyen/Documents/TiLearn/data/na.out","wt");
-	fprintf(f, "%d\n", job_amount(a));
-	fprintf(f, "%d\n", jobscale(a,job_amount(a)));
     fprintf(f, "%d\n", prec);
-    fprintf(f, "%d\n", plan_time);
     // Summarizing the amount of job
     for (int i=0; i<job_amount(a); i++) {
         for (int j=0; j<var; j++) {
@@ -84,14 +81,11 @@ void writefile (int a[maxm][maxn], int prec, int plan_time) {
         if (prec==0) {
             fprintf(f, "%.4lf %.4lf\n", 
                 process(
-                    i,
-                    a,
-                    job_amount(a),
+                    i, a, job_amount(a),
                     jobscale(a,job_amount(a))
                 ),
                 p_factor_nonprec(
-                    i,
-                    a,
+                    i, a,
                     process(i,a,job_amount(a),
                     jobscale(a,job_amount(a)))
                 )
@@ -100,11 +94,18 @@ void writefile (int a[maxm][maxn], int prec, int plan_time) {
         // Precedence Job Type
         else if (prec==1) {
             sum += process(i,a,job_amount(a),jobscale(a,job_amount(a)));
-            double p = process(i,a,job_amount(a),jobscale(a,job_amount(a)));
+            double p = process(
+                i, a, job_amount(a),
+                jobscale(a,job_amount(a))
+            );
             fprintf(f, "%.4lf %.4lf\n",
                 p,
-                p_factor_prec(i,a,job_amount(a),jobscale(a,job_amount(a)),p,sum)
-                );
+                p_factor_prec(
+                    i, a, job_amount(a),
+                    jobscale(a,job_amount(a)),
+                    p, sum
+                )
+            );
         }
     }
 	fclose(f);
