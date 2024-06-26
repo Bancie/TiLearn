@@ -45,8 +45,8 @@ void readfile (int a[maxm][maxn], int &prec, int &plan_time) {
         return sum;
     }
     // Process Variable
-    double process (int i, int a[maxm][maxn], int job_amount, int job_scale) {
-        double p = (double) (a[i][1]*job_amount)/job_scale;
+    double process (int i, int a[maxm][maxn], int &plan_time, int job_scale) {
+        double p = (double) (a[i][1]*plan_time)/job_scale;
         return p;
     }
     // Non-precedence p-factor Variable
@@ -80,21 +80,21 @@ void writefile (int a[maxm][maxn], int prec, int plan_time) {
         if (prec==0) {
             fprintf(f, "%.4lf %.4lf\n", 
                 process(
-                    i, a, job_amount(a),
+                    i, a, plan_time,
                     jobscale(a,job_amount(a))
                 ),
                 p_factor_nonprec(
                     i, a,
-                    process(i,a,job_amount(a),
+                    process(i,a,plan_time,
                     jobscale(a,job_amount(a)))
                 )
             );
         }
         // Precedence Job Type
         else if (prec==1) {
-            sum += process(i,a,job_amount(a),jobscale(a,job_amount(a)));
+            sum += process(i,a,plan_time,jobscale(a,job_amount(a)));
             double p = process(
-                i, a, job_amount(a),
+                i, a, plan_time,
                 jobscale(a,job_amount(a))
             );
             fprintf(f, "%.4lf %.4lf\n",
