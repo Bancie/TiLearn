@@ -78,15 +78,17 @@ void writefile (int a[maxm][maxn], int prec, int plan_time) {
         }
         // Non-Precedence Job Type
         if (prec==0) {
-            fprintf(f, "%.4lf %.4lf\n", 
+            fprintf(f, "%.1lf %lf\n", 
                 process(
                     i, a, plan_time,
                     jobscale(a,job_amount(a))
                 ),
                 p_factor_nonprec(
                     i, a,
-                    process(i,a,plan_time,
-                    jobscale(a,job_amount(a)))
+                    process(
+                        i,a,plan_time,
+                        jobscale(a,job_amount(a))
+                    )
                 )
             );
         }
@@ -97,7 +99,7 @@ void writefile (int a[maxm][maxn], int prec, int plan_time) {
                 i, a, plan_time,
                 jobscale(a,job_amount(a))
             );
-            fprintf(f, "%.4lf %.4lf\n",
+            fprintf(f, "%.1lf %lf\n",
                 p,
                 p_factor_prec(
                     i, a, job_amount(a),
