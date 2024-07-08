@@ -10,7 +10,7 @@ def main() -> None:
     """Minimal jobshop problem."""
     # Data.
     jobs_data = [  # task = (machine_id, processing_time).
-        [(0, 3), (1, 2), (2, 2)],  # Job0
+        [(0, 10), (1, 2), (2, 2)],  # Job0
         [(0, 2), (2, 1), (1, 4)],  # Job1
         [(1, 4), (2, 3)],  # Job2
     ]
@@ -126,9 +126,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
-ft06 = load_benchmark_instance("ft10")
-solver = ORToolsSolver(max_time_in_seconds=10)
-
-fig, ax = plot_gantt_chart(solver(ft06))
-plt.show()
