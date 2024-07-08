@@ -3,8 +3,14 @@ import collections
 from ortools.sat.python import cp_model
 from job_shop_lib.benchmarking import load_benchmark_instance
 import matplotlib.pyplot as plt
+from job_shop_lib.benchmarking import (
+    load_all_benchmark_instances,
+    load_benchmark_instance,
+)
+
 from job_shop_lib.cp_sat import ORToolsSolver
-from job_shop_lib.visualization import plot_gantt_chart
+from job_shop_lib.visualization import plot_gantt_chart, plot_disjunctive_graph
+from job_shop_lib.graphs import build_disjunctive_graph
 
 def main() -> None:
     """Minimal jobshop problem."""
@@ -126,3 +132,10 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+benchmark_instances = load_all_benchmark_instances()
+benchmark_instances
+
+ft06 = load_benchmark_instance("ft06")
+solution = ORToolsSolver(max_time_in_seconds=5).solve(ft06)
+fig, ax = plot_gantt_chart(solution)
