@@ -1,18 +1,30 @@
-"""Minimal jobshop example."""
 import collections
 from ortools.sat.python import cp_model
 from job_shop_lib.benchmarking import load_benchmark_instance
 import matplotlib.pyplot as plt
+from job_shop_lib.benchmarking import (
+    load_all_benchmark_instances,
+    load_benchmark_instance,
+)
+
 from job_shop_lib.cp_sat import ORToolsSolver
-from job_shop_lib.visualization import plot_gantt_chart
+from job_shop_lib.visualization import plot_gantt_chart, plot_disjunctive_graph
+from job_shop_lib.graphs import build_disjunctive_graph
 
 def main() -> None:
     """Minimal jobshop problem."""
     # Data.
     jobs_data = [  # task = (machine_id, processing_time).
-        [(0, 3), (1, 2), (2, 2)],  # Job0
+        [(0, 10), (1, 2), (2, 2)],  # Job0
         [(0, 2), (2, 1), (1, 4)],  # Job1
         [(1, 4), (2, 3)],  # Job2
+        [(5, 2), (2, 1), (5, 4)],  # Job3
+        [(3, 10), (1, 2), (2, 2)],  # Job4
+        [(5, 10), (1, 2), (2, 2)],  # Job5
+        [(4, 2), (5, 1), (5, 4)],  # Job6
+        [(4, 4), (5, 3)],  # Job7
+        [(5, 2), (5, 1), (5, 4)],  # Job8
+        [(5, 10), (5, 2), (5, 2)],  # Job9
     ]
 
     machines_count = 1 + max(task[0] for job in jobs_data for task in job)
@@ -127,8 +139,9 @@ def main() -> None:
 if __name__ == "__main__":
     main()
 
-ft06 = load_benchmark_instance("ft10")
-solver = ORToolsSolver(max_time_in_seconds=10)
+benchmark_instances = load_all_benchmark_instances()
+benchmark_instances
 
-fig, ax = plot_gantt_chart(solver(ft06))
-plt.show()
+ft06 = load_benchmark_instance("ft06")
+solution = ORToolsSolver(max_time_in_seconds=5).solve(ft06)
+fig, ax = plot_gantt_chart(solution)
