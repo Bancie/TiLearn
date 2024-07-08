@@ -1,7 +1,10 @@
 """Minimal jobshop example."""
 import collections
 from ortools.sat.python import cp_model
-
+from job_shop_lib.benchmarking import load_benchmark_instance
+import matplotlib.pyplot as plt
+from job_shop_lib.cp_sat import ORToolsSolver
+from job_shop_lib.visualization import plot_gantt_chart
 
 def main() -> None:
     """Minimal jobshop problem."""
@@ -123,3 +126,9 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+ft06 = load_benchmark_instance("ft10")
+solver = ORToolsSolver(max_time_in_seconds=10)
+
+fig, ax = plot_gantt_chart(solver(ft06))
+plt.show()
