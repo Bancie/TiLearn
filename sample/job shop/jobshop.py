@@ -1,4 +1,3 @@
-"""Minimal jobshop example."""
 import collections
 from ortools.sat.python import cp_model
 from job_shop_lib.benchmarking import load_benchmark_instance
@@ -19,6 +18,13 @@ def main() -> None:
         [(0, 10), (1, 2), (2, 2)],  # Job0
         [(0, 2), (2, 1), (1, 4)],  # Job1
         [(1, 4), (2, 3)],  # Job2
+        [(5, 2), (2, 1), (5, 4)],  # Job3
+        [(3, 10), (1, 2), (2, 2)],  # Job4
+        [(5, 10), (1, 2), (2, 2)],  # Job5
+        [(4, 2), (5, 1), (5, 4)],  # Job6
+        [(4, 4), (5, 3)],  # Job7
+        [(5, 2), (5, 1), (5, 4)],  # Job8
+        [(5, 10), (5, 2), (5, 2)],  # Job9
     ]
 
     machines_count = 1 + max(task[0] for job in jobs_data for task in job)
