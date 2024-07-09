@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/chibangnguyen/Documents/TiLearn/main/phase 1",
-      "program": "/Users/chibangnguyen/Documents/TiLearn/main/phase 1/build/Debug/outDebug"
+      "cwd": "/Users/chibangnguyen/Documents/TiLearn",
+      "program": "/Users/chibangnguyen/Documents/TiLearn/build/Debug/outDebug"
     }
   ]
 }
