@@ -7,7 +7,7 @@
       "request": "launch",
       "args": [],
       "cwd": "/Users/chibangnguyen/Documents/TiLearn",
-      "program": "/Users/chibangnguyen/Documents/TiLearn/build/Debug/outDebug"
+      "program": "/Users/chibangnguyen/Documents/TiLearn/build/Release/outRelease"
     }
   ]
 }

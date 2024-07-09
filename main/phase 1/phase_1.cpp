@@ -119,8 +119,8 @@ class Job_Type {
 };
 
 int main () {
-    Job_Type type1[maxm];
-    type1[1].readfile();
-    type1[1].writefile();
+    Job_Type type1;
+    type1.readfile();
+    type1.writefile();
 	return 0;
 } 
