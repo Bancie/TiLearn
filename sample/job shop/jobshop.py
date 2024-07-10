@@ -14,18 +14,20 @@ from job_shop_lib.graphs import build_disjunctive_graph
 def main() -> None:
     """Minimal jobshop problem."""
     # Data.
-    jobs_data = [  # task = (machine_id, processing_time).
-        [(0, 10), (1, 2), (2, 2)],  # Job0
-        [(0, 2), (2, 1), (1, 4)],  # Job1
-        [(1, 4), (2, 3)],  # Job2
-        [(5, 2), (2, 1), (5, 4)],  # Job3
-        [(3, 10), (1, 2), (2, 2)],  # Job4
-        [(5, 10), (1, 2), (2, 2)],  # Job5
-        [(4, 2), (5, 1), (5, 4)],  # Job6
-        [(4, 4), (5, 3)],  # Job7
-        [(5, 2), (5, 1), (5, 4)],  # Job8
-        [(5, 10), (5, 2), (5, 2)],  # Job9
-    ]
+
+    file_path = '/Users/chibangnguyen/Documents/TiLearn/sample/job shop/jobs_data.txt'  # Replace with the actual path to your text file
+
+    with open(file_path, 'r') as file:
+        jobs_data_text = file.read()
+
+    # Convert the text representation back to the jobs_data array
+    jobs_data = []
+    for line in jobs_data_text.split('\n'):
+        job = []
+        for task in line.split('; '):
+            machine_id, processing_time = map(int, task.strip('()').split(', '))
+            job.append((machine_id, processing_time))
+        jobs_data.append(job)
 
     machines_count = 1 + max(task[0] for job in jobs_data for task in job)
     all_machines = range(machines_count)
@@ -138,10 +140,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
-benchmark_instances = load_all_benchmark_instances()
-benchmark_instances
-
-ft06 = load_benchmark_instance("ft06")
-solution = ORToolsSolver(max_time_in_seconds=5).solve(ft06)
-fig, ax = plot_gantt_chart(solution)
