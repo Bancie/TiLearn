@@ -14,7 +14,7 @@ from job_shop_lib.graphs import build_disjunctive_graph
 def main() -> None:
     """Minimal jobshop problem."""
     # Data.
-
+    # task = (machine_id, processing_time).
     file_path = '/Users/chibangnguyen/Documents/TiLearn/sample/job shop/jobs_data.txt'  # Replace with the actual path to your text file
 
     with open(file_path, 'r') as file:
