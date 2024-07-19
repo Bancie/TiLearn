@@ -17,7 +17,7 @@ class Job_Type {
     int blank () {
         int count = 0;
         FILE *f;
-        f=fopen("<YOUR_PATH>/na.inp","rt");
+        f=fopen("/Users/chibangnguyen/Documents/TiLearn/data/na.inp","rt");
         while (fgets(line, sizeof(line), f)) {
             line[strcspn(line, "\n")] = '\0';
             if (strlen(line) == 0) {
@@ -31,7 +31,7 @@ class Job_Type {
     // SCANNING DATA FILE
     void readfile () {
         FILE *f;
-        f=fopen("<YOUR_PATH>/na.inp","rt");
+        f=fopen("/Users/chibangnguyen/Documents/TiLearn/data/na.inp","rt");
             fscanf(f, "%d", &prec);
             fscanf(f, "%d", &plan_time);
             for (int i=0; i<maxm; i++) {
@@ -89,7 +89,7 @@ class Job_Type {
     void writefile () {
         FILE *f;
         double sum=0;
-        f=fopen("<YOUR_PATH>/na.out","wt");
+        f=fopen("/Users/chibangnguyen/Documents/TiLearn/data/na.out","wt");
         fprintf(f, "%d\n", prec);
         // Summarizing the amount of job
         for (int i=0; i<job_amount(a); i++) {
