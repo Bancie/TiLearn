@@ -14,11 +14,13 @@ class Job_Type {
     int prec;
     int plan_time;
     char line[maxm];
-    // SCANNING DATA FILE <---- NA.OUT
+    int job_amount;
+    // SCANNING DATA FILE <---- NON-PRECEDENCE DATA (na.out)
     void readfile () {
         FILE *f;
         f=fopen("/Users/chibangnguyen/Documents/TiLearn/data/na.out","rt");
             fscanf(f, "%d", &prec);
+            fscanf(f, "%d", &job_amount);
             for (int i=0; i<maxm; i++) {
                 for (int j=0; j<var; j++) {
                     fscanf(f, "%d", &a[i][j]);
@@ -27,11 +29,22 @@ class Job_Type {
         fclose(f);
     }
 
-    // PRINTING OUTPUT FILE ----> NON-PRECEDENCE SORTING
-    void writefile () {
+    // SORTING
+    int count_rows (int a[maxm][maxn]) {
+        for (int i=0; i<=job_amount; i++) {
+            for (int j=0; j<=7; j++) {
+                
+            }
+        }
+    }
+
+
+    // PRINTING OUTPUT FILE ----> NON-PRECEDENCE SORTING (nonprec_sorting.out)
+    void writefile () { 
         FILE *f;
         double sum=0;
         f=fopen("/Users/chibangnguyen/Documents/TiLearn/data/nonprec_sorting.out","wt");
+        fprintf(f, "abc");
         fclose(f);
     }
 };

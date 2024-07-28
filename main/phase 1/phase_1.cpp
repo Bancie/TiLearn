@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <vector>
 #include <string>
+#include <cstdlib>
 using namespace std; 
 #define maxm 1000
 #define maxn 1000
@@ -77,6 +78,7 @@ class Job_Type {
         double sum=0;
         f=fopen("/Users/chibangnguyen/Documents/TiLearn/data/na.out","wt");
         fprintf(f, "%d\n", prec);
+        fprintf(f, "%d\n", job_amount(a));
         // Summarizing the amount of job
         for (int i=0; i<job_amount(a); i++) {
             for (int j=0; j<var; j++) {
