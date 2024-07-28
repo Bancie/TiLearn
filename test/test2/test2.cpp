@@ -40,14 +40,11 @@ int compare(const void *a, const void *b) {
 int main() {
 	const int m = 3;
     const int n = 2;
+    int *arrPtrs[3];
 	int arr[m][n] = {{3,2},
                     {2,6},
                     {1,7}};
 
-    int *arrPtrs[3];
-    for (int i = 0; i < 3; i++) {
-        arrPtrs[i] = arr[i];
-    }
     
 	for (int i=0; i<m; i++) {
         for (int j=0; j<n; j++)
@@ -55,6 +52,9 @@ int main() {
         cout<<endl;
     }
 
+    for (int i = 0; i < 3; i++) {
+        arrPtrs[i] = arr[i];
+    }
 
 	qsort(arr,m,sizeof(*arr),compare);
 	cout << endl;
@@ -64,5 +64,8 @@ int main() {
         cout<<endl;
     }
 
+    for (int i = 0; i < 3; i++) {
+        printf("%d %d\n", arrPtrs[i][0], arrPtrs[i][1]);
+    }
 	return 0;
 }
