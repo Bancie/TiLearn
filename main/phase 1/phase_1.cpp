@@ -14,20 +14,6 @@ class Job_Type {
     int prec;
     int plan_time;
     char line[maxm];
-    int blank () {
-        int count = 0;
-        FILE *f;
-        f=fopen("/Users/chibangnguyen/Documents/TiLearn/data/na.inp","rt");
-        while (fgets(line, sizeof(line), f)) {
-            line[strcspn(line, "\n")] = '\0';
-            if (strlen(line) == 0) {
-                break;
-            }
-            count++;
-        }
-        return count;
-        fclose(f);
-    }
     // SCANNING DATA FILE
     void readfile () {
         FILE *f;
@@ -135,7 +121,6 @@ class Job_Type {
 
 int main () {
     Job_Type type1;
-    cout<<type1.blank()<<endl;
     type1.readfile();
     type1.writefile();
 	return 0;
