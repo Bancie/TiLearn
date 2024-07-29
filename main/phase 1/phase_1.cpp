@@ -9,6 +9,12 @@ using namespace std;
 #define maxn 1000
 #define var 5 // <-- Variable Summarized from Data File
 
+int compare (const void *a, const void *b) {
+    int *rowA = *(int **)a;
+    int *rowB = *(int **)b;
+    return (rowA[6] - rowB[6]);
+}
+
 class Job_Type {
     public:
     int a[maxm][maxn];
@@ -78,7 +84,6 @@ class Job_Type {
         double sum=0;
         f=fopen("/Users/chibangnguyen/Documents/TiLearn/data/na.out","wt");
         fprintf(f, "%d\n", prec);
-        fprintf(f, "%d\n", job_amount(a));
         // Summarizing the amount of job
         for (int i=0; i<job_amount(a); i++) {
             for (int j=0; j<var; j++) {
@@ -119,11 +124,47 @@ class Job_Type {
         }
         fclose(f);
     }
+
+    void readfile_2 () {
+        FILE *f;
+        f=fopen("/Users/chibangnguyen/Documents/TiLearn/data/na.out","rt");
+            fscanf(f, "%d", &prec);
+            for (int i=0; i<job_amount(a); i++) {
+                for (int j=0; j<7; j++) {
+                    fscanf(f, "%d", &a[i][j]);
+                }
+            }
+        fclose(f);
+    }
+
+    void sorting (int job_amount) {
+        int ja = job_amount;
+        int *arrPtrs[ja];
+        for (int i=0; i<ja; i++) {
+            arrPtrs[i] = a[i];
+        }
+        qsort(arrPtrs, ja, sizeof(double *), compare);
+        for (int i=0; i<ja; i++) {
+            for (int j=0; j<7; j++) {
+                printf("%d ", arrPtrs[i][j]);
+            }
+            printf("\n");
+        }
+    }
+
+    void writefile_2 () { 
+        FILE *f;
+        f=fopen("/Users/chibangnguyen/Documents/TiLearn/data/nonprec_sorting.out","wt");
+        fclose(f);
+    }
 };
 
 int main () {
     Job_Type type1;
     type1.readfile();
     type1.writefile();
+    type1.readfile_2();
+    type1.writefile_2();
+    type1.sorting(10);
 	return 0;
 } 
