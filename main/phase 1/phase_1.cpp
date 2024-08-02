@@ -20,6 +20,7 @@ class Job_Type {
     int a[maxm][maxn];
     int prec;
     int plan_time;
+    
     // SCANNING DATA FILE
     void readfile () {
         FILE *f;
@@ -35,53 +36,47 @@ class Job_Type {
     }
 
     // NECESSARY VARIABLES
-        // Amount of Job
-        int job_amount (int a[maxm][maxn]) {
-            int sum=0;
-            for (int i=0; i<maxm; i++) {
-                if (a[i][0]==0)
-                    break;
-                for (int j=0; j<1; j++)
-                    sum ++;
+    // Amount of Job
+    int job_amount (int a[maxm][maxn]) {
+        int sum=0;
+        for (int i=0; i<maxm; i++) {
+            if (a[i][0]==0)
+                break;
+            for (int j=0; j<1; j++)
+                sum ++;
+        }
+        return sum;
+    }
+    // Scaling Job
+    int jobscale (int a[maxm][maxn], int job_amount) {
+        int sum=0;
+        for (int i=0; i<job_amount; i++) {
+            for (int j=0; j<1; j++) {
+                sum += a[i][1];
             }
-            return sum;
         }
-        // Scaling Job
-        int jobscale (int a[maxm][maxn], int job_amount) {
-            int sum=0;
-            for (int i=0; i<job_amount; i++) {
-                for (int j=0; j<1; j++) {
-                    sum += a[i][1];
-                }
-            }
-            return sum;
+        return sum;
+    }
+    // Process Variable
+    double process (int i, int a[maxm][maxn], int &plan_time, int job_scale) {
+        double p = (double) (a[i][1]*plan_time)/job_scale;
+        return p;
+    }
+    // Non-precedence p-factor Variable
+    double p_factor_nonprec (int i, int a[maxm][maxn], double p) {
+        double p_factor_nonprec = (double) a[i][4]/p;
+        return p_factor_nonprec;
+    }
+    // Precedence p-factor Variable
+    double p_factor_prec_tu (int i, int a[maxm][maxn], double p) {
+        if (i<0) {
+            return 0;
         }
-        // Process Variable
-        /***
- \begin{eqnarray*}
-   y_1 &=& x_1 \\
-   y_2 &=& x_2 
- \end{eqnarray*}
-***/
-        double process (int i, int a[maxm][maxn], int &plan_time, int job_scale) {
-            double p = (double) (a[i][1]*plan_time)/job_scale;
-            return p;
-        }
-        // Non-precedence p-factor Variable
-        double p_factor_nonprec (int i, int a[maxm][maxn], double p) {
-            double p_factor_nonprec = (double) a[i][4]/p;
-            return p_factor_nonprec;
-        }
-        // Precedence p-factor Variable
-        double p_factor_prec_tu (int i, int a[maxm][maxn], double p) {
-            if (i<0) {
-                return 0;
-            }
-            return a[i][4] + p_factor_prec_tu(i-1,a,p);
-        }
-        double p_factor_prec (int i, int a[maxm][maxn], int job_amount, int job_scale, double p, double sum) {
-            return p_factor_prec_tu(i,a,p)/sum;
-        }
+        return a[i][4] + p_factor_prec_tu(i-1,a,p);
+    }
+    double p_factor_prec (int i, int a[maxm][maxn], int job_amount, int job_scale, double p, double sum) {
+        return p_factor_prec_tu(i,a,p)/sum;
+    }
 
     // PRINTING OUTPUT FILE
     void writefile () {
