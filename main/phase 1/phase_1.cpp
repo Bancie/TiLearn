@@ -20,7 +20,6 @@ class Job_Type {
     int a[maxm][maxn];
     int prec;
     int plan_time;
-    char line[maxm];
     // SCANNING DATA FILE
     void readfile () {
         FILE *f;
@@ -58,6 +57,12 @@ class Job_Type {
             return sum;
         }
         // Process Variable
+        /***
+ \begin{eqnarray*}
+   y_1 &=& x_1 \\
+   y_2 &=& x_2 
+ \end{eqnarray*}
+***/
         double process (int i, int a[maxm][maxn], int &plan_time, int job_scale) {
             double p = (double) (a[i][1]*plan_time)/job_scale;
             return p;
