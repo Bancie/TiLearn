@@ -9,10 +9,12 @@ using namespace std;
 #define maxn 1000
 #define var 5 // <-- Variable Summarized from Data File
 
-int compare (const void *a, const void *b) {
+int compare(const void *a, const void *b) {
     double *rowA = *(double **)a;
     double *rowB = *(double **)b;
-    return (rowA[6] - rowB[6]);
+    if (rowA[6] > rowB[6]) return -1;
+    if (rowA[6] < rowB[6]) return 1;
+    return 0;
 }
 
 class Job_Type {
