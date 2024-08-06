@@ -131,7 +131,7 @@ class Job_Type {
         f=fopen("/Users/chibangnguyen/Documents/TiLearn/data/na.out","rt");
             fscanf(f, "%d", &prec);
             for (int i=0; i<job_amount(a); i++) {
-                for (int j=0; j<5; j++) {
+                for (int j=0; j<7; j++) {
                     fscanf(f, "%lf", &ar[i][j]);
                 }
             }
