@@ -10,8 +10,8 @@ using namespace std;
 #define var 5 // <-- Variable Summarized from Data File
 
 int compare (const void *a, const void *b) {
-    int *rowA = *(int **)a;
-    int *rowB = *(int **)b;
+    double *rowA = *(double **)a;
+    double *rowB = *(double **)b;
     return (rowA[6] - rowB[6]);
 }
 
