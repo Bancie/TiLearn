@@ -17,7 +17,7 @@ int compare (const void *a, const void *b) {
 
 class Job_Type {
     public:
-    int a[maxm][maxn];
+    double a[maxm][maxn];
     int prec;
     int plan_time;
     
@@ -29,7 +29,7 @@ class Job_Type {
             fscanf(f, "%d", &plan_time);
             for (int i=0; i<maxm; i++) {
                 for (int j=0; j<var; j++) {
-                    fscanf(f, "%d", &a[i][j]);
+                    fscanf(f, "%lf", &a[i][j]);
                 }
             }
         fclose(f);
@@ -37,7 +37,7 @@ class Job_Type {
 
     // NECESSARY VARIABLES
     // Amount of Job
-    int job_amount (int a[maxm][maxn]) {
+    int job_amount (double a[maxm][maxn]) {
         int sum=0;
         for (int i=0; i<maxm; i++) {
             if (a[i][0]==0)
@@ -48,7 +48,7 @@ class Job_Type {
         return sum;
     }
     // Scaling Job
-    int jobscale (int a[maxm][maxn], int job_amount) {
+    int jobscale (double a[maxm][maxn], int job_amount) {
         int sum=0;
         for (int i=0; i<job_amount; i++) {
             for (int j=0; j<1; j++) {
@@ -58,23 +58,23 @@ class Job_Type {
         return sum;
     }
     // Process Variable
-    double process (int i, int a[maxm][maxn], int &plan_time, int job_scale) {
+    double process (int i, double a[maxm][maxn], int &plan_time, int job_scale) {
         double p = (double) (a[i][1]*plan_time)/job_scale;
         return p;
     }
     // Non-precedence p-factor Variable
-    double p_factor_nonprec (int i, int a[maxm][maxn], double p) {
+    double p_factor_nonprec (int i, double a[maxm][maxn], double p) {
         double p_factor_nonprec = (double) a[i][4]/p;
         return p_factor_nonprec;
     }
     // Precedence p-factor Variable
-    double p_factor_prec_tu (int i, int a[maxm][maxn], double p) {
+    double p_factor_prec_tu (int i, double a[maxm][maxn], double p) {
         if (i<0) {
             return 0;
         }
         return a[i][4] + p_factor_prec_tu(i-1,a,p);
     }
-    double p_factor_prec (int i, int a[maxm][maxn], int job_amount, int job_scale, double p, double sum) {
+    double p_factor_prec (int i, double a[maxm][maxn], int job_amount, int job_scale, double p, double sum) {
         return p_factor_prec_tu(i,a,p)/sum;
     }
 
@@ -87,7 +87,7 @@ class Job_Type {
         // Summarizing the amount of job
         for (int i=0; i<job_amount(a); i++) {
             for (int j=0; j<var; j++) {
-                fprintf(f, "%d ", a[i][j]);
+                fprintf(f, "%lf ", a[i][j]);
             }
             // Non-Precedence Job Type
             if (prec==0) {
@@ -127,12 +127,11 @@ class Job_Type {
 
     void readfile_2 () {
         FILE *f;
-        double ar[maxm][maxn];
         f=fopen("/Users/chibangnguyen/Documents/TiLearn/data/na.out","rt");
             fscanf(f, "%d", &prec);
             for (int i=0; i<job_amount(a); i++) {
                 for (int j=0; j<7; j++) {
-                    fscanf(f, "%lf", &ar[i][j]);
+                    fscanf(f, "%lf", &a[i][j]);
                 }
             }
         fclose(f);
@@ -140,14 +139,14 @@ class Job_Type {
 
     void sorting (int job_amount) {
         int ja = job_amount;
-        int *arrPtrs[ja];
+        double *arrPtrs[ja];
         for (int i=0; i<ja; i++) {
             arrPtrs[i] = a[i];
         }
         qsort(arrPtrs, ja, sizeof(double *), compare);
         for (int i=0; i<ja; i++) {
             for (int j=0; j<7; j++) {
-                printf("%d ", arrPtrs[i][j]);
+                printf("%lf ", arrPtrs[i][j]);
             }
             printf("\n");
         }
