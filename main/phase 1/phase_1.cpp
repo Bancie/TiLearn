@@ -167,6 +167,6 @@ int main () {
     type1.writefile();
     type1.readfile_2();
     type1.writefile_2();
-    type1.sorting(10);
+    type1.sorting(30);
 	return 0;
 } 
