@@ -3,7 +3,8 @@ hide:
   - navigation
   - toc
 social:
-  cards_layout: layouts/tilearn2.png
+  cards_layout_options:
+    background_image: layouts/tilearn2.png
 ---
 # <center>Welcome to **TiLearn**!<center/>
 
