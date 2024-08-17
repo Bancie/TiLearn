@@ -3,6 +3,7 @@ site_url: https://bancie.github.io/TiLearn/
 site_author: Bancie
 nav:
   - Home: index.md
+  - Getting started: start/index.md
 
 plugins:
     - search: {}
@@ -98,11 +99,14 @@ extra_javascript:
 extra_css:
   - https://unpkg.com/katex@0/dist/katex.min.css
   - stylesheets/extra.css
+  - assets/styles.css
+
 
 copyright: |
   &copy; 2024 <a href="https://web.facebook.com/ngchibangg"  target="_blank" rel="noopener">Bang Nguyen</a>
 
 extra:
+  hero_image: tilearn.png
   homepage: https://bancie.github.io/TiLearn/
   social:
     - icon: fontawesome/brands/facebook

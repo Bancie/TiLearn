@@ -1,0 +1,58 @@
+.buttons {
+    margin-top: 20px;
+  }
+  
+  .md-button {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
+  .md-button--primary {
+    background-color: #0083ff;
+    color: white;
+  }
+  
+  .features {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+  
+  .feature {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+  }
+  
+  .feature h2 {
+    font-size: 1.5em;
+  }
+  
+  .feature p {
+    font-size: 1em;
+  }
+
+  body {
+    background-image: url('docs/tilearn.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: white;  /* Adjust text color if needed */
+  }
+  
+  .md-typeset h1, .md-typeset h2, .md-typeset h3, .md-typeset p {
+    color: white;  /* Adjust text color for headers and paragraphs */
+  }
+  
+  .md-typeset a {
+    color: #00f;  /* Adjust link color if needed */
+  }
+  
+  .md-container {
+    background-color: rgb(126, 119, 179);  /* Optional: Add a semi-transparent background to content */
+    padding: 20px;
+    border-radius: 10px;
+  }

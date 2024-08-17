@@ -1,17 +1,29 @@
-# Welcome to MkDocs
+---
+hide:
+  - navigation
+  - toc
+---
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+# <center> TiLearn </center>
 
-## Commands
+<small>Your Project Tagline</small>
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+<div class="buttons">
+  <a href="getting-started/" class="md-button md-button--primary">Get Started</a>
+  <a href="https://github.com/your/repo" class="md-button">GitHub</a>
+</div>
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+<section class="features">
+  <div class="feature">
+    <h2>Feature One</h2>
+    <p>Describe your first feature here.</p>
+  </div>
+  <div class="feature">
+    <h2>Feature Two</h2>
+    <p>Describe your second feature here.</p>
+  </div>
+  <div class="feature">
+    <h2>Feature Three</h2>
+    <p>Describe your third feature here.</p>
+  </div>
+</section>
