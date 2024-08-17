@@ -6,8 +6,6 @@ nav:
   - Getting started: start/index.md
 
 plugins:
-    - social:
-          enabled: !ENV [CI, false]
     - search: {}
     - encryptcontent:
         title_prefix: ''
