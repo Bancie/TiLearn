@@ -41,17 +41,17 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Switch to dark mode
-      primary: yellow
+      primary: indigo
       accent: yellow 
     - scheme: slate 
       toggle:
         icon: material/weather-night
         name: Switch to light mode    
-      primary: yellow
+      primary: indigo
       accent: yellow
   font:
     text: Open Sans
-  logo: tilearn.png
+  logo: tilearnyl.png
   favicon: tilearn.png
   icon:
     logo: logo
