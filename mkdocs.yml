@@ -6,6 +6,8 @@ nav:
   - Getting started: start/index.md
 
 plugins:
+    - social:
+          enabled: !ENV [CI, false]
     - search: {}
     - encryptcontent:
         title_prefix: ''
@@ -54,7 +56,7 @@ theme:
   logo: tilearn.png
   favicon: tilearn.png
   icon:
-    logo: tilearn2.png
+    logo: logo
     admonition:
       note: fontawesome/solid/note-sticky
       abstract: fontawesome/solid/book
