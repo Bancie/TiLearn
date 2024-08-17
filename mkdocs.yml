@@ -1,0 +1,113 @@
+site_name: TiLearn
+#site_url: https://s-roll.github.io/notebook.language/
+site_author: Bang Nguyen
+nav:
+  - Home: index.md
+
+plugins:
+    - search: {}
+    - encryptcontent:
+        title_prefix: ''
+        summary: 'Bạn cần có password để vào được trang này.'
+        placeholder: 'Nhập password'
+        decryption_failure_message: 'Try again!'
+        encryption_info_message: "Vui lòng nhập password vào bên dưới"
+        input_class: 'md-search__form md-search__input'
+        button_class: 'md-search__icon'
+
+
+theme:
+  name: material
+  features:
+     - toc.follow
+     - navigation.footer
+     - navigation.tabs
+     - navigation.tabs.sticky
+     - navigation.expand
+     - navigation.path
+     - navigation.indexes
+     - navigation.instant.preview
+     - navigation.sections
+     - navigation.top
+     - search.suggest
+     - search.highlight
+     - content.tabs.link
+     - content.code.annotation
+     - content.code.copy
+  language: en
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+      primary: yellow
+      accent: yellow 
+    - scheme: slate 
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode    
+      primary: yellow
+      accent: yellow
+  font:
+    text: Open Sans
+  logo: tilearn.png
+  favicon: tilearn.png
+  icon:
+    logo: logo
+    admonition:
+      note: fontawesome/solid/note-sticky
+      abstract: fontawesome/solid/book
+      info: fontawesome/solid/circle-info
+      tip: fontawesome/solid/bullhorn
+      success: fontawesome/solid/check
+      question: fontawesome/solid/circle-question
+      warning: fontawesome/solid/triangle-exclamation
+      failure: fontawesome/solid/bomb
+      danger: fontawesome/solid/skull
+      bug: fontawesome/solid/robot
+      example: fontawesome/solid/flask
+      quote: fontawesome/solid/quote-left
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  
+
+extra_javascript:
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - https://unpkg.com/katex@0/dist/katex.min.css
+  - stylesheets/extra.css
+
+copyright: |
+  &copy; 2024 <a href="https://web.facebook.com/ngchibangg"  target="_blank" rel="noopener">Bang Nguyen</a>
+
+extra:
+  #homepage: https://s-roll.github.io/notebook.language/
+  social:
+    - icon: fontawesome/brands/facebook
+      link: https://web.facebook.com/ngchibangg
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/bancie.007/
+    - icon: fontawesome/brands/github
+      link: https://github.com/Bancie
