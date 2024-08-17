@@ -53,7 +53,7 @@ theme:
       accent: yellow
   font:
     text: Open Sans
-  logo: tilearn.png
+  logo: layouts/tilearn2.png
   favicon: tilearn.png
   icon:
     logo: logo
