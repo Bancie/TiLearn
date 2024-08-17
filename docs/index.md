@@ -9,6 +9,10 @@ Welcome to our open-source project dedicated to time management and scheduling s
 
 Join us in creating a community where time management tools and effective scheduling practices are accessible to all.
 
+<center><a href="https://github.com/Bancie/TiLearn">
+    <button class="button-29" role="button"><p style="word-spacing: 5px;">:fontawesome-brands-github: GitHub</p></button>
+</a></center>
+
 ## Web mapping
 
 
