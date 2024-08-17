@@ -54,7 +54,7 @@ theme:
   logo: tilearn.png
   favicon: tilearn.png
   icon:
-    logo: logo
+    logo: tilearn2.png
     admonition:
       note: fontawesome/solid/note-sticky
       abstract: fontawesome/solid/book
