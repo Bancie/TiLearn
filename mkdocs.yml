@@ -50,7 +50,7 @@ theme:
       primary: indigo
       accent: yellow
   font:
-    text: Open Sans
+    text: Source Code Pro
   logo: tilearn2.png
   favicon: tilearn.png
   icon:
@@ -99,6 +99,7 @@ extra_javascript:
 extra_css:
   - https://unpkg.com/katex@0/dist/katex.min.css
   - stylesheets/extra.css
+  - css/extra.css
 
 copyright: |
   &copy; 2024 <a href="https://web.facebook.com/ngchibangg"  target="_blank" rel="noopener">Bancie Nguyen</a>

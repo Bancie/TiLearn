@@ -1,4 +1,4 @@
-/* CSS */
+/* Button - github */
 .button-29 {
   align-items: center;
   appearance: none;
@@ -11,23 +11,23 @@
   cursor: pointer;
   display: inline-flex;
   font-family: "JetBrains Mono",monospace;
-  height: 48px;
+  height: 60px;
   justify-content: center;
   line-height: 1;
   list-style: none;
   overflow: hidden;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 40px;
+  padding-right: 40px;
   position: relative;
   text-align: left;
   text-decoration: none;
-  transition: box-shadow .15s,transform .15s;
+  transition: box-shadow .5s,transform .5s;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
   white-space: nowrap;
   will-change: box-shadow,transform;
-  font-size: 18px;
+  font-size: 25px;
 }
 
 .button-29:focus {
@@ -42,4 +42,51 @@
 .button-29:active {
   box-shadow: #3c4fe0 0 3px 7px inset;
   transform: translateY(2px);
+}
+
+/* Font style */
+
+body {
+  font-family: 'M PLUS 1 Code', monospace;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'M PLUS 1 Code', monospace;
+  font-weight: bold; /* Use bold font weight for headings */
+}
+
+p, li, span, a {
+  font-family: 'M PLUS 1 Code', monospace;
+  font-weight: 400; /* Normal font weight for regular text */
+}
+
+/* Background */
+
+/* Light theme background */
+.homepage-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('background-light.png'); /* Light theme background */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.85;
+  z-index: -1;
+}
+
+/* Styles for the content on the homepage */
+.homepage-content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
