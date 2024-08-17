@@ -1,6 +1,6 @@
 site_name: TiLearn
-#site_url: https://s-roll.github.io/notebook.language/
-site_author: Bang Nguyen
+site_url: https://bancie.github.io/TiLearn/
+site_author: Bancie
 nav:
   - Home: index.md
 
@@ -8,10 +8,10 @@ plugins:
     - search: {}
     - encryptcontent:
         title_prefix: ''
-        summary: 'Bạn cần có password để vào được trang này.'
-        placeholder: 'Nhập password'
+        summary: 'A password is required to access this page.'
+        placeholder: 'Please enter your password.'
         decryption_failure_message: 'Try again!'
-        encryption_info_message: "Vui lòng nhập password vào bên dưới"
+        encryption_info_message: "Please enter your password below."
         input_class: 'md-search__form md-search__input'
         button_class: 'md-search__icon'
 
@@ -103,7 +103,7 @@ copyright: |
   &copy; 2024 <a href="https://web.facebook.com/ngchibangg"  target="_blank" rel="noopener">Bang Nguyen</a>
 
 extra:
-  #homepage: https://s-roll.github.io/notebook.language/
+  homepage: https://bancie.github.io/TiLearn/
   social:
     - icon: fontawesome/brands/facebook
       link: https://web.facebook.com/ngchibangg
