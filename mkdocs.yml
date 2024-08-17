@@ -3,6 +3,7 @@ site_url: https://bancie.github.io/TiLearn/
 site_author: Bancie
 nav:
   - Home: index.md
+  - Getting started: start/index.md
 
 plugins:
     - search: {}
@@ -100,7 +101,7 @@ extra_css:
   - stylesheets/extra.css
 
 copyright: |
-  &copy; 2024 <a href="https://web.facebook.com/ngchibangg"  target="_blank" rel="noopener">Bang Nguyen</a>
+  &copy; 2024 <a href="https://web.facebook.com/ngchibangg"  target="_blank" rel="noopener">Bancie Nguyen</a>
 
 extra:
   homepage: https://bancie.github.io/TiLearn/
