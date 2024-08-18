@@ -77,3 +77,44 @@ p, li, span, a {
   opacity: 1;
   z-index: -1;
 }
+
+ol.circle-list {
+  padding-left: 0px; /* Adjust padding for left alignment */
+  list-style-type: none; /* Remove default numbering */
+  counter-reset: list-counter; /* Initialize counter */
+}
+
+ol.circle-list li { 
+  color: #4F4F4F; 
+  padding-left: 60px; /* Adjust padding to align text with circles */
+  position: relative;
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 20px; /* Add some space between list items */
+  counter-increment: list-counter; /* Increment counter */
+}
+
+ol.circle-list li::before {
+  content: counter(list-counter);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4050b5, #56B4D3); /* Gradient color */
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff; /* Text color inside the circle */
+}
+
+ol.circle-list.alternating-colors li:nth-child(odd)::before { 
+  background: linear-gradient(135deg, #0BAD02, #56B4D3); /* Greenish gradient for odd items */
+}
+
+ol.circle-list.alternating-colors li:nth-child(even)::before { 
+  background: linear-gradient(135deg, #f06, #2378D5); /* Reddish gradient for even items */
+}

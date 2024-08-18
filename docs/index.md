@@ -22,4 +22,17 @@ hide:
   <!--- <h2>Web mapping</h2> --->
   <p><em>For any questions, suggestions, or collaborations, feel free to reach out to me. I'm excited to connect with fellow enthusiasts and contributors!</em></p>
   
+  <h1><strong>Web mapping</strong></h1>
+
+<ol class="circle-list">
+  <li><strong><a href="start/">Getting started</a></strong>
+  </li>
+  <br>
+  <li><strong><a href="al/">Algorithms</a></strong>
+    <ul>
+      ...
+    </ul>
+  </li>
+</ol>
+
 </html>

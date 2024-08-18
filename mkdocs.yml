@@ -5,6 +5,8 @@ nav:
   - Home: index.md
   - Getting started: start/index.md
   #- test: test.md
+  - Algorithms: al/index.md
+  - About: about.md
 
 plugins:
     - search: {}
