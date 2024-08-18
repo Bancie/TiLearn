@@ -20,8 +20,7 @@ hide:
   </a></center>
   <br/>
   <!--- <h2>Web mapping</h2> --->
-  <p><em>For any questions, suggestions, or collaborations, feel free to reach out to me. I'm excited to connect with fellow enthusiasts and contributors!</em></p>
-  
+  <br/>
   <h1><strong>Web mapping</strong></h1>
 
 <ol class="circle-list">
@@ -34,5 +33,6 @@ hide:
     </ul>
   </li>
 </ol>
-
+<br/>
+<p><em>For any questions, suggestions, or collaborations, feel free to reach out to me. I'm excited to connect with fellow enthusiasts and contributors!</em></p>
 </html>
