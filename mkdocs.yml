@@ -4,6 +4,7 @@ site_author: Bancie
 nav:
   - Home: index.md
   - Getting started: start/index.md
+  - test: test.md
 
 plugins:
     - search: {}
