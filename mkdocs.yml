@@ -40,18 +40,18 @@ theme:
      - content.code.copy
   language: en
   palette:
-    - scheme: slate
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to dark mode
-      primary: indigo
-      accent: yellow 
     - scheme: default
       toggle:
         icon: material/weather-night
         name: Switch to light mode    
       primary: indigo
       accent: yellow
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+      primary: indigo
+      accent: yellow 
   font:
     text: Source Code Pro
   logo: tilearn2.png
