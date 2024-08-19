@@ -40,13 +40,13 @@ theme:
      - content.code.copy
   language: en
   palette:
-    - scheme: default
+    - scheme: slate
       toggle:
         icon: material/weather-sunny
         name: Switch to dark mode
       primary: indigo
       accent: yellow 
-    - scheme: slate 
+    - scheme: default
       toggle:
         icon: material/weather-night
         name: Switch to light mode    
