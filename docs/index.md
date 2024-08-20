@@ -18,25 +18,6 @@ hide:
   <center><a href="https://github.com/Bancie/TiLearn">
       <button class="button-29" role="button"><p style="word-spacing: 5px;"><img src="stylesheets/github-mark.png" alt="GitHub Logo" style="width: 25px; height: 25px; margin-right: 10px;"><strong>GitHub</strong></p></button>
   </a></center>
-<<<<<<< HEAD
-  <br/>
-  <!--- <h2>Web mapping</h2> --->
-  <br/>
-  <h1><strong>Web mapping</strong></h1>
-
-<ol class="circle-list">
-  <li><strong><a href="start/">Getting started</a></strong>
-  </li>
-  <br>
-  <li><strong><a href="al/">Algorithms</a></strong>
-    <ul>
-      ...
-    </ul>
-  </li>
-</ol>
-<br/>
-<p><em>For any questions, suggestions, or collaborations, feel free to reach out to me. I'm excited to connect with fellow enthusiasts and contributors!</em></p>
-=======
   
   <div class="line-2"></div>
   
@@ -68,5 +49,4 @@ hide:
   
   <p style="text-align: center;"><em>For any questions, suggestions, or collaborations, feel free to reach out to me. <br> I'm excited to connect with fellow enthusiasts and contributors!</em></p>
 
->>>>>>> bancie-features/v1.2
 </html>
