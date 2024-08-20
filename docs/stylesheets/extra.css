@@ -55,6 +55,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto Mono', monospace;
   font-weight: bold; /* Use bold font weight for headings */
+  opacity: 1;
 }
 
 p, li, span, a {
@@ -74,9 +75,11 @@ p, li, span, a {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 1;
+  opacity: 0.5;
   z-index: -1;
 }
+
+/* Homepage Web mapping */
 
 ol.circle-list {
   padding-left: 0px; /* Adjust padding for left alignment */
@@ -89,7 +92,7 @@ ol.circle-list li {
   padding-left: 60px; /* Adjust padding to align text with circles */
   position: relative;
   font-size: 18px;
-  line-height: 30px;
+  line-height: 20px;
   margin-bottom: 20px; /* Add some space between list items */
   counter-increment: list-counter; /* Increment counter */
 }
@@ -111,10 +114,34 @@ ol.circle-list li::before {
   color: #fff; /* Text color inside the circle */
 }
 
+ol.circle-list li .list-item-content {
+  margin-top: 5px; /* Add margin if you want some space between the title and content */
+  word-wrap: break-word; /* Ensure long words break into the next line */
+  padding-right: 20px; /* Add padding to avoid overflow on the right side */
+}
+
 ol.circle-list.alternating-colors li:nth-child(odd)::before { 
   background: linear-gradient(135deg, #0BAD02, #56B4D3); /* Greenish gradient for odd items */
 }
 
 ol.circle-list.alternating-colors li:nth-child(even)::before { 
   background: linear-gradient(135deg, #f06, #2378D5); /* Reddish gradient for even items */
+}
+
+/* Line separator */
+
+.line {
+  border: none; /* Remove any border if you're using <hr> */
+  height: 1px; /* Adjust the thickness of the line */
+  background: linear-gradient(to right, #4050b5, #448ba2); /* Blue to Cyan gradient */
+  margin: 60px auto; /* Space around the separator */
+  width: 30%; /* Full width */
+}
+
+.line-2 {
+  border: none; /* Remove any border if you're using <hr> */
+  height: 0px; /* Adjust the thickness of the line */
+  background: linear-gradient(to right, #4050b5, #448ba2); /* Blue to Cyan gradient */
+  margin: 45px auto; /* Space around the separator */
+  width: 100%; /* Full width */
 }
