@@ -4,8 +4,9 @@ site_author: Bancie
 nav:
   - Home: index.md
   - Getting started: start/index.md
-  #- test: test.md
-  - Algorithms: al/index.md
+  - How it works: class/index.md
+  - Building from source: run/index.md
+  - API reference: api/index.md
   - About: about.md
 
 plugins:
