@@ -30,17 +30,4 @@ As part of this open-source project, contributors are encouraged to:
 - **Integration and Testing**: Integrate developed models into real-world scheduling systems and conduct extensive testing to validate their effectiveness.
 - **Documentation and Support**: Maintain comprehensive documentation of the project, providing clear guidelines for usage and contribution. Assist users and other contributors through forums and issue tracking.
 
-## How to Contribute
-
-We welcome contributions from developers, data scientists, and researchers. To get started:
-
-- Fork the repository and clone it to your local machine.
-- Create a new branch for your feature or bug fix.
-- Commit your changes and push them to your branch.
-- Submit a pull request with a detailed description of your changes.
-
-Together, we can harness the power of machine learning and deep learning to transform machine scheduling and time management, driving greater efficiency and productivity across industries.
-
-Feel free to modify and expand upon this description to fit your project’s specific needs and vision.
-
 > ✨ For inquiries, please contact me at [21510802132@uah.edu.vn](https://mail.google.com/mail)
