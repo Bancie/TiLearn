@@ -30,7 +30,7 @@ hide:
     </li>
     <br>
     <li>
-      <strong><a href="class/">How it works</a></strong><br>
+      <strong><a href="how/">How it works</a></strong><br>
       <p class="list-item-content">This document categorizes all the problems, detailing their foundational concepts, relevant materials, and solutions.</p>
     </li>
     <br>
