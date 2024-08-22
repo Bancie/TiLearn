@@ -5,7 +5,7 @@ site_author: Bancie
 nav:
   - Home: index.md
   - Getting started: start/index.md
-  - How it works:
+  - Tutorials:
     - how/index.md
     - Single Machine:
       - Maximum Lateness:
