@@ -23,10 +23,6 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
         "Programming Language :: Python :: 3.12",
-        "Topic :: Office/Business :: Scheduling",
-        "Topic :: Office/Business :: Time Tracking",
-        "Topic :: Office/Business :: Machine Scheduling",
-        "Topic :: Office/Business :: Time Management",
         "Topic :: Software Development :: Libraries :: Python Modules"
     ],
     # install_requires=["bson >= 0.5.10"],
