@@ -1,4 +1,8 @@
+<<<<<<< HEAD:.venv/bin/rst2xml
 #!/Users/chibangnguyen/Documents/TiLearn/.venv/bin/python3
+=======
+#!/Users/chibangnguyen/Documents/TiLearn/venv/bin/python3.12
+>>>>>>> parent of cb5fd21 (new upgraded):venv/bin/rst2xml
 # -*- coding: utf-8 -*-
 import re
 import sys
