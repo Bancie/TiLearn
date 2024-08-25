@@ -1,14 +1,14 @@
 from setuptools import find_packages, setup
 
-with open("tilearn/README.md", "r") as f:
+with open("app/README.md", "r") as f:
     long_description = f.read()
 
 setup(
     name="TiLearn",
     version="0.0.10",
     description="An open-source project for time management and scheduling solutions.",
-    package_dir={"": "tilearn"},
-    packages=find_packages(where="tilearn"),
+    package_dir={"": "app"},
+    packages=find_packages(where="app"),
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/Bancie/TiLearn",
