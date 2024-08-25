@@ -33,9 +33,11 @@ def list_gen(rows, cols):
     return a
 
 
+"""
 x = [[1, 2, 3],
      [2, 4, 8], 
      [1, 2, 3],
      [2, 4, 8]]
 
 print(list_gen(5, 3))
+"""
