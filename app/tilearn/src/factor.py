@@ -1,4 +1,5 @@
 import tilearn as tl
+import process as pc
 
 x = [[1, 2, 3, 6, 3],[2, 4, 8, 4, 2],[2, 4, 8, 6, 7],[2, 4, 8, 4, 2],[2, 4, 8, 4, 2]]
 
@@ -9,7 +10,7 @@ def calculate(a, plan_time):
     return list
 
 def factor_data(a, plan_time):
-    result = tl.process_data(a, plan_time)
+    result = pc.process_data(a, plan_time)
     for i in range(tl.job_amount(a)):
         result[i].extend(calculate(a, plan_time)[i])
     return result
