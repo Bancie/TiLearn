@@ -9,5 +9,4 @@ app/TiLearn.egg-info/top_level.txt
 app/tilearn/__init__.py
 app/tilearn/src/__init__.py
 app/tilearn/src/basis.py
-app/tilearn/src/factor.py
 tests/test1.py
