@@ -1,7 +1,3 @@
-var = 5
-maxm, maxn = 1000, 1000
-# a = [[0 for i in range(maxm)] for j in range(maxn)]
-
 def job_amount(a):
     return len(a)
 
@@ -27,8 +23,3 @@ def p_factor_prec_tu(i, a, p):
 
 def p_factor_prec(i, a, job_amount, job_scale, p, sum):
     return p_factor_prec_tu(i,a,p)/sum
-
-"""x = [[1, 2, 3],
-     [2, 4, 8], 
-     [1, 2, 3],
-     [2, 4, 8]]"""
