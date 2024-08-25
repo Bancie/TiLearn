@@ -10,5 +10,4 @@ app/tilearn/__init__.py
 app/tilearn/src/__init__.py
 app/tilearn/src/basis.py
 app/tilearn/src/factor.py
-app/tilearn/src/process.py
 tests/test1.py

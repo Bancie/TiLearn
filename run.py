@@ -6,4 +6,6 @@ from tilearn.src.basis import (
     p_factor_prec_tu,
     p_factor_prec,
     list_gen,
+    calculate,
+    process_data,
 )

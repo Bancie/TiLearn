@@ -2,6 +2,8 @@ var = 5
 maxm, maxn = 1000, 1000
 # a = [[0 for i in range(maxm)] for j in range(maxn)]
 
+x = [[1, 2, 3, 6, 3],[2, 4, 8, 4, 2],[2, 4, 8, 6, 7],[2, 4, 8, 4, 2],[2, 4, 8, 4, 2]]
+
 def job_amount(a):
     return len(a)
 
@@ -32,7 +34,7 @@ def list_gen(rows, cols):
     a = [[0 for j in range(cols)] for i in range(rows)]
     return a
 
-def calculate(a, plan_time):
+def calculate_process(a, plan_time):
     list = list_gen(job_amount(a), 1)
     for i in range(job_amount(a)):
         list[i][0] = process(i, a, plan_time,jobscale(a, job_amount(a)))
@@ -40,14 +42,22 @@ def calculate(a, plan_time):
 
 def process_data(a, plan_time):
     for i in range(job_amount(a)):
-        a[i].extend(calculate(a, plan_time)[i])
+        a[i].extend(calculate_process(a, plan_time)[i])
     return a
 
-x = [[1, 2, 3],
-     [2, 4, 8], 
-     [1, 2, 3],
-     [2, 4, 8]]
+def calculate_factor(a, plan_time):
+    list = list_gen(job_amount(a), 1)
+    for i in range(job_amount(a)):
+        list[i][0] = p_factor_nonprec(i, a,process(i, a, plan_time,jobscale(a, job_amount(a))))
+    return list
 
-print(list_gen(5, 3))
-print(job_amount(x))
-print(process_data(x, 3))
+def factor_data(a, plan_time):
+    result = process_data(a, plan_time)
+    for i in range(job_amount(a)):
+        result[i].extend(calculate_factor(a, plan_time)[i])
+    return result
+
+def show_mytime(a, plan_time):
+    a = factor_data(a, plan_time)
+    a.sort(key=lambda x: x[6], reverse=True)
+    return a

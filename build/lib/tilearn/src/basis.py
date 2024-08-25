@@ -42,12 +42,3 @@ def process_data(a, plan_time):
     for i in range(job_amount(a)):
         a[i].extend(calculate(a, plan_time)[i])
     return a
-
-x = [[1, 2, 3],
-     [2, 4, 8], 
-     [1, 2, 3],
-     [2, 4, 8]]
-
-print(list_gen(5, 3))
-print(job_amount(x))
-print(process_data(x, 3))
