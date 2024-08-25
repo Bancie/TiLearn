@@ -1,5 +1,4 @@
-import tilearn as tl
-import process as pc
+import tilearn
 
 x = [[1, 2, 3, 6, 3],[2, 4, 8, 4, 2],[2, 4, 8, 6, 7],[2, 4, 8, 4, 2],[2, 4, 8, 4, 2]]
 
