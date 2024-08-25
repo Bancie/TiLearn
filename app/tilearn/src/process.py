@@ -1,7 +1,7 @@
 import tilearn as tl
 
-"""
 x = [[1, 2, 3, 6, 3],[2, 4, 8, 4, 2],[2, 4, 8, 6, 7],[2, 4, 8, 4, 2],[2, 4, 8, 4, 2]]
+"""
 var = 5
 maxm, maxn = 1000, 1000
 # a = [[0 for i in range(5)] for j in range(5)]
@@ -17,3 +17,5 @@ def process_data(a, plan_time):
     for i in range(tl.job_amount(a)):
         a[i].extend(calculate(a, plan_time)[i])
     return a
+
+print(process_data(x, 3))
