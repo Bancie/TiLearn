@@ -32,12 +32,22 @@ def list_gen(rows, cols):
     a = [[0 for j in range(cols)] for i in range(rows)]
     return a
 
+def calculate(a, plan_time):
+    list = list_gen(job_amount(a), 1)
+    for i in range(job_amount(a)):
+        list[i][0] = process(i, a, plan_time,jobscale(a, job_amount(a)))
+    return list
 
-"""
+def process_data(a, plan_time):
+    for i in range(job_amount(a)):
+        a[i].extend(calculate(a, plan_time)[i])
+    return a
+
 x = [[1, 2, 3],
      [2, 4, 8], 
      [1, 2, 3],
      [2, 4, 8]]
 
 print(list_gen(5, 3))
-"""
+print(job_amount(x))
+print(process_data(x, 3))

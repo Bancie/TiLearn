@@ -1,4 +1,4 @@
-import tilearn as tl
+import tilearn
 
 x = [[1, 2, 3, 6, 3],[2, 4, 8, 4, 2],[2, 4, 8, 6, 7],[2, 4, 8, 4, 2],[2, 4, 8, 4, 2]]
 """
@@ -18,4 +18,4 @@ def process_data(a, plan_time):
         a[i].extend(calculate(a, plan_time)[i])
     return a
 
-print(process_data(x, 20))
+print(process_data(x, 3))
