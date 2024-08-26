@@ -30,4 +30,4 @@ As part of this open-source project, contributors are encouraged to:
 - **Integration and Testing**: Integrate developed models into real-world scheduling systems and conduct extensive testing to validate their effectiveness.
 - **Documentation and Support**: Maintain comprehensive documentation of the project, providing clear guidelines for usage and contribution. Assist users and other contributors through forums and issue tracking.
 
-> ✨ For inquiries, please contact me at [21510802132@uah.edu.vn](https://mail.google.com/mail)
+> ✨ For inquiries, please contact me at [chibangn1@gmail.com](https://mail.google.com/mail)
