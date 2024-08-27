@@ -34,11 +34,11 @@ hide:
       <p class="list-item-content">This document categorizes all the problems, detailing their foundational concepts, relevant materials, and solutions.</p>
     </li>
     <br>
-    <li>
+    <!-- <li>
       <strong><a href="run/">Building from source</a></strong><br>
       <p class="list-item-content">This document offers a concise guide to running the code from the source, explaining its core functionality and how it can be applied to solve various problems.</p>
     </li>
-    <br>
+    <br> -->
     <li>
       <strong><a href="api/">API reference</a></strong><br>
       <p class="list-item-content">This section details API endpoints, usage, parameters, and responses for effective integration.</p>
