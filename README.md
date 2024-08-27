@@ -34,4 +34,41 @@ As part of this open-source project, contributors are encouraged to:
 - **Integration and Testing**: Integrate developed models into real-world scheduling systems and conduct extensive testing to validate their effectiveness.
 - **Documentation and Support**: Maintain comprehensive documentation of the project, providing clear guidelines for usage and contribution. Assist users and other contributors through forums and issue tracking.
 
+# Installation
+
+To install TiLearn using PyPI, run the following command:
+
+```
+pip install tilearn
+```
+
+Then, in the TiLearn repository that you cloned, simply run:
+
+```
+pip install .
+```
+
+
+# Documentation and Usage
+For in-depth instructions on installation and building the documentation, see the [TiLearn Documentation Guide and Tutorial](https://bancie.github.io/TiLearn/)
+
+Link: https://bancie.github.io/TiLearn/
+
+# Citation
+
+A BibTeX entry for LaTeX users is
+
+```latex
+@article{
+ title = {TiLearn: time management and scheduling solutions by Python},
+ author = {Chi Bang Nguyen},
+ year = 2024,
+ month = Aug,
+ keywords = {Python, Machine Scheduling, Time Management, Operations research, Optimization Mathematics, Machine Learning},
+ abstract = {
+            TiLearn basically a project dedicated to time management and scheduling solutions. This platform is designed to empower individuals and teams to optimize their daily routines, enhance productivity, and achieve their goals more efficiently. By providing a range of tools and resources, we aim to foster a community-driven approach to managing time and tasks effectively. Whether you're a student, a professional, or simply looking to make the most of your day, our project offers innovative strategies and customizable schedules to help you stay on track. Join us in building a future where time management is accessible to everyone.
+         },
+}
+```
+
 > For inquiries, please contact me at [chibangn1@gmail.com](https://mail.google.com/mail)
