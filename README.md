@@ -1,7 +1,7 @@
-[![homepage](https://img.shields.io/badge/powered%20by-TiLearn-%237072eb?labelColor=%23555555)](https://bancie.github.io/TiLearn/)
-[![PyPI](https://img.shields.io/badge/pypi%20package-0.0.10-%23177bbb?logo=pypi&labelColor=white
+[![homepage](https://img.shields.io/badge/powered%20by-TiLearn-%237072eb?style=for-the-badge&labelColor=%23555555)](https://bancie.github.io/TiLearn/)
+[![PyPI](https://img.shields.io/badge/pypi%20package-0.0.10-%23177bbb?style=for-the-badge&logo=pypi&labelColor=white
 )](https://pypi.org/project/TiLearn/0.0.10/)
-[![author](https://img.shields.io/badge/author-Bancie-%23177bbb?logo=gravatar&labelColor=white)](https://bancie.link/)
+[![author](https://img.shields.io/badge/author-Bancie-%23177bbb?style=for-the-badge&logo=gravatar&labelColor=white)](https://bancie.link/)
 
 <a href="https://bancie.github.io/TiLearn/" target="_blank">
   <picture>
