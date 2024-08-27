@@ -3,4 +3,5 @@ hide:
   - navigation
   - toc
 ---
-*(In development process...)*
+
+- The Total (Weighted) Completion Time $\big(\sum w_j C_j\big)$
