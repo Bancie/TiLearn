@@ -11,9 +11,10 @@
 </a>
 <h3></h3>
 
-[![homepage](https://img.shields.io/badge/powered%20by-TiLearn-%237072eb?labelColor=%23595959)](https://bancie.github.io/TiLearn/)
-[![PyPI](https://img.shields.io/badge/pypi%20package-0.0.10-%230173b7?logo=pypi&labelColor=white)](https://pypi.org/project/TiLearn/0.0.10/)
-[![author](https://img.shields.io/badge/author-Bancie-%23fbec53?labelColor=%23565656)](https://github.com/Bancie)
+[![homepage](https://img.shields.io/badge/powered%20by-TiLearn-%237072eb?style=for-the-badge&labelColor=%23555555)](https://bancie.github.io/TiLearn/)
+[![PyPI](https://img.shields.io/badge/pypi%20package-0.0.10-%231e75b3?style=for-the-badge&logo=pypi&labelColor=white
+)](https://pypi.org/project/TiLearn/0.0.10/)
+[![author](https://img.shields.io/badge/author-Bancie-%23177bbb?style=for-the-badge&logo=gravatar&labelColor=white)](https://bancie.link/)
 
 Welcome to our open-source project focused on applying **Machine Learning (ML)** and **Deep Learning (DL)** techniques to **Machine Scheduling** and **Time Management**, often referred to as **Optimal Processing**. Our goal is to revolutionize the way tasks and processes are managed in various projects by leveraging advanced computational methods to optimize efficiency and productivity.
 
