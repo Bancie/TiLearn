@@ -1,3 +1,4 @@
+
 <a href="https://web.facebook.com/ngchibangg?__cft__[0]=AZUZx_Pe8u4-tiSh77gJQ1HR1YJ7SNb7CqCvr0Hkf8oO69J2fwebFyWGl9r68Kg3WmgWsUa-RCwdT2HzRTdCC8WW45Gtx_wO4AjBJKgfcLuIG94XDOYjlqq7SbS4q4D-KTjM8_CR_GQ5ZkeG7cliEFmlX6VyeDFxH5Jo8ubWPIg60g&__tn__=-]C%2CP-R" target="_blank">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://github.com/Bancie/Optimization-Oracle/assets/144613141/e36031e2-c050-4f56-8c53-c4d851772af3" style="max-width: 100%; width: 400px; margin-bottom: 20px">
@@ -11,6 +12,11 @@
   </picture>
 </a>
 <h3></h3>
+
+[![powered by NumFOCUS](https://img.shields.io/badge/powered%20by-TiLearn-%237072eb?logoSize=auto&labelColor=%23fbec53
+)](https://bancie.github.io/TiLearn/)
+[![PyPI Downloads](https://img.shields.io/badge/pypi%20package-0.0.10-%23595959?logo=pypi&labelColor=white
+)](https://pypi.org/project/TiLearn/0.0.10/)
 
 Welcome to our open-source project focused on applying **Machine Learning (ML)** and **Deep Learning (DL)** techniques to **Machine Scheduling** and **Time Management**, often referred to as **Optimal Processing**. Our goal is to revolutionize the way tasks and processes are managed in various projects by leveraging advanced computational methods to optimize efficiency and productivity.
 
