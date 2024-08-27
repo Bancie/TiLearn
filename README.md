@@ -12,8 +12,7 @@
 <h3></h3>
 
 [![homepage](https://img.shields.io/badge/powered%20by-TiLearn-%237072eb?style=for-the-badge&labelColor=%23555555)](https://bancie.github.io/TiLearn/)
-[![PyPI](https://img.shields.io/badge/pypi%20package-0.0.10-%231e75b3?style=for-the-badge&logo=pypi&labelColor=white
-)](https://pypi.org/project/TiLearn/0.0.10/)
+[![PyPI](https://img.shields.io/badge/pypi%20package-0.0.10-%231e75b3?style=for-the-badge&logo=pypi&labelColor=%23555555)](https://pypi.org/project/TiLearn/0.0.10/)
 [![author](https://img.shields.io/badge/author-Bancie-%23177bbb?style=for-the-badge&logo=gravatar&labelColor=white)](https://bancie.link/)
 
 Welcome to our open-source project focused on applying **Machine Learning (ML)** and **Deep Learning (DL)** techniques to **Machine Scheduling** and **Time Management**, often referred to as **Optimal Processing**. Our goal is to revolutionize the way tasks and processes are managed in various projects by leveraging advanced computational methods to optimize efficiency and productivity.
@@ -34,4 +33,4 @@ As part of this open-source project, contributors are encouraged to:
 - **Integration and Testing**: Integrate developed models into real-world scheduling systems and conduct extensive testing to validate their effectiveness.
 - **Documentation and Support**: Maintain comprehensive documentation of the project, providing clear guidelines for usage and contribution. Assist users and other contributors through forums and issue tracking.
 
-> ✨ For inquiries, please contact me at [chibangn1@gmail.com](https://mail.google.com/mail)
+> For inquiries, please contact me at [chibangn1@gmail.com](https://mail.google.com/mail)
