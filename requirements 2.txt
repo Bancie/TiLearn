@@ -1,0 +1,6 @@
+wheel
+setuptools
+twine
+mkdocs
+mkdocs-material
+mkdocs-encryptcontent-plugin
