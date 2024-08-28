@@ -1,4 +1,4 @@
-# How it works
+# User Guide
 - The Maximum Lateness $\big(L_{\max}\big)$
     - Independence jobs $\big(1 \: | \:  \: | \: L_{\max}\big)$
     - Release jobs $\big(1 \: | \: r_j \: | \: L_{\max}\big)$

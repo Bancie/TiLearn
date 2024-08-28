@@ -5,18 +5,20 @@ site_author: Bancie
 nav:
   - Home: index.md
   - Getting started: getting-started/index.md
-  - Tutorials:
-    - tutorial/index.md
+  - User Guide:
+    - user-guide/index.md
     - Single Machine:
       - Maximum Lateness:
-        - tutorial/single-machine/lateness/index.md
-        - Release jobs: tutorial/single-machine/lateness/release.md
+        - user-guide/single-machine/lateness/index.md
+        - Release jobs: user-guide/single-machine/lateness/release.md
       - Total Completion Time:
-        - tutorial/single-machine/completion/index.md
-        - Sequence jobs: tutorial/single-machine/completion/sequence.md
-        - Release jobs: tutorial/single-machine/completion/release.md
+        - user-guide/single-machine/completion/index.md
+        - Sequence jobs: user-guide/single-machine/completion/sequence.md
+        - Release jobs: user-guide/single-machine/completion/release.md
   #- Building from source: run/index.md
-  - API reference: api-reference/index.md
+  - API reference:
+    - api-reference/index.md
+    - tilearn.show_mytime: api-reference/in-job/i-job.md
   - About: about.md
 
 plugins:
