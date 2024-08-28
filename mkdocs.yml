@@ -20,6 +20,7 @@ nav:
   - About: about.md
 
 plugins:
+    - glightbox
     - search: {}
     - encryptcontent:
         title_prefix: ''
@@ -84,6 +85,7 @@ theme:
       quote: fontawesome/solid/quote-left
 
 markdown_extensions:
+  - md_in_html
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
