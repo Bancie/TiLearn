@@ -4,22 +4,25 @@ site_author: Bancie
 
 nav:
   - Home: index.md
-  - Getting started: start/index.md
-  - Tutorials:
-    - how/index.md
+  - Getting started: getting-started/index.md
+  - User Guide:
+    - user-guide/index.md
     - Single Machine:
       - Maximum Lateness:
-        - how/single-machine/lateness/index.md
-        - Release jobs: how/single-machine/lateness/release.md
+        - user-guide/single-machine/lateness/index.md
+        - Release jobs: user-guide/single-machine/lateness/release.md
       - Total Completion Time:
-        - how/single-machine/completion/index.md
-        - Sequence jobs: how/single-machine/completion/sequence.md
-        - Release jobs: how/single-machine/completion/release.md
-  - Building from source: run/index.md
-  - API reference: api/index.md
+        - user-guide/single-machine/completion/index.md
+        - Sequence jobs: user-guide/single-machine/completion/sequence.md
+        - Release jobs: user-guide/single-machine/completion/release.md
+  #- Building from source: run/index.md
+  - API reference:
+    - api-reference/index.md
+    - tilearn.show_mytime: api-reference/in-job/i-job.md
   - About: about.md
 
 plugins:
+    - glightbox
     - search: {}
     - encryptcontent:
         title_prefix: ''
@@ -84,6 +87,7 @@ theme:
       quote: fontawesome/solid/quote-left
 
 markdown_extensions:
+  - md_in_html
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite

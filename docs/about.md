@@ -3,4 +3,4 @@ hide:
   - navigation
   - toc
 ---
-# About us
+# About me
