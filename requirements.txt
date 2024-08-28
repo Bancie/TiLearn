@@ -5,3 +5,4 @@ mkdocs
 mkdocs-material
 mkdocs-encryptcontent-plugin
 mkdocs-glightbox
+"mkdocs-material[imaging]"

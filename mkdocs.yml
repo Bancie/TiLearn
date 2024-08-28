@@ -22,6 +22,7 @@ nav:
   - About: about.md
 
 plugins:
+    - social:
     - glightbox
     - search: {}
     - encryptcontent:
