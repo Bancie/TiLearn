@@ -1,7 +1,3 @@
----
-hide:
-  - navigation
----
 # tilearn.show_mytime
 
 !!! info

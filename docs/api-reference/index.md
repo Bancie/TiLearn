@@ -1,6 +1,5 @@
 ---
 hide:
-  - navigation
   - toc
 ---
 # TiLearn reference
@@ -15,7 +14,7 @@ By exploring this manual, users can gain a clear understanding of how to utilize
 
 ## Python API
 - [The Total (Weighted) Completion Time](#python-api)
-    - [Independence jobs (``show_mytime``)](in-job/i-job.md#tilearnshow_mytimelist-due-date)
+    - [Independence jobs (``show_mytime``)](in-job/i-job.md)
   
 ## Acknowledgements
 
