@@ -25,12 +25,12 @@ hide:
 
   <ol class="circle-list">
     <li>
-      <strong><a href="start/">Getting started</a></strong><br>
+      <strong><a href="getting-started/">Getting started</a></strong><br>
       <p class="list-item-content">This document provides an overview of project content and the generalization of the various problems it addresses.</p>
     </li>
     <br>
     <li>
-      <strong><a href="how/">Tutorials</a></strong><br>
+      <strong><a href="tutorial/">Tutorials</a></strong><br>
       <p class="list-item-content">This document categorizes all the problems, detailing their foundational concepts, relevant materials, and solutions.</p>
     </li>
     <br>
@@ -40,7 +40,7 @@ hide:
     </li>
     <br> -->
     <li>
-      <strong><a href="api/">API reference</a></strong><br>
+      <strong><a href="api-reference/">API reference</a></strong><br>
       <p class="list-item-content">This section details API endpoints, usage, parameters, and responses for effective integration.</p>
     </li>
   </ol>

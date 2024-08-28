@@ -1,4 +1,4 @@
-# The Total Weighted Completion Time $\big(\sum w_j C_j\big)$
+# The Total Weighted Completion Time $\big(\sum w_j C_j\big)$ [(``show_mytime``)](../../../api-reference/i-job.md)
 ## What is the main goal?
 
 - Another optimal approach in single machine scheduling is the **Shortest Process Time (SPT)** algorithm and the **Weighted Shortest Process Time (WSPT)** algorithm.
