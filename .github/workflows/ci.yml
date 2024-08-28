@@ -23,5 +23,6 @@ jobs:
           path: .cache
       - run: pip install mkdocs-material
       - run: pip install pillow cairosvg
-      - run: pip install mkdocs-encryptcontent-plugin  # Install plugin from PyPI
+      - run: pip install mkdocs-encryptcontent-plugin
+      - run: pip install mkdocs-glightbox
       - run: mkdocs gh-deploy --force
