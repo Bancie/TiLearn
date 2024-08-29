@@ -41,7 +41,7 @@ Link: https://bancie.github.io/TiLearn/
 
 - **Optimized Scheduling**: Develop algorithms that can create optimal schedules for machines, minimizing downtime and maximizing throughput.
 - **Predictive Maintenance**: Implement predictive models to foresee and mitigate potential machine failures, ensuring continuous and efficient operations.
-- **Time Management**: Utilize deep learning models to enhance time management practices, helping businesses allocate resources more effectively and meet deadlines.
+- **Time Management**: Utilize deep learning models to enhance time management practices, helping businesses or individuals and team allocate resources more effectively and meet deadlines.
 - **Scalability**: Design solutions that are scalable and adaptable to different industrial environments and varying sizes of operations.
 
 # Responsibilities
