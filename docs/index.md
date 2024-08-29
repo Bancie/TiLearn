@@ -48,6 +48,10 @@ hide:
                       </strong>
                   </button>
               </a>
+              <br/>
+              <a href="news/">
+              <p><em>(TiLearn 0.0.10 released!)</em></p>
+              </a>
               </center>
           </div>
       </div>

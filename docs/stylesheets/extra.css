@@ -199,7 +199,7 @@ ol.circle-list.alternating-colors li:nth-child(even)::before {
   border: none; /* Remove any border if you're using <hr> */
   height: 0px; /* Adjust the thickness of the line */
   background: linear-gradient(to right, #4050b5, #448ba2); /* Blue to Cyan gradient */
-  margin: 80px auto; /* Space around the separator */
+  margin: 20px auto; /* Space around the separator */
   width: 100%; /* Full width */
 }
 
