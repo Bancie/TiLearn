@@ -1,3 +1,8 @@
+---
+title: tilearn.show_mytime
+social:
+  cards_layout: default
+---
 # tilearn.show_mytime
 
 !!! info

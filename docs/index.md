@@ -1,5 +1,6 @@
 ---
-title: Home
+title: TiLearn homepage
+description: An open-source project for time management and scheduling solutions
 hide:
   - navigation
   - toc

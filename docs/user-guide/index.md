@@ -1,3 +1,7 @@
+---
+title: User Guide
+description: This document categorizes all the problems, detailing their foundational concepts, relevant materials, and solutions
+---
 # User Guide
 - The Maximum Lateness $\big(L_{\max}\big)$
     - Independence jobs $\big(1 \: | \:  \: | \: L_{\max}\big)$

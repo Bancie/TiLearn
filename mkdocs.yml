@@ -19,6 +19,7 @@ nav:
   - API reference:
     - api-reference/index.md
     - tilearn.show_mytime: api-reference/in-job/i-job.md
+  - News: news/index.md
   - About: about.md
 
 plugins:

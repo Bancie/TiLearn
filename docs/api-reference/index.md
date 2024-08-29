@@ -1,4 +1,6 @@
 ---
+title: API reference
+description: This section details API endpoints, usage, parameters, and responses for effective integration
 hide:
   - toc
 ---
