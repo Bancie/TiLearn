@@ -37,23 +37,21 @@ For in-depth instructions on installation and building the documentation, see th
 
 Link: https://bancie.github.io/TiLearn/
 
-# Citation
+# Project Goals
 
-A BibTeX entry for LaTeX users is
+- **Optimized Scheduling**: Develop algorithms that can create optimal schedules for machines, minimizing downtime and maximizing throughput.
+- **Predictive Maintenance**: Implement predictive models to foresee and mitigate potential machine failures, ensuring continuous and efficient operations.
+- **Time Management**: Utilize deep learning models to enhance time management practices, helping businesses allocate resources more effectively and meet deadlines.
+- **Scalability**: Design solutions that are scalable and adaptable to different industrial environments and varying sizes of operations.
 
-```latex
-@article{
- title = {TiLearn: time management and scheduling solutions by Python},
- author = {Chi Bang Nguyen},
- year = 2024,
- month = Aug,
- keywords = {Python, Machine Scheduling, Time Management, Operations research, Optimization Mathematics, Machine Learning},
- abstract = {
-            TiLearn basically a project dedicated to time management and scheduling solutions. This platform is designed to empower individuals and teams to optimize their daily routines, enhance productivity, and achieve their goals more efficiently. By providing a range of tools and resources, we aim to foster a community-driven approach to managing time and tasks effectively. Whether you're a student, a professional, or simply looking to make the most of your day, our project offers innovative strategies and customizable schedules to help you stay on track. Join us in building a future where time management is accessible to everyone.
-         },
-}
-```
+# Responsibilities
 
+As part of this open-source project, contributors are encouraged to:
 
+- **Algorithm Development**: Create and refine machine learning and deep learning algorithms tailored to scheduling and time management.
+- **Data Collection and Preprocessing**: Gather and preprocess data from various sources to train and validate models.
+- **Model Training and Evaluation**: Train models using the collected data and evaluate their performance to ensure accuracy and reliability.
+- **Integration and Testing**: Integrate developed models into real-world scheduling systems and conduct extensive testing to validate their effectiveness.
+- **Documentation and Support**: Maintain comprehensive documentation of the project, providing clear guidelines for usage and contribution. Assist users and other contributors through forums and issue tracking.
 
 For inquiries, please **contact** me at [chibangn1@gmail.com](https://mail.google.com/mail)
