@@ -23,7 +23,7 @@ nav:
 
 plugins:
     - social:
-    - glightbox
+    #- glightbox
     - search: {}
     - encryptcontent:
         title_prefix: ''

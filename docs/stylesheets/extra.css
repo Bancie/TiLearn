@@ -12,6 +12,7 @@
   display: inline-flex;
   font-family: "JetBrains Mono",monospace;
   height: 60px;
+  width: 200px;
   justify-content: center;
   line-height: 1;
   list-style: none;
@@ -41,6 +42,54 @@
 
 .button-29:active {
   box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+/* Button - PyPI */
+
+.button-30 {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #e9efd9 0, #0D7C66 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(255, 255, 255, 0.4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 60px;
+  width: 200px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 40px;
+  padding-right: 40px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .5s,transform .5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 25px;
+}
+
+.button-30:focus {
+  box-shadow: #0D7C66 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #0D7C66 0 -3px 0 inset;
+}
+
+.button-30:hover {
+  box-shadow: #2d234266 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #0D7C66 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-30:active {
+  box-shadow: #0D7C66 0 3px 7px inset;
   transform: translateY(2px);
 }
 
@@ -146,10 +195,51 @@ ol.circle-list.alternating-colors li:nth-child(even)::before {
   width: 100%; /* Full width */
 }
 
+.line-3 {
+  border: none; /* Remove any border if you're using <hr> */
+  height: 0px; /* Adjust the thickness of the line */
+  background: linear-gradient(to right, #4050b5, #448ba2); /* Blue to Cyan gradient */
+  margin: 80px auto; /* Space around the separator */
+  width: 100%; /* Full width */
+}
+
 pre {
   white-space: pre-wrap; /* CSS3 */
   white-space: -moz-pre-wrap; /* Firefox */
   white-space: -pre-wrap; /* Opera <7 */
   white-space: -o-pre-wrap; /* Opera 7 */
   word-wrap: break-word; /* IE */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  position: relative; /* Needed for positioning the pseudo-element */
+}
+
+.column {
+  flex: 1;
+  padding: 20px;
+  position: relative; /* Needed for positioning content within columns */
+}
+
+#column1 {
+  margin-right: 10px; /* Adds space between the two columns */
+}
+
+#column2 {
+  margin-left: 10px; /* Adds space between the two columns */
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 1.1px; /* Width of the gradient line */
+  background: linear-gradient(to bottom, #767676, #a5a5a5); /* Gradient line */
+  transform: translateX(-50%); /* Centers the line between the columns */
+
+  /* Adjust the height here */
+  top: 38%; /* Start the line 10% from the top of the container */
+  bottom: 10%; /* End the line 10% from the bottom of the container */
 }

@@ -14,12 +14,45 @@ hide:
   <p>
     Join us in creating a community where time management tools and effective scheduling practices are accessible to all.
   </p>
-  <br/>
-  <center><a href="https://github.com/Bancie/TiLearn">
-      <button class="button-29" role="button"><p style="word-spacing: 5px;"><img src="stylesheets/github-mark.png" alt="GitHub Logo" style="width: 25px; height: 25px; margin-right: 10px;"><strong>GitHub</strong></p></button>
-  </a></center>
   
-  <div class="line-2"></div>
+  <body>
+      <div class="container">
+          <div class="column" id="column1">
+              <center>
+              <h2><strong>GitHub repository</strong></h2>
+              </center>
+              <p>Explore the code, contribute, or check out in our GitHub repository:</p>
+              <center>
+              <a href="https://github.com/Bancie/TiLearn">
+                  <button class="button-29" role="button">
+                      <img src="stylesheets/github-mark.png" alt="GitHub Logo" style="width: 25px; height: 25px; margin-right: 10px;">
+                      <strong>
+                          GitHub
+                      </strong>
+                  </button>
+              </a>
+              </center>
+          </div>
+          <div class="column" id="column2">
+              <center>
+              <h2><strong>PyPI package</strong></h2>
+              </center>
+              <p>Easily install and use TiLearn by accessing our package on PyPI:</p>
+              <center>
+              <a href="https://pypi.org/project/TiLearn/">
+                  <button class="button-30" role="button">
+                      <img src="stylesheets/pypi.png" alt="GitHub Logo" style="width: 25px; height: 25px; margin-right: 10px;">
+                      <strong>
+                          PyPI
+                      </strong>
+                  </button>
+              </a>
+              </center>
+          </div>
+      </div>
+  </body>
+  
+  <div class="line-3"></div>
   
   <h1><strong>Web mapping</strong></h1>
 
