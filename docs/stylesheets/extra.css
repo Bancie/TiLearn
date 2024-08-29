@@ -215,6 +215,7 @@ pre {
   display: flex;
   justify-content: space-between;
   position: relative; /* Needed for positioning the pseudo-element */
+  flex-wrap: wrap; /* Allows items to wrap onto the next line */
 }
 
 .column {
@@ -238,8 +239,23 @@ pre {
   width: 1.1px; /* Width of the gradient line */
   background: linear-gradient(to bottom, #767676, #a5a5a5); /* Gradient line */
   transform: translateX(-50%); /* Centers the line between the columns */
-
-  /* Adjust the height here */
   top: 38%; /* Start the line 10% from the top of the container */
   bottom: 10%; /* End the line 10% from the bottom of the container */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  .container {
+      flex-direction: column; /* Stacks the columns vertically */
+      align-items: center; /* Centers the columns horizontally */
+  }
+
+  .column {
+      width: 100%; /* Makes each column take the full width */
+      margin: 0; /* Removes margins between columns */
+  }
+
+  .container::before {
+      display: none; /* Hides the gradient line on smaller screens */
+  }
 }
