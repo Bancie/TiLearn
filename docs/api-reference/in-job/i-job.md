@@ -7,7 +7,7 @@ social:
 # tilearn.show_mytime
 
 !!! info
-    For a more in-depth understanding of the concept, you can check [here](../../user-guide/single-machine/completion/index.md#the-total-weighted-completion-time--show_mytime).
+    For a more in-depth understanding of the concept, you can check [here](../../user-guide/single-machine/completion/wspt.md).
 
 ## tilearn.<span style="color:#ffde59;">show_mytime</span>(*list, due date*)
 

@@ -1,20 +1,19 @@
 site_name: TiLearn
 site_url: https://bancie.github.io/TiLearn/
 site_author: Bancie
+repo_url: https://github.com/Bancie/TiLearn
+repo_name: Bancie/TiLearn
 
 nav:
   - Home: index.md
   - Getting started: getting-started/index.md
   - User Guide:
     - user-guide/index.md
-    - Single Machine:
-      - Maximum Lateness:
-        - user-guide/single-machine/lateness/index.md
-        - Release jobs: user-guide/single-machine/lateness/release.md
-      - Total Completion Time:
-        - user-guide/single-machine/completion/index.md
-        - Sequence jobs: user-guide/single-machine/completion/sequence.md
-        - Release jobs: user-guide/single-machine/completion/release.md
+    #- Single Machine:
+    - Maximum Lateness: user-guide/single-machine/lateness/edd.md
+    - Total Completion Time: user-guide/single-machine/completion/wspt.md
+      #- Sequence jobs: user-guide/single-machine/completion/sequence.md
+      #- Release jobs: user-guide/single-machine/completion/release.md
   #- Building from source: run/index.md
   - API reference:
     - api-reference/index.md
@@ -73,6 +72,7 @@ theme:
   logo: tilearn2.png
   favicon: tilearn.png
   icon:
+    repo: fontawesome/brands/github
     logo: logo
     admonition:
       note: fontawesome/solid/note-sticky
