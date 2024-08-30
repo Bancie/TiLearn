@@ -1,5 +1,6 @@
 ---
-title: tilearn.show_mytime
+title: tl.show_mytime
+description: The function tl.show_mytime minimizes waiting and completion times by using the SPT/WSPT algorithms to prioritize shorter tasks
 social:
   cards_layout: default
 ---
