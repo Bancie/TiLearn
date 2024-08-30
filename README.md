@@ -1,10 +1,5 @@
 <a href="https://bancie.github.io/TiLearn/" target="_blank">
   <picture>
-    <img alt="Bancie logo" src="https://github.com/Bancie/TiLearn/assets/144613141/ceb3dfd0-a358-4a46-b478-0a5235496cc7" width="400px">
-  </picture>
-</a>
-<a href="https://bancie.github.io/TiLearn/" target="_blank">
-  <picture>
     <img alt="Bancie logo" src="https://github.com/Bancie/TiLearn/assets/144613141/9c35f828-8c29-444e-aafb-f298c2bdba93" width="400px">
   </picture>
 </a>
