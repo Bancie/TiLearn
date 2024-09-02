@@ -1,3 +1,10 @@
+# List genarated
+def list_gen(rows, cols):
+    a = [[0 for j in range(cols)] for i in range(rows)]
+    return a
+
+# Data
+
 def job_amount(a):
     return len(a)
 
@@ -12,10 +19,6 @@ def p_factor_prec_tu(i, a):
 
 def p_factor_prec(i, a, job_amount, job_scale, sum):
     return p_factor_prec_tu(i,a,a[i][1])/sum
-
-def list_gen(rows, cols):
-    a = [[0 for j in range(cols)] for i in range(rows)]
-    return a
 
 def calculate_factor(a, plan_time):
     list = list_gen(job_amount(a), 1)
@@ -46,3 +49,5 @@ def factor_data(a, plan_time):
     for i in range(job_amount(a)):
         a[i].extend(calculate_factor(a, plan_time)[i])
     return a
+
+# Data completed inserted
