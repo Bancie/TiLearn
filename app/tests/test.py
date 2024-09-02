@@ -1,4 +1,4 @@
-import tilearn as tl
+from tilearn import custom
 
 x = [[1, 2, 3, 5, 7],
      [2, 4, 8, 6, 6], 
@@ -7,6 +7,6 @@ x = [[1, 2, 3, 5, 7],
      [2, 4, 8, 6, 6], 
      [1, 2, 3, 2, 3]]
 
-time = tl.show_mytime(x, 30)
+time = custom.wspt(x, 30)
 for row in time:
     print(row)

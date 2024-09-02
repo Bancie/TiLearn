@@ -29,6 +29,20 @@ def list_gen(rows, cols):
     return a
 
 def calculate_process(a, plan_time):
+    """
+    Creating process data for job list `a`.
+    
+    *Note*: Only supporting for **custom list**.
+    
+    Parameters
+    ----------
+        a (list): list or an array, that holds the job table data.
+        plan_time (int): (due date) deadline by which all jobs in the provided list need to be completed.
+    
+    Returns
+    ----------
+        `job_amount(a)x1` list.
+    """
     list = list_gen(job_amount(a), 1)
     for i in range(job_amount(a)):
         list[i][0] = process(i, a, plan_time,jobscale(a, job_amount(a)))
@@ -50,3 +64,8 @@ def factor_data(a, plan_time):
     for i in range(job_amount(a)):
         result[i].extend(calculate_factor(a, plan_time)[i])
     return result
+
+def wspt(a, plan_time):
+    a = factor_data(a, plan_time)
+    a.sort(key=lambda x: x[6], reverse=True)
+    return a

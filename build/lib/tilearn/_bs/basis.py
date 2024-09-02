@@ -1,15 +1,3 @@
-var = 5
-maxm, maxn = 1000, 1000
-# a = [[0 for i in range(maxm)] for j in range(maxn)]
-"""
-x = [[1, 2, 3, 5, 7],
-     [2, 4, 8, 6, 6], 
-     [1, 2, 3, 2, 3],
-     [2, 4, 6, 7, 4],
-     [2, 4, 8, 6, 6], 
-     [1, 2, 3, 2, 3]]
-"""
-
 def job_amount(a):
     return len(a)
 
@@ -62,10 +50,3 @@ def factor_data(a, plan_time):
     for i in range(job_amount(a)):
         result[i].extend(calculate_factor(a, plan_time)[i])
     return result
-
-
-"""
-time = show_mytime(x, 30)
-for row in time:
-    print(row)
-"""

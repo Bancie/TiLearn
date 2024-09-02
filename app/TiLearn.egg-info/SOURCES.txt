@@ -8,6 +8,8 @@ app/TiLearn.egg-info/top_level.txt
 app/tilearn/__init__.py
 app/tilearn/_bs/__init__.py
 app/tilearn/_bs/basis.py
+app/tilearn/_bs_custom/__init__.py
+app/tilearn/_bs_custom/custom.py
 app/tilearn/_wspt/__init__.py
 app/tilearn/_wspt/wspt.py
 tests/test1.py
