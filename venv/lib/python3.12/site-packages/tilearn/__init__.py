@@ -1,1 +1,2 @@
-from tilearn.src.basis import *
+from tilearn._bs.basis import *
+from tilearn._wspt.wspt import *

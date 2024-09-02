@@ -63,10 +63,6 @@ def factor_data(a, plan_time):
         result[i].extend(calculate_factor(a, plan_time)[i])
     return result
 
-def show_mytime(a, plan_time):
-    a = factor_data(a, plan_time)
-    a.sort(key=lambda x: x[6], reverse=True)
-    return a
 
 """
 time = show_mytime(x, 30)

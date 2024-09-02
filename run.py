@@ -1,4 +1,4 @@
-from tilearn.src.basis import (
+from tilearn._bs.basis import (
     job_amount,
     jobscale,
     process,
@@ -10,5 +10,8 @@ from tilearn.src.basis import (
     process_data,
     calculate_factor,
     factor_data,
-    show_mytime,
+)
+
+from tilearn._wspt.wspt import (
+    custom_wspt,
 )
