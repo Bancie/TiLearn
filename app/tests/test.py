@@ -14,6 +14,7 @@ data = [['bt task 1', 4, 0, 10, 0],
 # schedule = tilearn.wspt(data, 10)
 
 schedule = tilearn.c_time(data)
+full_schedule = tilearn.lateness(data)
 
-for row in schedule:
+for row in full_schedule:
     print(row)

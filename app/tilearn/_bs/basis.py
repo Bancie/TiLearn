@@ -61,9 +61,14 @@ def c_time(a):
         a[i].extend(list[i])
     return a
 
-# # Lateness
-# def lateness(a):
-#     """
-#     Cj - dj
-#     """
-    
+# Lateness
+def lateness(a):
+    """
+    Cj - dj -> a[i][5] - a[i][3]
+    """
+    list = list_gen(job_amount(a), 1)
+    for i in range(job_amount(a)):
+        list[i][0] = a[i][5] - a[i][3]
+    for i in range(job_amount(a)):
+        a[i].extend(list[i])
+    return a
