@@ -3,8 +3,7 @@ def list_gen(rows, cols):
     a = [[0 for j in range(cols)] for i in range(rows)]
     return a
 
-# Data
-
+# Data basis
 def job_amount(a):
     return len(a)
 
@@ -30,10 +29,6 @@ def factor_data(a, plan_time):
     """
     Creates `p-factor` data for the job list `a`.
 
-    Notes
-    -----
-    The `p-factor` pertains to the non-precedence job type in the `1||∑w_jC_j` problem.
-
     Parameters
     ----------
     a : list or array
@@ -45,9 +40,30 @@ def factor_data(a, plan_time):
     -------
     list or array
         A matrix of size `job_amount(a) × 6`.
+    
+    Notes
+    -----
+    The `p-factor` pertains to the non-precedence job type in the `1||∑w_jC_j` problem.
     """
     for i in range(job_amount(a)):
         a[i].extend(calculate_factor(a, plan_time)[i])
     return a
 
-# Data completed inserted
+# Data basis 2
+# Completion time
+def c_time(a):
+    sum = 0
+    list = list_gen(job_amount(a), 1)
+    for i in range(job_amount(a)):
+        list[i][0] = sum + a[i][1]
+        sum = list[i][0]
+    for i in range(job_amount(a)):
+        a[i].extend(list[i])
+    return a
+
+# # Lateness
+# def lateness(a):
+#     """
+#     Cj - dj
+#     """
+    
