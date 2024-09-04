@@ -19,13 +19,13 @@ def p_factor_prec_tu(i, a):
 def p_factor_prec(i, a, job_amount, job_scale, sum):
     return p_factor_prec_tu(i,a,a[i][1])/sum
 
-def calculate_factor(a, plan_time):
+def calculate_factor(a):
     list = list_gen(job_amount(a), 1)
     for i in range(job_amount(a)):
         list[i][0] = p_factor_nonprec(i, a)
     return list
 
-def factor_data(a, plan_time):
+def factor_data(a):
     """
     Creates `p-factor` data for the job list `a`.
 
@@ -33,8 +33,6 @@ def factor_data(a, plan_time):
     ----------
     a : list or array
         A list or an array that contains the job table data.
-    plan_time : int
-        The due date by which all jobs in the provided list need to be completed.
 
     Returns
     -------
@@ -46,7 +44,7 @@ def factor_data(a, plan_time):
     The `p-factor` pertains to the non-precedence job type in the `1||∑w_jC_j` problem.
     """
     for i in range(job_amount(a)):
-        a[i].extend(calculate_factor(a, plan_time)[i])
+        a[i].extend(calculate_factor(a)[i])
     return a
 
 # Data basis 2

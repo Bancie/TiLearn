@@ -2,4 +2,9 @@ import csv
 import tilearn as tl
 from tilearn import data
 
-print(data.read_file('app/tests/data.csv'))
+data = data.read_file('app/tests/data.csv')
+
+schedule = tl.wspt(data)
+
+for row in schedule:
+    print(row)
