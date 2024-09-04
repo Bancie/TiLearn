@@ -10,6 +10,8 @@ app/tilearn/_bs/__init__.py
 app/tilearn/_bs/basis.py
 app/tilearn/_bs_custom/__init__.py
 app/tilearn/_bs_custom/custom.py
+app/tilearn/_data/__init__.py
+app/tilearn/_data/data.py
 app/tilearn/_edd/__init__.py
 app/tilearn/_edd/edd.py
 app/tilearn/_wspt/__init__.py
