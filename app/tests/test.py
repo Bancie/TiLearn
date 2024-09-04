@@ -18,6 +18,5 @@ data = [['bt task 1', 4, 0, 1, 0],
 
 schedule = tl.edd(data)
 
-
 for row in schedule:
     print(row)
