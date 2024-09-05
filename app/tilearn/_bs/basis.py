@@ -70,3 +70,20 @@ def lateness(a):
     for i in range(job_amount(a)):
         a[i].extend(list[i])
     return a
+
+# Precedence
+def sum_factor(a):
+    list = list_gen(job_amount(a), 3)
+    sum_p = 0
+    sum_w = 0
+    for i in range(job_amount(a)):
+        list[i][0] = sum_p + a[i][1]
+        sum_p = list[i][0]
+    for i in range(job_amount(a)):
+        list[i][1] = sum_w + a[i][4]
+        sum_w = list[i][1]
+    for i in range(job_amount(a)):
+        list[i][2] = list[i][1]/list[i][0]
+    for i in range(job_amount(a)):
+        a[i].append(list[i][2])
+    return a

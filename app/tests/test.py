@@ -1,7 +1,7 @@
 import csv
 import tilearn as tl
 
-data = [['bt task 1', 4, 0, 1, 0],
+data = [['bt task 1', 4, 0, 1, 1],
         ['luyen speaking', 9, 0, 4, 3],
         ['task 2', 6, 0, 3, 2],
         ['reading b1', 7, 0, 2, 3],
@@ -12,12 +12,14 @@ data = [['bt task 1', 4, 0, 1, 0],
         ['luyen de', 2, 0, 7, 1],
         ['final', 6, 0, 2, 2]]
 
-schedule = tl.wspt(data, 10)
+# schedule = tl.wspt(data)
 
 # schedule = tl.c_time(data)
 # full_schedule = tl.lateness(data)
 
 # schedule = tl.edd(data)
+
+schedule = tl.wspt_prec(data)
 
 for row in schedule:
     print(row)
