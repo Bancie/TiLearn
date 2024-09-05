@@ -6,6 +6,7 @@ app/TiLearn.egg-info/SOURCES.txt
 app/TiLearn.egg-info/dependency_links.txt
 app/TiLearn.egg-info/top_level.txt
 app/tilearn/__init__.py
+app/tilearn/list.py
 app/tilearn/_bs/__init__.py
 app/tilearn/_bs/basis.py
 app/tilearn/_bs_custom/__init__.py

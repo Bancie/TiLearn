@@ -23,3 +23,9 @@ schedule = tl.wspt_prec(data)
 
 for row in schedule:
     print(row)
+
+print('\n')
+
+max_value = max([row[5] for row in data])
+
+print(max_value)
