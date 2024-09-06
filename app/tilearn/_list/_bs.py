@@ -25,7 +25,7 @@ def job_amount_all(path, lists):
         sum = count
     return count
 
-def opt_loca(lists):
+def opt_loca(lists, pick):
     """
     Returns
     -------
@@ -34,17 +34,21 @@ def opt_loca(lists):
     """
     opt = tl.list_gen(2, 1)
     max_value = 0
-    sl = -1
+    init = 0
     for sublist in lists:
-        sl += 1
-        opt[0][0] = sl
         for i in range(tl.job_amount(sublist.info())):
             if sublist.run()[i][5] > max_value:
                 max_value = sublist.run()[i][5]
-                opt[1][0] = i
-    return opt
+                opt[0] = init
+                opt[1] = i
+        init += 1
+    if pick == 'sub':
+        return opt[0]
+    elif pick == 'row':
+        return opt[1]
 
-# def main_list(path, lists):
-#     set_j = []
-#     while job_amount_all(path) == 0:
-#         a
+def main_list(path, lists):
+    set_j = []
+    # while job_amount_all(path) == 0:
+    opt_list = tl.list_gen(opt_loca(lists, pick=1), 1)
+    return opt_list
