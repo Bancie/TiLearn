@@ -14,10 +14,14 @@ lists = [
 
 # print('\n')
 
-# for row in tl.set_construct(lists):
+# for row in tl.set_construct(lists, 0):
 #     print(row)
 
+# print(tl.set_construct(lists, 0))
+
 # print(tl.main_list('/Users/chibangnguyen/Documents/TiLearn/app/tests', lists))
+
+# print(tl.optimal_list('/Users/chibangnguyen/Documents/TiLearn/app/tests', lists))
 
 for row in tl.optimal_list('/Users/chibangnguyen/Documents/TiLearn/app/tests', lists):
     print(row)

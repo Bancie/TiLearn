@@ -10,6 +10,9 @@ class List:
     def info(self):
         return self.data
     
+    def check(self):
+        return self.prec
+    
     def run(self):
         if self.prec == 1:
             return tl.sum_factor(self.data)
@@ -47,12 +50,18 @@ def opt_loca(lists, pick):
     elif pick == 'row':
         return opt[1]+1
 
-def set_construct(lists):
-    set = tl.list_gen(opt_loca(lists, pick='row'), 6)
-    opt_list = lists[opt_loca(lists, pick='sub')].run()
-    for i in range(len(set)):
-        for j in range(len(set[i])):
-            set[i][j] = opt_list[i][j]
+def set_construct(lists, prec):
+    if prec == 1:
+        set = tl.list_gen(opt_loca(lists, pick='row'), 6)
+        opt_list = lists[opt_loca(lists, pick='sub')].run()
+        for i in range(len(set)):
+            for j in range(len(set[i])):
+                set[i][j] = opt_list[i][j]
+    elif prec == 0:
+        set = ['Job', 0, 0, 0, 0, 0]
+        opt_list = lists[opt_loca(lists, pick='sub')].run()
+        specific_row = opt_list[opt_loca(lists, pick='row')-1]
+        set = specific_row[:len(set)] 
     return set
 
 def optimal_list(path, lists):
@@ -60,10 +69,14 @@ def optimal_list(path, lists):
     jc = job_amount_all(path, lists)
     while jc > 0:
         opt_list = lists[opt_loca(lists, pick='sub')].run()
-        row_list = opt_loca(lists, pick='row')
-        set_j.extend(set_construct(lists))
-        del opt_list[0:row_list]
-        for row in opt_list:
-            del row[5]
-        jc -= row_list
+        if lists[opt_loca(lists, pick='sub')].check() == 1:
+            row_list = opt_loca(lists, pick='row')
+            set_j.extend(set_construct(lists, 1))
+            del opt_list[0:row_list]
+            jc -= row_list
+        elif lists[opt_loca(lists, pick='sub')].check() == 0:
+            row_list = opt_loca(lists, pick='row')
+            set_j.extend(set_construct(lists, 0))
+            del opt_list[row_list]
+            jc -= 1
     return set_j
