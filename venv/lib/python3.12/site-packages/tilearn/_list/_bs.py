@@ -37,11 +37,11 @@ def opt_loca(lists):
     sl = -1
     for sublist in lists:
         sl += 1
-        opt[1][0] = sl
+        opt[0][0] = sl
         for i in range(tl.job_amount(sublist.info())):
             if sublist.run()[i][5] > max_value:
                 max_value = sublist.run()[i][5]
-                opt[2][0] = i
+                opt[1][0] = i
     return opt
 
 # def main_list(path, lists):
