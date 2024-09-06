@@ -29,11 +29,11 @@ def opt_loca(lists):
     """
     Returns
     -------
-    opt = [sublist location, list row location]
+    List
+        opt = [sublist location, list row location]
     """
     opt = tl.list_gen(2, 1)
     max_value = 0
-    position = 0
     sl = -1
     for sublist in lists:
         sl += 1
@@ -41,10 +41,10 @@ def opt_loca(lists):
         for i in range(tl.job_amount(sublist.info())):
             if sublist.run()[i][5] > max_value:
                 max_value = sublist.run()[i][5]
-                position = i
-    return 
+                opt[2][0] = i
+    return opt
 
-def main_list(path, lists):
-    set_j = []
-    while job_amount_all(path) == 0:
-        a
+# def main_list(path, lists):
+#     set_j = []
+#     while job_amount_all(path) == 0:
+#         a
