@@ -1,5 +1,6 @@
 import tilearn as tl
 from tilearn import data
+import numpy as np
 import os
 
 class List:
@@ -77,6 +78,7 @@ def optimal_list(path, lists):
         elif lists[opt_loca(lists, pick='sub')].check() == 0:
             row_list = opt_loca(lists, pick='row')
             set_j.extend(set_construct(lists, 0))
-            del opt_list[row_list]
+            # del opt_list[row_list]
+            opt_list = np.delete(opt_list, row_list, axis=0)
             jc -= 1
     return set_j
