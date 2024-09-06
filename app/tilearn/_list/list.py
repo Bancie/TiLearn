@@ -32,18 +32,7 @@ def job_amount_all(path, lists):
         sum = count
     return count
 
-# def mixed(path, lists):
-#     set_j = []
-#     max = 0
-#     position = 0
-#     sl = -1
-#     for sublist in lists:
-#         sub_pst = sl + 1
-#         for i in range(tl.job_amount(sublist.info())):
-#             if sublist.run()[i][5] > max:
-#                 max = sublist.run()[i][5]
-#                 position = i
-#     return set_j.extend(lists[sub_pst][0:position])
+
 
 def mixed(path, lists):
     set_j = []
@@ -59,13 +48,9 @@ def mixed(path, lists):
             if sublist.run()[i][5] > max_value:
                 max_value = sublist.run()[i][5]
                 position = i
-        
-        set_j.extend(lists[sub_pst].run())
-
-    return set_j
 
 # for sublist in lists:
 #     print(sublist.run())
-print(mixed('/Users/chibangnguyen/Documents/TiLearn/app/tests', lists))
+# print(mixed('/Users/chibangnguyen/Documents/TiLearn/app/tests', lists))
 # print(lists[1].run())
 # print(tl.list_gen(job_amount_all('/Users/chibangnguyen/Documents/TiLearn/app/tests', lists), 6))
