@@ -12,10 +12,17 @@ class List:
     
     def run(self):
         if self.prec == 1:
-            return tl.sum_factor(self.data)
+            return tl.wspt_prec(self.data)
         elif self.prec == 0:
-            return tl.factor_data(self.data)
+            return tl.wspt(self.data)
     
+        
+lists = [
+    List(data=data.read_file('app/tests/data.csv'), prec=1),
+    List(data=data.read_file('app/tests/data2.csv'), prec=1)
+]
+
+
 def job_amount_all(path, lists):
     sum = 0
     folder_path = path
@@ -25,17 +32,20 @@ def job_amount_all(path, lists):
         sum = count
     return count
 
-def opt_loca(lists):
-    max_value = 0
+def mixed(path, lists):
+    set_j = tl.list_gen(0, 6)
+    max = 0
     position = 0
     sl = -1
     for sublist in lists:
-        sl += 1
-        sub_pst = sl
+        sub_pst = sl + 1
         for i in range(tl.job_amount(sublist.info())):
-            if sublist.run()[i][5] > max_value:
-                max_value = sublist.run()[i][5]
+            if sublist.run()[i][5] > max:
+                max = sublist.run()[i][5]
                 position = i
-    
-def mixed(path, lists):
-    set_j = []
+        
+# for sublist in lists:
+#     print(sublist.run())
+# print(mixed('/Users/chibangnguyen/Documents/TiLearn/app/tests', lists))
+# print(lists[1].run())
+# print(tl.list_gen(job_amount_all('/Users/chibangnguyen/Documents/TiLearn/app/tests', lists), 6))
