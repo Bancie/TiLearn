@@ -45,10 +45,25 @@ def opt_loca(lists, pick):
     if pick == 'sub':
         return opt[0]
     elif pick == 'row':
-        return opt[1]
+        return opt[1]+1
 
-def main_list(path, lists):
+def set_construct(lists):
+    set = tl.list_gen(opt_loca(lists, pick='row'), 6)
+    opt_list = lists[opt_loca(lists, pick='sub')].run()
+    for i in range(len(set)):
+        for j in range(len(set[i])):
+            set[i][j] = opt_list[i][j]
+    return set
+
+def optimal_list(path, lists):
     set_j = []
-    # while job_amount_all(path) == 0:
-    opt_list = tl.list_gen(opt_loca(lists, pick=1), 1)
-    return opt_list
+    jc = job_amount_all(path, lists)
+    while jc > 0:
+        opt_list = lists[opt_loca(lists, pick='sub')].run()
+        row_list = opt_loca(lists, pick='row')
+        set_j.extend(set_construct(lists))
+        del opt_list[0:row_list]
+        for row in opt_list:
+            del row[5]
+        jc -= row_list
+    return set_j
