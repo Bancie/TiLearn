@@ -15,6 +15,7 @@ app/tilearn/_data/data.py
 app/tilearn/_edd/__init__.py
 app/tilearn/_edd/edd.py
 app/tilearn/_list/__init__.py
+app/tilearn/_list/_bs.py
 app/tilearn/_list/list.py
 app/tilearn/_wspt/__init__.py
 app/tilearn/_wspt/wspt.py
