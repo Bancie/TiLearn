@@ -37,7 +37,8 @@ def set_const(lists, prec):
 # ╚═══════════════════════════════╝
 def prec_updated(lists, set_j, opt_list, row_list):
     set_j.extend(set_const(lists, prec=1))
-    del opt_list[0:row_list]
+    next = row_list + 1
+    del opt_list[row_list:next]
     return opt_list
     # return set_j
 
