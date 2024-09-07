@@ -3,7 +3,9 @@ def list_gen(rows, cols):
     a = [[0 for j in range(cols)] for i in range(rows)]
     return a
 
-# Data basis
+# ╔═══════════════════════════════╗
+# ║          Data basis           ║
+# ╚═══════════════════════════════╝
 def job_amount(a):
     return len(a)
 
@@ -47,7 +49,9 @@ def factor_data(a):
         a[i].extend(calculate_factor(a)[i])
     return a
 
-# Data basis 2
+# ╔═══════════════════════════════╗
+# ║       main factor data        ║
+# ╚═══════════════════════════════╝
 # Completion time
 def c_time(a):
     sum = 0

@@ -2,6 +2,9 @@ import tilearn as tl
 import numpy as np
 import os
 
+# ╔═══════════════════════════════╗
+# ║          CLASS DATA           ║
+# ╚═══════════════════════════════╝
 class List:
     def __init__(self, data, prec=1):
         self.data = data
@@ -19,6 +22,9 @@ class List:
         elif self.prec == 0:
             return tl.factor_data(self.data)
     
+# ╔═══════════════════════════════╗
+# ║         CRUCIAL DATA          ║
+# ╚═══════════════════════════════╝
 def ja_all(path, lists):
     sum = 0
     folder_path = path
