@@ -34,7 +34,7 @@ def ja_all(path, lists):
         sum = count
     return count
 
-def opt_loca(lists, pick):
+def location(lists, type):
     """
     Returns
     -------
@@ -51,7 +51,7 @@ def opt_loca(lists, pick):
                 opt[0] = init
                 opt[1] = i
         init += 1
-    if pick == 'sub':
+    if type == 'sub':
         return opt[0]
-    elif pick == 'row':
+    elif type == 'row':
         return opt[1]+1
