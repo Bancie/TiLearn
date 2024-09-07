@@ -1,5 +1,4 @@
 import tilearn as tl
-import numpy as np
 import os
 
 # ╔═══════════════════════════════╗

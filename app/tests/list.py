@@ -1,19 +1,37 @@
 import tilearn as tl
-import numpy as np
 from tilearn import _data as data
 from tilearn import _plat as pl
 
 lists = [
-    # pl.List(data=data.read_file('/Users/chibangnguyen/Documents/TiLearn/app/tests/data.csv'), prec=1),
-    # pl.List(data=data.read_file('/Users/chibangnguyen/Documents/TiLearn/app/tests/data2.csv'), prec=1),
-    pl.List(data=data.read_file('/Users/chibangnguyen/Documents/TiLearn/app/tests/data3.csv'), prec=1)
+    pl.List(data=data.read_file('/Users/chibangnguyen/Documents/TiLearn/app/tests/data.csv'), prec=0),
+    pl.List(data=data.read_file('/Users/chibangnguyen/Documents/TiLearn/app/tests/data2.csv'), prec=0),
+    pl.List(data=data.read_file('/Users/chibangnguyen/Documents/TiLearn/app/tests/data3.csv'), prec=0)
 ]
+
+
 
 # print(pl.location(lists, type='row'))
 
 # print(tl.optimal_list('/Users/chibangnguyen/Documents/TiLearn/app/tests', lists))
 
-for row in tl.optimal_list('/Users/chibangnguyen/Documents/TiLearn/app/tests', lists):
+# opt_list = lists[pl.location(lists, type='sub')].run()
+# print(opt_list[2])
+# print(tl.set(lists))
+
+# set_j = []
+# opt_list = lists[pl.location(lists, type='sub')].run()
+# row_list = pl.location(lists, type='row')
+
+# print(tl.set_non(lists))
+
+# print(tl.updated(lists, set_j, opt_list, row_list))
+
+# for row in tl.updated(lists, set_j, opt_list, row_list):
+#     print(row)
+
+# print(tl.optimal_list('/Users/chibangnguyen/Documents/TiLearn/app/tests', lists))
+
+for row in tl.optimal_list('/Users/chibangnguyen/Documents/TiLearn/app/tests', lists):  
     print(row)
 
 # print(tl.set_const(lists, prec=0))
