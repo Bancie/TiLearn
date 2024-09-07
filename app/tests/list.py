@@ -22,7 +22,9 @@ lists = [
 # for row in tl.set_construct(lists, 0):
 #     print(row)
 
-# print(tl.set_construct(lists, 0))
+# print(tl.set_const(lists, 1))
+# print(tl.opt_loca(lists, pick='sub'))
+# print(tl.ja_all('/Users/chibangnguyen/Documents/TiLearn/app/tests', lists))
 
 # print(tl.main_list('/Users/chibangnguyen/Documents/TiLearn/app/tests', lists))
 

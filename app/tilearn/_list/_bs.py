@@ -20,7 +20,7 @@ class List:
         elif self.prec == 0:
             return tl.factor_data(self.data)
     
-def job_amount_all(path, lists):
+def ja_all(path, lists):
     sum = 0
     folder_path = path
     csv_count = len([file for file in os.listdir(folder_path) if file.endswith('.csv')])
@@ -51,34 +51,34 @@ def opt_loca(lists, pick):
     elif pick == 'row':
         return opt[1]+1
 
-def set_construct(lists, prec):
+def set_const(lists, prec):
     if prec == 1:
         set = tl.list_gen(opt_loca(lists, pick='row'), 6)
         opt_list = lists[opt_loca(lists, pick='sub')].run()
         for i in range(len(set)):
             for j in range(len(set[i])):
                 set[i][j] = opt_list[i][j]
-    elif prec == 0:
-        set = ['Job', 0, 0, 0, 0, 0]
-        opt_list = lists[opt_loca(lists, pick='sub')].run()
-        specific_row = opt_list[opt_loca(lists, pick='row')-1]
-        set = specific_row[:len(set)] 
+    # elif prec == 0:
+    #     set = ['Job', 0, 0, 0, 0, 0]
+    #     opt_list = lists[opt_loca(lists, pick='sub')].run()
+    #     specific_row = opt_list[opt_loca(lists, pick='row')-1]
+    #     set = specific_row[:len(set)] 
     return set
 
 def optimal_list(path, lists):
     set_j = []
-    jc = job_amount_all(path, lists)
+    jc = ja_all(path, lists)
     while jc > 0:
         opt_list = lists[opt_loca(lists, pick='sub')].run()
         if lists[opt_loca(lists, pick='sub')].check() == 1:
             row_list = opt_loca(lists, pick='row')
-            set_j.extend(set_construct(lists, 1))
+            set_j.extend(set_const(lists, 1))
             del opt_list[0:row_list]
             jc -= row_list
-        elif lists[opt_loca(lists, pick='sub')].check() == 0:
-            row_list = opt_loca(lists, pick='row')
-            set_j.extend(set_construct(lists, 0))
-            # del opt_list[row_list]
-            opt_list = np.delete(opt_list, row_list, axis=0)
-            jc -= 1
+        # elif lists[opt_loca(lists, pick='sub')].check() == 0:
+        #     row_list = opt_loca(lists, pick='row')
+        #     set_j.extend(set_const(lists, 0))
+        #     # del opt_list[row_list]
+        #     opt_list = np.delete(opt_list, row_list, axis=0)
+        #     jc -= 1
     return set_j
