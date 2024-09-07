@@ -43,8 +43,8 @@ def prec_updated(lists, set_j, opt_list, row_list):
 
 def updated(lists, set_j, opt_list, row_list):
     set_j.extend(set_const(lists, prec=0))
-    for row in opt_list:
-        del row[row_list]
+    next = row_list + 1
+    del opt_list[row_list:next]
     return opt_list
     # return set_j
 
@@ -60,5 +60,5 @@ def optimal_list(path, lists):
             jc -= row_list
         elif check == 0:
             updated(lists, set_j, opt_list, row_list)
-            jc -= row_list
+            jc -= 1
     return set_j

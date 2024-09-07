@@ -8,6 +8,14 @@ lists = [
     pl.List(data=data.read_file('/Users/chibangnguyen/Documents/TiLearn/app/tests/data3.csv'), prec=0)
 ]
 
+# 2D list example
+matrix = [[1, 2, 3],
+          [4, 5, 6],
+          [7, 8, 9]]
+
+del matrix[0:1]
+
+print(matrix)
 
 
 # print(pl.location(lists, type='row'))
@@ -33,6 +41,8 @@ lists = [
 
 for row in tl.optimal_list('/Users/chibangnguyen/Documents/TiLearn/app/tests', lists):  
     print(row)
+# print(lists[0].info())
+
 
 # print(tl.set_const(lists, prec=0))
 # print(tl.set_non(lists))
