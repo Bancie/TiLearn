@@ -51,15 +51,17 @@ def updated(lists, set_j, opt_list, row_list):
 
 def optimal_list(path, lists):
     set_j = []
-    jc = int(pl.ja_all(path, lists))
+    jc = pl.ja_all(path, lists)
     while jc > 0:
         opt_list = lists[pl.location(lists, type='sub')].run()
         row_list = pl.location(lists, type='row')
         check = lists[pl.location(lists, type='sub')].check()
         if check == 1:
-            prec_updated(lists, set_j, opt_list, row_list)
+            # prec_updated(lists, set_j, opt_list, row_list)
+            set_j.extend(set_const(lists, prec=1))
             jc -= row_list
         elif check == 0:
-            updated(lists, set_j, opt_list, row_list)
+            # updated(lists, set_j, opt_list, row_list)
+            set_j.extend(set_const(lists, prec=0))
             jc -= 1
     return set_j

@@ -9,13 +9,13 @@ lists = [
 ]
 
 # 2D list example
-matrix = [[1, 2, 3],
-          [4, 5, 6],
-          [7, 8, 9]]
+# matrix = [[1, 2, 3],
+#           [4, 5, 6],
+#           [7, 8, 9]]
 
-del matrix[0:1]
+# del matrix[0:1]
 
-print(matrix)
+# print(matrix)
 
 
 # print(pl.location(lists, type='row'))
