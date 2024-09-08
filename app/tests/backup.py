@@ -2,6 +2,9 @@ import tilearn as tl
 from tilearn import _data as data
 from tilearn import _plat as pl
 import os
+import csv
+import shutil
+import glob
 
 # print(data.path('/Users/chibangnguyen/Documents/TiLearn/app/tests/data.csv'))
 # print(data.read_file('/Users/chibangnguyen/Documents/TiLearn/app/tests/data.csv'))
@@ -17,18 +20,20 @@ lists = [
     pl.List(file_path='/Users/chibangnguyen/Documents/TiLearn/app/tests/data3.csv', prec=1)
 ]
 
-row_list = pl.location(lists, type='row')
-opt_file = lists[pl.location(lists, type='sub')].path
+# row_list = pl.location(lists, type='row')
+# opt_file = lists[pl.location(lists, type='sub')].path
 
-print(row_list, opt_file)
-print(data.prec(opt_file, row_list))
+# print(row_list, opt_file)
+# print(data.prec(opt_file, row_list))
+# rows = data.none(opt_file, row_list)
+# print(rows)
 
 # data.updated(opt_file, prec=1, opt_row=row_list)
-data.clear('/Users/chibangnguyen/Documents/TiLearn/app/tests/backup')
+# data.clear('/Users/chibangnguyen/Documents/TiLearn/app/tests/backup')
 
 # print(tl.set_const(lists, prec=1))
 
-# print(tl.optimal_list(lists,original_file, '/Users/chibangnguyen/Documents/TiLearn/app/tests/backup'))
+# print(tl.optimal_list(lists, original_file, '/Users/chibangnguyen/Documents/TiLearn/app/tests/backup'))
 
 # data.clear('/Users/chibangnguyen/Documents/TiLearn/app/tests/backup')
 

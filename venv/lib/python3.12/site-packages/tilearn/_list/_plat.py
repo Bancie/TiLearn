@@ -7,7 +7,7 @@ import os
 # ╚═══════════════════════════════╝
 class List:
     def __init__(self, file_path, prec=1):
-        self.path = os.path.abspath(file_path)
+        self.path = data.path(os.path.abspath(file_path))
         self.data = data.read_file(file_path)
         self.prec = prec
     

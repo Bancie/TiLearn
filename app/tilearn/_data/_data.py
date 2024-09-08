@@ -33,31 +33,38 @@ def read_file(file_path):
             data.append(row)
     return data
 
-def prec(file_path, opt_row):
+def precedence(file_path, opt_row):
     with open(file_path, 'r') as infile:
         reader = csv.reader(infile)
-        rows = [row for index, row in enumerate(reader) if index < 0 or index > opt_row]
+        next(reader)
+        rows = []
+        for index, row in enumerate(reader):
+            if index < 0 or index > int(opt_row):
+                processed_row = [str(row[0])] + [float(row[1])] + [int(val) for val in row[2:]]
+                rows.append(processed_row)
     return rows
 
 def none(file_path, opt_row):
     with open(file_path, 'r') as infile:
         reader = csv.reader(infile)
-        rows = [row for index, row in enumerate(reader) if index != opt_row]
+        next(reader)
+        rows = []
+        for index, row in enumerate(reader):
+            if index != int(opt_row-1):
+                processed_row = [str(row[0])] + [float(row[1])] + [int(val) for val in row[2:]]
+                rows.append(processed_row)
     return rows
 
 def updated(file_path, prec, opt_row):
+    header = ['Name', 'p', 'r', 'd', 'w']
+    rows = []
     if prec == 1:
-        # rows = prec(file_path, opt_row)
-        with open(file_path, 'r') as infile:
-            reader = csv.reader(infile)
-            rows = [row for index, row in enumerate(reader) if index < 0 or index > opt_row]
+        rows = precedence(file_path, opt_row)
     elif prec == 0:
-        # rows = none(file_path, opt_row)
-        with open(file_path, 'r') as infile:
-            reader = csv.reader(infile)
-            rows = [row for index, row in enumerate(reader) if index != opt_row]
+        rows = none(file_path, opt_row)
     with open(file_path, 'w', newline='') as outfile:
         writer = csv.writer(outfile)
+        writer.writerow(header)
         writer.writerows(rows)
             
 def clear(folder_path):
