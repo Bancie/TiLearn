@@ -53,7 +53,7 @@ def updated(lists, set_j, opt_list, row_list):
 def optimal_list(lists, path, backup_path):
     set_j = []
     # data.backup(path, backup_path)
-    jc = pl.ja_all(lists, backup_path)
+    jc = pl.ja_all(lists, path)
     while jc > 0:
         opt_list = lists[pl.location(lists, type='sub')].run()
         row_list = pl.location(lists, type='row')
