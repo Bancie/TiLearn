@@ -8,17 +8,18 @@ import glob
 
 # print(data.path('/Users/chibangnguyen/Documents/TiLearn/app/tests/data.csv'))
 # print(data.read_file('/Users/chibangnguyen/Documents/TiLearn/app/tests/data.csv'))
-# data.backup('/Users/chibangnguyen/Documents/TiLearn/app/tests', '/Users/chibangnguyen/Documents/TiLearn/app/tests/backup')
-
-original_file = '/Users/chibangnguyen/Documents/TiLearn/app/tests'
-
-data.backup(original_file, '/Users/chibangnguyen/Documents/TiLearn/app/tests/backup')
+data.backup('/Users/chibangnguyen/Documents/TiLearn/app/tests', '/Users/chibangnguyen/Documents/TiLearn/app/tests/backup')
 
 lists = [
-    pl.List(file_path='/Users/chibangnguyen/Documents/TiLearn/app/tests/data.csv', prec=1),
-    pl.List(file_path='/Users/chibangnguyen/Documents/TiLearn/app/tests/data2.csv', prec=1),
-    pl.List(file_path='/Users/chibangnguyen/Documents/TiLearn/app/tests/data3.csv', prec=1)
+    pl.List(file_path='/Users/chibangnguyen/Documents/TiLearn/app/tests/data.csv', prec=0),
+    pl.List(file_path='/Users/chibangnguyen/Documents/TiLearn/app/tests/data2.csv', prec=0),
+    pl.List(file_path='/Users/chibangnguyen/Documents/TiLearn/app/tests/data3.csv', prec=0)
 ]
+
+# print(pl.location(lists, type='sub'))
+
+for row in tl.optimal_list(lists, '/Users/chibangnguyen/Documents/TiLearn/app/tests', '/Users/chibangnguyen/Documents/TiLearn/app/tests/backup'):
+    print(row)
 
 # row_list = pl.location(lists, type='row')
 # opt_file = lists[pl.location(lists, type='sub')].path
@@ -33,7 +34,6 @@ lists = [
 
 # print(tl.set_const(lists, prec=1))
 
-# print(tl.optimal_list(lists, original_file, '/Users/chibangnguyen/Documents/TiLearn/app/tests/backup'))
 
 # data.clear('/Users/chibangnguyen/Documents/TiLearn/app/tests/backup')
 
