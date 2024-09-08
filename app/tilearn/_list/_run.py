@@ -1,5 +1,6 @@
 import tilearn as tl
 from tilearn import _plat as pl
+from tilearn import _data as data
 import os
 
 # ╔═══════════════════════════════╗
@@ -49,9 +50,10 @@ def updated(lists, set_j, opt_list, row_list):
     return opt_list
     # return set_j
 
-def optimal_list(path, lists):
+def optimal_list(lists, path, backup_path):
     set_j = []
-    jc = pl.ja_all(path, lists)
+    data.backup(path, backup_path)
+    jc = pl.ja_all(lists, backup_path)
     while jc > 0:
         opt_list = lists[pl.location(lists, type='sub')].run()
         row_list = pl.location(lists, type='row')
@@ -64,4 +66,5 @@ def optimal_list(path, lists):
             # updated(lists, set_j, opt_list, row_list)
             set_j.extend(set_const(lists, prec=0))
             jc -= 1
+    data.clear(backup_path)
     return set_j

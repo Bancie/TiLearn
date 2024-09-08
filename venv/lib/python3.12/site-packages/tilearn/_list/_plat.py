@@ -24,7 +24,7 @@ class List:
 # ╔═══════════════════════════════╗
 # ║         CRUCIAL DATA          ║
 # ╚═══════════════════════════════╝
-def ja_all(path, lists):
+def ja_all(lists, path):
     sum = 0
     folder_path = path
     csv_count = len([file for file in os.listdir(folder_path) if file.endswith('.csv')])
