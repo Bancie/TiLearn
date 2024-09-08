@@ -1,12 +1,14 @@
 import tilearn as tl
+from tilearn import _data as data
 import os
 
 # ╔═══════════════════════════════╗
 # ║          CLASS DATA           ║
 # ╚═══════════════════════════════╝
 class List:
-    def __init__(self, data, prec=1):
-        self.data = data
+    def __init__(self, file_path, prec=1):
+        self.path = os.path.abspath(file_path)
+        self.data = data.read_file(file_path)
         self.prec = prec
     
     def info(self):
@@ -14,6 +16,9 @@ class List:
     
     def check(self):
         return self.prec
+    
+    def path(self):
+        return self.path
     
     def run(self):
         if self.prec == 1:

@@ -52,19 +52,22 @@ def updated(lists, set_j, opt_list, row_list):
 
 def optimal_list(lists, path, backup_path):
     set_j = []
-    data.backup(path, backup_path)
+    # data.backup(path, backup_path)
     jc = pl.ja_all(lists, backup_path)
     while jc > 0:
         opt_list = lists[pl.location(lists, type='sub')].run()
         row_list = pl.location(lists, type='row')
+        opt_file = lists[pl.location(lists, type='sub')].path
         check = lists[pl.location(lists, type='sub')].check()
         if check == 1:
             # prec_updated(lists, set_j, opt_list, row_list)
             set_j.extend(set_const(lists, prec=1))
+            data.updated(opt_file, prec=1, opt_row=row_list)
             jc -= row_list
         elif check == 0:
             # updated(lists, set_j, opt_list, row_list)
             set_j.extend(set_const(lists, prec=0))
+            data.updated(opt_file, prec=0, opt_row=row_list)
             jc -= 1
-    data.clear(backup_path)
+    # data.clear(backup_path)
     return set_j

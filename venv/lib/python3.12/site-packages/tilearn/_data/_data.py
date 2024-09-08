@@ -33,16 +33,26 @@ def read_file(file_path):
             data.append(row)
     return data
 
-def updated(file_path, prec, end_index):
+def prec(file_path, opt_row):
+    with open(file_path, 'r') as infile:
+        reader = csv.reader(infile)
+        rows = [row for index, row in enumerate(reader) if index < 0 or index > opt_row]
+    return rows
+
+def none(file_path, opt_row):
+    with open(file_path, 'r') as infile:
+        reader = csv.reader(infile)
+        rows = [row for index, row in enumerate(reader) if index != opt_row]
+    return rows
+
+def updated(file_path, prec, opt_row):
     if prec == 1:
-        start_index = 0
-        with open(file_path, 'r') as infile:
-            reader = csv.reader(infile)
-            rows = [row for index, row in enumerate(reader) if index < start_index or index > end_index]
-        with open(file_path, 'w', newline='') as outfile:
-            writer = csv.writer(outfile)
-            writer.writerow(["Name", "p", "r", "d", "w", "p-factor"])
-            writer.writerows(rows)
+        rows = prec(file_path, opt_row)
+    elif prec == 0:
+        rows = none(file_path, opt_row)
+    with open(file_path, 'w', newline='') as outfile:
+        writer = csv.writer(outfile)
+        writer.writerows(rows)
             
 def clear(folder_path):
     csv_files = glob.glob(os.path.join(folder_path, '*.csv'))
