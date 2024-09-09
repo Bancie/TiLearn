@@ -51,17 +51,14 @@ def optimal_list(lists, path, backup_path):
             # if file_seek(lists, path=backup_path) == 1:
             #     set_j.extend(opt_list)
             #     break
-            set_j.extend(set_const(lists, prec=1, op=opt_list, row=row_list))
+            set_j.extend(set_const(lists, prec=1, op=opt_list, row=row_list+1))
             data.updated(opt_file, prec=1, opt_row=row_list)
-            # print(jc)
-            # print(set_j, '\n')
             jc -= row_list+1
         elif check == 0:
             set_j.extend(set_const(lists, prec=0, op=opt_list, row=row_list))
             data.updated(opt_file, prec=0, opt_row=row_list)
-            # print(jc)
             jc -= 1
-        print(file_seek(lists, path=backup_path))
-        print(set_j, '\n')
+        # print(file_seek(lists, path=backup_path))
+        # print(set_j, '\n')
     data.clear(backup_path)
     return set_j

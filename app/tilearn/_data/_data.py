@@ -22,7 +22,7 @@ def read_file(file_path):
         reader = csv.reader(file)
         next(reader)
         for row in reader:
-            for i in range(1, 5):
+            for i in range(0, 5):
                 if i == 0:
                     row[i] = str(row[i])
                 elif i == 1:
