@@ -18,8 +18,7 @@ def path(original_path):
 
 def read_file(file_path):
     data = []
-    backup = path(file_path)
-    with open(backup, 'r') as file:
+    with open(file_path, 'r') as file:
         reader = csv.reader(file)
         next(reader)
         for row in reader:

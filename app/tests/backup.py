@@ -6,23 +6,20 @@ import csv
 import shutil
 import glob
 
-# print(data.path('/Users/chibangnguyen/Documents/TiLearn/app/tests/data.csv'))
-# print(data.read_file('/Users/chibangnguyen/Documents/TiLearn/app/tests/data.csv'))
-# data.backup('/Users/chibangnguyen/Documents/TiLearn/app/tests', '/Users/chibangnguyen/Documents/TiLearn/app/tests/backup')
-
 lists = [
-    pl.List(file_path='/Users/chibangnguyen/Documents/TiLearn/app/tests/data.csv', prec=0),
-    pl.List(file_path='/Users/chibangnguyen/Documents/TiLearn/app/tests/data2.csv', prec=0),
-    pl.List(file_path='/Users/chibangnguyen/Documents/TiLearn/app/tests/data3.csv', prec=0)
+    pl.List(file_path='/Users/chibangnguyen/Documents/TiLearn/app/tests/data.csv', prec=1),
+    pl.List(file_path='/Users/chibangnguyen/Documents/TiLearn/app/tests/data2.csv', prec=1),
+    pl.List(file_path='/Users/chibangnguyen/Documents/TiLearn/app/tests/data3.csv', prec=1)
 ]
 
-opt_list = lists[pl.location(lists, type='sub')].path
-print(opt_list)
+# opt_list = lists[pl.location(lists, type='sub')].path
+# print(opt_list)
 # print(pl.location(lists, type='sub'))
 
 # tl.optimal_list(lists, '/Users/chibangnguyen/Documents/TiLearn/app/tests', '/Users/chibangnguyen/Documents/TiLearn/app/tests/backup')
-# for row in tl.optimal_list(lists, '/Users/chibangnguyen/Documents/TiLearn/app/tests', '/Users/chibangnguyen/Documents/TiLearn/app/tests/backup'):
-#     print(row)
+# print(tl.optimal_list(lists, '/Users/chibangnguyen/Documents/TiLearn/app/tests', '/Users/chibangnguyen/Documents/TiLearn/app/tests/backup'))
+for row in tl.optimal_list(lists, '/Users/chibangnguyen/Documents/TiLearn/app/tests', '/Users/chibangnguyen/Documents/TiLearn/app/tests/backup'):
+    print(row)
 
 # row_list = pl.location(lists, type='row')
 # opt_file = lists[pl.location(lists, type='sub')].path

@@ -6,15 +6,12 @@ import os
 # ║          CLASS DATA           ║
 # ╚═══════════════════════════════╝
 class List:
-    def __init__(self, file_path, prec=1):
+    def __init__(self, file_path, prec):
         self.path = data.path(os.path.abspath(file_path))
-        # self.data = data.read_file(data.path(os.path.abspath(file_path)))
-        # self.data = data.read_file(data.path(file_path))
-        self.data = data.read_file(file_path)
         self.prec = prec
     
     def info(self):
-        return self.data
+        return data.read_file(self.path)
     
     def check(self):
         return self.prec
@@ -24,9 +21,9 @@ class List:
     
     def run(self):
         if self.prec == 1:
-            return tl.sum_factor(self.data)
+            return tl.sum_factor(data.read_file(self.path))
         elif self.prec == 0:
-            return tl.factor_data(self.data)
+            return tl.factor_data(data.read_file(self.path))
     
 # ╔═══════════════════════════════╗
 # ║         CRUCIAL DATA          ║
