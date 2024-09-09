@@ -12,20 +12,7 @@ data = [['bt task 1', 4, 0, 1, 1],
         ['luyen de', 2, 0, 7, 1],
         ['final', 6, 0, 2, 2]]
 
-# schedule = tl.wspt(data)
-
-# schedule = tl.c_time(data)
-# full_schedule = tl.lateness(data)
-
-# schedule = tl.edd(data)
-
 schedule = tl.wspt_prec(data)
 
 for row in schedule:
     print(row)
-
-print('\n')
-
-max_value = max([row[5] for row in data])
-
-print(max_value)
