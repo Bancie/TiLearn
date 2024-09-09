@@ -6,11 +6,15 @@ import csv
 import shutil
 import glob
 
+# data.backup('/Users/chibangnguyen/Documents/TiLearn/app/tests', '/Users/chibangnguyen/Documents/TiLearn/app/tests/backup')
+
 lists = [
     pl.List(file_path='/Users/chibangnguyen/Documents/TiLearn/app/tests/data.csv', prec=1),
     pl.List(file_path='/Users/chibangnguyen/Documents/TiLearn/app/tests/data2.csv', prec=1),
     pl.List(file_path='/Users/chibangnguyen/Documents/TiLearn/app/tests/data3.csv', prec=1)
 ]
+
+# print(tl.file_seek(lists, '/Users/chibangnguyen/Documents/TiLearn/app/tests/backup'))
 
 # opt_list = lists[pl.location(lists, type='sub')].path
 # print(opt_list)

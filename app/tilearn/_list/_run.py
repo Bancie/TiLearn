@@ -31,6 +31,13 @@ def set_const(lists, prec, op, row):
     elif prec == 0:
         return set(lists, op, row)
 
+def file_seek(lists, path):
+    sum = pl.count_file(path)
+    for sublist in lists:
+        if sublist.info() == []:
+            sum -= 1
+    return sum
+
 def optimal_list(lists, path, backup_path):
     set_j = []
     data.backup(path, backup_path)
@@ -41,15 +48,18 @@ def optimal_list(lists, path, backup_path):
         opt_file = lists[pl.location(lists, type='sub')].path
         check = lists[pl.location(lists, type='sub')].check()
         if check == 1:
+            if file_seek(lists, path=backup_path) == 1:
+                set_j.extend(opt_list)
+                break
             set_j.extend(set_const(lists, prec=1, op=opt_list, row=row_list))
             data.updated(opt_file, prec=1, opt_row=row_list)
             # print(jc)
-            print(set_j, '\n')
+            # print(set_j, '\n')
             jc -= row_list
         elif check == 0:
             set_j.extend(set_const(lists, prec=0, op=opt_list, row=row_list))
             data.updated(opt_file, prec=0, opt_row=row_list)
-            print(jc)
+            # print(jc)
             jc -= 1
     data.clear(backup_path)
-    # return set_j
+    return set_j

@@ -65,7 +65,7 @@ def updated(file_path, prec, opt_row):
         writer = csv.writer(outfile)
         writer.writerow(header)
         writer.writerows(rows)
-            
+
 def clear(folder_path):
     csv_files = glob.glob(os.path.join(folder_path, '*.csv'))
     for file in csv_files:
