@@ -1,12 +1,16 @@
-import tilearn
+import tilearn as tl
+from tilearn import _data as data
+from tilearn import _plat as pl
+import os
+import csv
+import shutil
+import glob
 
-x = [[1, 2, 3, 5, 7],
-     [2, 4, 8, 6, 6], 
-     [1, 2, 3, 2, 3],
-     [2, 4, 6, 7, 4],
-     [2, 4, 8, 6, 6], 
-     [1, 2, 3, 2, 3]]
+lists = [
+    pl.List(file_path='/Users/chibangnguyen/Documents/TiLearn/tests/data.csv', prec=0),
+    pl.List(file_path='/Users/chibangnguyen/Documents/TiLearn/tests/data2.csv', prec=1),
+    pl.List(file_path='/Users/chibangnguyen/Documents/TiLearn/tests/data3.csv', prec=1)
+]
 
-time = tilearn.custom_wspt(x, 30)
-for row in time:
+for row in tl.optimal_list(lists, '/Users/chibangnguyen/Documents/TiLearn/tests', '/Users/chibangnguyen/Documents/TiLearn/tests/backup'):
     print(row)
