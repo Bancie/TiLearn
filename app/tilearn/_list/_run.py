@@ -33,7 +33,6 @@ def set_const(lists, prec, op, row):
 
 def optimal_list(lists, path, backup_path):
     set_j = []
-    a = []
     # data.backup(path, backup_path)
     jc = pl.ja_all(lists, path)
     while jc > 0:
@@ -49,5 +48,9 @@ def optimal_list(lists, path, backup_path):
             set_j.extend(set_const(lists, prec=0, op=opt_list, row=row_list))
             data.updated(opt_file, prec=0, opt_row=row_list)
             jc -= 1
+        print(opt_list, '\n')
+        # print(row_list, '\n')
+        # print(opt_file, '\n')
+        # print(check, '\n')
     data.clear(backup_path)
-    return set_j
+    # return set_j
