@@ -17,7 +17,7 @@ def set(lists, op, row):
     set = tl.list_gen(1, 6)
     # opt_list = lists[pl.location(lists, type='sub')].run()
     # opt_row = pl.location(lists, type='row')-1
-    fix_row = row - 1
+    fix_row = row
     for i in range(len(set)):
         for j in range(len(set[i])):
             if i == 0 and j == 0:
@@ -48,18 +48,17 @@ def optimal_list(lists, path, backup_path):
         opt_file = lists[pl.location(lists, type='sub')].path
         check = lists[pl.location(lists, type='sub')].check()
         if check == 1:
-            if file_seek(lists, path=backup_path) == 1:
-                set_j.extend(opt_list)
-                break
+            # if file_seek(lists, path=backup_path) == 1:
+            #     set_j.extend(opt_list)
+            #     break
             set_j.extend(set_const(lists, prec=1, op=opt_list, row=row_list))
             data.updated(opt_file, prec=1, opt_row=row_list)
-            # print(jc)
-            # print(set_j, '\n')
-            jc -= row_list
+            jc -= row_list+1
         elif check == 0:
             set_j.extend(set_const(lists, prec=0, op=opt_list, row=row_list))
             data.updated(opt_file, prec=0, opt_row=row_list)
-            # print(jc)
             jc -= 1
+        # print(file_seek(lists, path=backup_path))
+        # print(set_j, '\n')
     data.clear(backup_path)
     return set_j

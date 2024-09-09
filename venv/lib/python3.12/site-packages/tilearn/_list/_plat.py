@@ -61,4 +61,4 @@ def location(lists, type):
     if type == 'sub':
         return opt[0]
     elif type == 'row':
-        return opt[1]+1
+        return opt[1]

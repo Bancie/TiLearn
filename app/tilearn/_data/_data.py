@@ -38,7 +38,7 @@ def precedence(file_path, opt_row):
         next(reader)
         rows = []
         for index, row in enumerate(reader):
-            if index < 0 or index > opt_row:
+            if index > int(opt_row):
                 processed_row = [str(row[0])] + [float(row[1])] + [int(val) for val in row[2:]]
                 rows.append(processed_row)
     return rows
@@ -49,7 +49,7 @@ def none(file_path, opt_row):
         next(reader)
         rows = []
         for index, row in enumerate(reader):
-            if index != int(opt_row-1):
+            if index != int(opt_row):
                 processed_row = [str(row[0])] + [float(row[1])] + [int(val) for val in row[2:]]
                 rows.append(processed_row)
     return rows

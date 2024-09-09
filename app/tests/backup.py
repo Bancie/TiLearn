@@ -14,6 +14,10 @@ lists = [
     pl.List(file_path='/Users/chibangnguyen/Documents/TiLearn/app/tests/data3.csv', prec=1)
 ]
 
+# print(pl.location(lists, type='row'))
+# for row in lists[pl.location(lists, type='sub')].run():
+#     print(row)
+
 # print(tl.file_seek(lists, '/Users/chibangnguyen/Documents/TiLearn/app/tests/backup'))
 
 # opt_list = lists[pl.location(lists, type='sub')].path
