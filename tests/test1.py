@@ -1,10 +1,5 @@
 import tilearn as tl
-from tilearn import _data as data
 from tilearn import _plat as pl
-import os
-import csv
-import shutil
-import glob
 
 lists = [
     pl.List(file_path='/Users/chibangnguyen/Documents/TiLearn/tests/data.csv', prec=0),
