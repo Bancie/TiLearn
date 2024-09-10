@@ -17,4 +17,3 @@ app/tilearn/_list/_plat.py
 app/tilearn/_list/_run.py
 app/tilearn/_wspt/__init__.py
 app/tilearn/_wspt/_wspt.py
-tests/test1.py
