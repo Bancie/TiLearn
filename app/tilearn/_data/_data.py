@@ -25,7 +25,7 @@ def read_file(file_path):
             for i in range(0, 5):
                 if i == 0:
                     row[i] = str(row[i])
-                elif i == 1:
+                elif i == 1 or i == 4:
                     row[i] = float(row[i])
                 else:
                     row[i] = int(row[i])
@@ -39,7 +39,8 @@ def precedence(file_path, opt_row):
         rows = []
         for index, row in enumerate(reader):
             if index > int(opt_row):
-                processed_row = [str(row[0])] + [float(row[1])] + [int(val) for val in row[2:]]
+                # processed_row = [str(row[0])] + [float(row[1])] + [int(val) for val in row[2:]]
+                processed_row = [str(row[0])] + [float(row[1])] + [int(val) if idx != 4 else float(val) for idx, val in enumerate(row[2:], start=2)]
                 rows.append(processed_row)
     return rows
 
@@ -50,7 +51,8 @@ def none(file_path, opt_row):
         rows = []
         for index, row in enumerate(reader):
             if index != int(opt_row):
-                processed_row = [str(row[0])] + [float(row[1])] + [int(val) for val in row[2:]]
+                # processed_row = [str(row[0])] + [float(row[1])] + [int(val) for val in row[2:]]
+                processed_row = [str(row[0])] + [float(row[1])] + [int(val) if idx != 4 else float(val) for idx, val in enumerate(row[2:], start=2)]
                 rows.append(processed_row)
     return rows
 
