@@ -8,9 +8,9 @@ list2 = '/Users/chibangnguyen/Documents/TiLearn/tests/personal-list/DSA-DSA.csv'
 list3 = '/Users/chibangnguyen/Documents/TiLearn/tests/personal-list/Tieng Anh-Tieng Anh.csv'
 
 lists = [
-    pl.List(file_path=list1, prec=1),
-    pl.List(file_path=list2, prec=1),
-    pl.List(file_path=list3, prec=1)
+    pl.List(file_path=list1, prec=0),
+    pl.List(file_path=list2, prec=0),
+    pl.List(file_path=list3, prec=0)
 ]
 
 for row in tl.optimal_list(lists, original_path, backup_path):
