@@ -1,5 +1,6 @@
 import tilearn as tl
 from tilearn import _plat as pl
+import csv
 
 original = '/Users/chibangnguyen/Documents/TiLearn/test/Personal_list'
 backup = '/Users/chibangnguyen/Documents/TiLearn/test/Personal_list/backup'
@@ -29,5 +30,14 @@ lists = [
     pl.List(file_path=list11, prec=1),
 ]
 
-for row in tl.optimal_list(lists, original, backup):
-    print(row)
+# for row in tl.optimal_list(lists, original, backup):
+#     print(row)
+    
+schedule = tl.optimal_list(lists, original, backup)
+schedule_csv = '/Users/chibangnguyen/Documents/TiLearn/test/schedule.csv'
+
+header = ['Name', 'p', 'r', 'd', 'w', 'p-factor']
+with open(schedule_csv, 'w', newline='') as file:
+    writer = csv.writer(file)
+    writer.writerow(header)
+    writer.writerows(schedule)

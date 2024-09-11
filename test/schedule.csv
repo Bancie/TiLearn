@@ -1,0 +1,38 @@
+Name,p,r,d,w,p-factor
+BT thực hành môn DSA,0.5,0,10,1.0,2.0
+Vẽ giải thuật cho bài 1 DSA,0.5,0,10,0.31,0.62
+Notebook speaking part 2,1.0,0,10,0.41,0.41
+Script part 2 speaking,1.0,0,10,0.71,0.5599999999999999
+BT lý thuyết môn DSA,2.0,0,10,1.0,0.5
+Notebook supporting,1.0,0,10,0.31,0.31
+Homework supporting,1.0,0,10,0.61,0.45999999999999996
+Lý thuyết môn GTH,2.5,0,10,0.71,0.284
+Notebook môn GTH,1.0,0,10,0.41,0.31999999999999995
+BT môn GTH,2.0,0,10,0.71,0.3327272727272727
+Notebook task 1,0.5,0,10,0.11,0.22
+Homework task 1 body,2.0,0,10,0.61,0.288
+"Viết bài thu hoạch 2 phần 1|r,prmp|Lmax part 1",4.0,0,10,1.0,0.25
+"Viết bài thu hoạch 2 phần 1|r,prmp|Lmax part 2",4.0,0,10,1.0,0.25
+Viết bài thu hoạch 2 phần 1|r|Cmax,4.0,0,10,1.0,0.25
+Viết bài thu hoạch 2 phần chạy số liệu,2.0,0,10,1.0,0.2857142857142857
+Submit video speaking part 2,2.0,0,10,0.41,0.205
+Xem bài mới môn GTH,4.0,0,10,0.71,0.1775
+Notebook listening A to Z,4.0,0,10,0.11,0.0275
+Listening Completion (p2-3),0.5,0,10,0.21,0.07111111111111111
+Listening Completion (p4-7),0.5,0,10,0.21,0.10600000000000001
+Listening Completion_Practice,0.5,0,10,0.21,0.13454545454545455
+Video T4 4/9 (Map listening),2.0,0,10,0.21,0.105
+Notebook map listening,1.0,0,10,0.16,0.12333333333333334
+Homework map listening,1.0,0,10,0.11,0.11
+Lý thuyết môn CTRR,2.0,0,10,0.11,0.055
+Notebook môn CTRR,1.0,0,10,0.16,0.09000000000000001
+Lý thuyết độ phức tạp,4.0,0,10,0.31,0.0775
+Xem bài mới môn DSA,4.0,0,10,0.31,0.0775
+Lý thuyết môn LTMM,4.0,0,10,0.11,0.0275
+Notebook môn LTMM,1.0,0,10,0.16,0.054000000000000006
+BT môn LTMM,1.0,0,10,0.06,0.055
+Notebook T/F/NG,0.5,0,10,0.01,0.02
+Xem trước bài môn CTRR,1.0,0,10,0.01,0.01
+Xem trước bài môn LTMM,2.0,0,10,0.01,0.005
+Homework T/F/NG,3.0,0,10,0.01,0.0033333333333333335
+Video T2 9/9 (Chữa reading T/F/NG),2.0,0,10,0.01,0.004
