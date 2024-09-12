@@ -1,9 +1,8 @@
 Name,p,r,d,w,p-factor
-BT thực hành môn DSA,0.5,0,10,1.0,2.0
 Vẽ giải thuật cho bài 1 DSA,0.5,0,10,0.31,0.62
 Notebook speaking part 2,1.0,0,10,0.41,0.41
 Script part 2 speaking,1.0,0,10,0.71,0.5599999999999999
-BT lý thuyết môn DSA,2.0,0,10,1.0,0.5
+Viết bài thu hoạch 2 phần chạy số liệu,2.0,0,10,1.0,0.5
 Notebook supporting,1.0,0,10,0.31,0.31
 Homework supporting,1.0,0,10,0.61,0.45999999999999996
 Lý thuyết môn GTH,2.5,0,10,0.71,0.284
@@ -14,7 +13,6 @@ Homework task 1 body,2.0,0,10,0.61,0.288
 "Viết bài thu hoạch 2 phần 1|r,prmp|Lmax part 1",4.0,0,10,1.0,0.25
 "Viết bài thu hoạch 2 phần 1|r,prmp|Lmax part 2",4.0,0,10,1.0,0.25
 Viết bài thu hoạch 2 phần 1|r|Cmax,4.0,0,10,1.0,0.25
-Viết bài thu hoạch 2 phần chạy số liệu,2.0,0,10,1.0,0.2857142857142857
 Submit video speaking part 2,2.0,0,10,0.41,0.205
 Xem bài mới môn GTH,4.0,0,10,0.71,0.1775
 Notebook listening A to Z,4.0,0,10,0.11,0.0275
