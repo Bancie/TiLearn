@@ -6,7 +6,7 @@
 <h3></h3>
 
 [![homepage](https://img.shields.io/badge/powered%20by-TiLearn-%237072eb?style=for-the-badge&labelColor=%23555555)](https://bancie.github.io/TiLearn/)
-[![PyPI](https://img.shields.io/badge/pypi%20package-0.0.20-%23177bbb?style=for-the-badge&logo=pypi&labelColor=white
+[![PyPI](https://img.shields.io/badge/pypi%20package-1.0.0-%23177bbb?style=for-the-badge&logo=pypi&labelColor=white
 )](https://pypi.org/project/TiLearn/)
 
 Welcome to our open-source project focused on applying **Machine Learning (ML)** and **Deep Learning (DL)** techniques to **Machine Scheduling** and **Time Management**, often referred to as **Optimal Processing**. Our goal is to revolutionize the way tasks and processes are managed in various projects by leveraging advanced computational methods to optimize efficiency and productivity.
