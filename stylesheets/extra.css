@@ -1,0 +1,261 @@
+/* Button - github */
+.button-29 {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #4050b5 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(255, 255, 255, 0.4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 60px;
+  width: 200px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 40px;
+  padding-right: 40px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .5s,transform .5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 25px;
+}
+
+.button-29:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button-29:hover {
+  box-shadow: #2d234266 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-29:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+/* Button - PyPI */
+
+.button-30 {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #e9efd9 0, #0D7C66 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(255, 255, 255, 0.4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 60px;
+  width: 200px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 40px;
+  padding-right: 40px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .5s,transform .5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 25px;
+}
+
+.button-30:focus {
+  box-shadow: #0D7C66 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #0D7C66 0 -3px 0 inset;
+}
+
+.button-30:hover {
+  box-shadow: #2d234266 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #0D7C66 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-30:active {
+  box-shadow: #0D7C66 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+/* Font style */
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold; /* Use bold font weight for headings */
+  opacity: 1;
+}
+
+p, li, span, a {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400; /* Normal font weight for regular text */
+}
+
+/* Background */
+
+.homepage-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('background.png'); /* Light theme background */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+/* Homepage Web mapping */
+
+ol.circle-list {
+  padding-left: 0px; /* Adjust padding for left alignment */
+  list-style-type: none; /* Remove default numbering */
+  counter-reset: list-counter; /* Initialize counter */
+}
+
+ol.circle-list li { 
+  color: #4F4F4F; 
+  padding-left: 60px; /* Adjust padding to align text with circles */
+  position: relative;
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 20px; /* Add some space between list items */
+  counter-increment: list-counter; /* Increment counter */
+}
+
+ol.circle-list li::before {
+  content: counter(list-counter);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4050b5, #56B4D3); /* Gradient color */
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff; /* Text color inside the circle */
+}
+
+ol.circle-list li .list-item-content {
+  margin-top: 5px; /* Add margin if you want some space between the title and content */
+  word-wrap: break-word; /* Ensure long words break into the next line */
+  padding-right: 20px; /* Add padding to avoid overflow on the right side */
+}
+
+ol.circle-list.alternating-colors li:nth-child(odd)::before { 
+  background: linear-gradient(135deg, #0BAD02, #56B4D3); /* Greenish gradient for odd items */
+}
+
+ol.circle-list.alternating-colors li:nth-child(even)::before { 
+  background: linear-gradient(135deg, #f06, #2378D5); /* Reddish gradient for even items */
+}
+
+/* Line separator */
+
+.line {
+  border: none; /* Remove any border if you're using <hr> */
+  height: 1px; /* Adjust the thickness of the line */
+  background: linear-gradient(to right, #4050b5, #448ba2); /* Blue to Cyan gradient */
+  margin: 60px auto; /* Space around the separator */
+  width: 30%; /* Full width */
+}
+
+.line-2 {
+  border: none; /* Remove any border if you're using <hr> */
+  height: 0px; /* Adjust the thickness of the line */
+  background: linear-gradient(to right, #4050b5, #448ba2); /* Blue to Cyan gradient */
+  margin: 45px auto; /* Space around the separator */
+  width: 100%; /* Full width */
+}
+
+.line-3 {
+  border: none; /* Remove any border if you're using <hr> */
+  height: 0px; /* Adjust the thickness of the line */
+  background: linear-gradient(to right, #4050b5, #448ba2); /* Blue to Cyan gradient */
+  margin: 20px auto; /* Space around the separator */
+  width: 100%; /* Full width */
+}
+
+pre {
+  white-space: pre-wrap; /* CSS3 */
+  white-space: -moz-pre-wrap; /* Firefox */
+  white-space: -pre-wrap; /* Opera <7 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* IE */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  position: relative; /* Needed for positioning the pseudo-element */
+  flex-wrap: wrap; /* Allows items to wrap onto the next line */
+}
+
+.column {
+  flex: 1;
+  padding: 20px;
+  position: relative; /* Needed for positioning content within columns */
+}
+
+#column1 {
+  margin-right: 10px; /* Adds space between the two columns */
+}
+
+#column2 {
+  margin-left: 10px; /* Adds space between the two columns */
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 1.1px; /* Width of the gradient line */
+  background: linear-gradient(to bottom, #767676, #a5a5a5); /* Gradient line */
+  transform: translateX(-50%); /* Centers the line between the columns */
+  top: 38%; /* Start the line 10% from the top of the container */
+  bottom: 10%; /* End the line 10% from the bottom of the container */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  .container {
+      flex-direction: column; /* Stacks the columns vertically */
+      align-items: center; /* Centers the columns horizontally */
+  }
+
+  .column {
+      width: 100%; /* Makes each column take the full width */
+      margin: 0; /* Removes margins between columns */
+  }
+
+  .container::before {
+      display: none; /* Hides the gradient line on smaller screens */
+  }
+}
