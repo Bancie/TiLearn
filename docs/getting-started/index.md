@@ -1,8 +1,8 @@
 ---
 title: Introduction to TiLearn
 description: This document provides an overview of project content and the generalization of the various problems it addresses
-hide:
-  - navigation
+# hide:
+#   - navigation
 ---
 # TiLearn: Getting Started
 

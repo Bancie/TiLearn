@@ -6,7 +6,9 @@ repo_name: Bancie/TiLearn
 
 nav:
   - Home: index.md
-  - Getting started: getting-started/index.md
+  - Getting started:
+    - getting-started/index.md
+    - Running Illustrative: getting-started/illustrate.md
   - User Guide:
     - user-guide/index.md
     #- Single Machine:
