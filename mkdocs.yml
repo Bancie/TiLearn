@@ -6,14 +6,13 @@ repo_name: Bancie/TiLearn
 
 nav:
   - Home: index.md
-  - Getting started:
-    - getting-started/index.md
-    - Running Illustrative: getting-started/illustrate.md
+  - Getting started: getting-started/index.md
   - User Guide:
     - user-guide/index.md
     #- Single Machine:
     - Maximum Lateness: user-guide/single-machine/lateness/edd.md
     - Total Completion Time: user-guide/single-machine/completion/wspt.md
+    - Running Illustrative Data: user-guide/illustrate.md
       #- Sequence jobs: user-guide/single-machine/completion/sequence.md
       #- Release jobs: user-guide/single-machine/completion/release.md
   #- Building from source: run/index.md
@@ -57,13 +56,13 @@ theme:
      - content.code.copy
   language: en
   palette:
-    - scheme: slate
+    - scheme: default
       toggle:
         icon: material/weather-night
         name: Switch to light mode    
       primary: indigo
       accent: yellow
-    - scheme: default
+    - scheme: slate
       toggle:
         icon: material/weather-sunny
         name: Switch to dark mode
