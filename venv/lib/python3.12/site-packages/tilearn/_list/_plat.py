@@ -6,8 +6,9 @@ import os
 # ║          CLASS DATA           ║
 # ╚═══════════════════════════════╝
 class List:
-    def __init__(self, file_path, prec):
-        self.path = data.path(os.path.abspath(file_path))
+    def __init__(self, backup_path, file_path, prec):
+        self.backup = os.path.abspath(backup_path)
+        self.path = data.path(os.path.abspath(file_path), self.backup)
         self.prec = prec
     
     def info(self):

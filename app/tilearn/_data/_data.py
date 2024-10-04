@@ -13,13 +13,10 @@ def backup(src, dist):
     for file in csv_files:
         shutil.copy(file, dist)
 
-def path(original_path):
-    directory = os.path.dirname(original_path)
+def path(original_path, backup_path):
     filename = os.path.basename(original_path)
-    new_directory = os.path.join(directory, 'backup')
-    os.makedirs(new_directory, exist_ok=True)
-    new_path = os.path.join(new_directory, filename)
-    return new_path
+    new_directory = os.path.join(backup_path, filename)
+    return new_directory
 
 def read_file(file_path):
     data = []
