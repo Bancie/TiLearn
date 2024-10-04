@@ -3,8 +3,13 @@ import shutil
 import glob
 import os
 
+# def backup(src, dist):
+#     csv_files = glob.glob(os.path.join(src, '*.csv'))
+#     for file in csv_files:
+#         shutil.copy(file, dist)
+
 def backup(src, dist):
-    csv_files = glob.glob(os.path.join(src, '*.csv'))
+    csv_files = glob.glob(os.path.join(src, '**', '*.csv'), recursive=True)
     for file in csv_files:
         shutil.copy(file, dist)
 
@@ -39,7 +44,6 @@ def precedence(file_path, opt_row):
         rows = []
         for index, row in enumerate(reader):
             if index > int(opt_row):
-                # processed_row = [str(row[0])] + [float(row[1])] + [int(val) for val in row[2:]]
                 processed_row = [str(row[0])] + [float(row[1])] + [int(val) if idx != 4 else float(val) for idx, val in enumerate(row[2:], start=2)]
                 rows.append(processed_row)
     return rows
@@ -51,7 +55,6 @@ def none(file_path, opt_row):
         rows = []
         for index, row in enumerate(reader):
             if index != int(opt_row):
-                # processed_row = [str(row[0])] + [float(row[1])] + [int(val) for val in row[2:]]
                 processed_row = [str(row[0])] + [float(row[1])] + [int(val) if idx != 4 else float(val) for idx, val in enumerate(row[2:], start=2)]
                 rows.append(processed_row)
     return rows
@@ -72,3 +75,4 @@ def clear(folder_path):
     csv_files = glob.glob(os.path.join(folder_path, '*.csv'))
     for file in csv_files:
         os.remove(file)
+

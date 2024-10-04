@@ -7,9 +7,39 @@ def list_gen(rows, cols):
 # ║          Data basis           ║
 # ╚═══════════════════════════════╝
 def job_amount(a):
+    """
+    Counting the amount of job in list `a`.
+
+    Parameters
+    ----------
+    a : list or array
+        A list or an array that contains the job table data.
+
+    Returns
+    -------
+    int
+        A value of job amount.
+    """
     return len(a)
 
 def p_factor_nonprec(i, a):
+    """
+    Creates `p-factor` data for the job list `a`.
+
+    Parameters
+    ----------
+    a : list or array
+        A list or an array that contains the job table data.
+
+    Returns
+    -------
+    list or array
+        A matrix of size `job_amount(a) × 6`.
+    
+    Notes
+    -----
+    The `p-factor` pertains to the non-precedence job type in the `1||∑w_jC_j` problem.
+    """
     p_factor_nonprec = a[i][4]/a[i][1]
     return p_factor_nonprec
 
