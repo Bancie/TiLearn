@@ -1,16 +1,125 @@
-# Python cache
+# ==================================
+# Python
+# ==================================
 __pycache__/
 *.py[cod]
+*$py.class
 
 # Virtual environments
-venv/
-.venv/
 env/
-.env/
+.venv/
+venv/
+ENV/
+env.bak/
+venv.bak/
 
-# OS files
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually contains the output of PyInstaller
+#  Example: myscript.spec
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# Pyre type checker
+.pyre/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pytype
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# ==================================
+# Editor Configs
+# ==================================
+# VS Code
+.vscode/
+.code-workspace
+
+# PyCharm
+.idea/
+
+# Sublime
+*.sublime-project
+*.sublime-workspace
+
+# ==================================
+# Environment / Secret files
+# ==================================
+.env
+.env.*
+*.env
+*.key
+*.pem
+
+# ==================================
+# Logs / Databases / Others
+# ==================================
+*.log
+*.pot
+*.mo
+*.sqlite3
+*.db
+
+# ==================================
+# OS Files
+# ==================================
+# macOS
 .DS_Store
 
-# IDE configs
-.vscode/
-.idea/
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# ==================================
+# Custom user ignored files
+# ==================================
+# Add any personal files/folders you want Git to ignore below:
+# notes/
+# local_config.yaml
