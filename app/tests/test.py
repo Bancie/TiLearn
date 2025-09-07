@@ -12,7 +12,7 @@ data = [['bt task 1', 4, 0, 1, 1],
         ['luyen de', 2, 0, 7, 1],
         ['final', 6, 0, 2, 2]]
 
-schedule = tl.wspt_prec(data)
+schedule = tl.wspt(data)
 
 for row in schedule:
     print(row)
