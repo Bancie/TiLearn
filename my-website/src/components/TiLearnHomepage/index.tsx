@@ -1,11 +1,11 @@
 import Link from "@docusaurus/Link";
 import useBaseUrl from "@docusaurus/useBaseUrl";
+import IconGitHub from "@theme/Icon/Socials/GitHub";
 import type { ReactNode } from "react";
 import { DOC_CARDS, GITHUB_URL, PYPI_URL } from "./links";
 import styles from "./styles.module.css";
 
 export default function TiLearnHomepage(): ReactNode {
-  const githubImg = useBaseUrl("/img/github-mark.png");
   const pypiImg = useBaseUrl("/img/pypi.png");
 
   return (
@@ -32,7 +32,12 @@ export default function TiLearnHomepage(): ReactNode {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img className={styles.btnIcon} src={githubImg} alt="" aria-hidden />
+              <IconGitHub
+                className={styles.btnIconGithub}
+                width={18}
+                height={18}
+                aria-hidden
+              />
               GitHub
             </a>
             <a

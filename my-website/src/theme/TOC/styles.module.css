@@ -1,0 +1,35 @@
+/**
+ * Sticky desktop TOC shell + "On this page" heading (matches classic theme).
+ */
+
+.tableOfContents {
+  max-height: calc(100vh - (var(--ifm-navbar-height) + 2rem));
+  overflow-y: auto;
+  position: sticky;
+  top: calc(var(--ifm-navbar-height) + 1rem);
+}
+
+@media (max-width: 996px) {
+  .tableOfContents {
+    display: none;
+  }
+}
+
+.onThisPageHeading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--ifm-color-content-secondary);
+  margin: 0 0 0.625rem;
+  /* Align with text inside bordered TOC list (border + ul padding) */
+  padding-left: calc(1px + var(--ifm-toc-padding-horizontal, 0.5rem));
+  line-height: 1.2;
+}
+
+.onThisPageIcon {
+  flex-shrink: 0;
+  opacity: 0.88;
+}

@@ -64,10 +64,10 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: "TiLearn",
       logo: {
         alt: "TiLearn",
-        src: "img/tilearn2.png",
+        src: "img/tilearn.png",
+        srcDark: "img/tilearn2.png",
       },
       items: [
         {
@@ -120,32 +120,16 @@ const config: Config = {
       ],
     },
     footer: {
-      style: "dark",
+      style: "light",
       links: [
-        {
-          title: "Docs",
-          items: [
-            { label: "Getting started", to: "/getting-started" },
-            { label: "User Guide", to: "/user-guide" },
-            { label: "API reference", to: "/api-reference" },
-          ],
-        },
         {
           title: "Community",
           items: [
-            {
-              label: "Facebook",
-              href: "https://web.facebook.com/ngchibangg",
-            },
-            {
-              label: "Instagram",
-              href: "https://www.instagram.com/bancie.007/",
-            },
             { label: "GitHub", href: "https://github.com/Bancie/TiLearn" },
           ],
         },
       ],
-      copyright: `© ${new Date().getFullYear()} <a href="https://web.facebook.com/ngchibangg" target="_blank" rel="noopener noreferrer">Bancie Nguyen</a>. Built with Docusaurus.`,
+      copyright: `© ${new Date().getFullYear()} <a href="https://github.com/Bancie" target="_blank" rel="noopener noreferrer">Bancie Nguyen</a>.`,
     },
     prism: {
       theme: prismThemes.github,

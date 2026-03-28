@@ -159,6 +159,13 @@
   object-fit: contain;
 }
 
+/* Theme-aware mark (replaces flat github-mark.png) */
+.btnIconGithub {
+  flex-shrink: 0;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
 .releaseLink {
   font-size: 0.9rem;
   color: var(--ifm-color-primary);
