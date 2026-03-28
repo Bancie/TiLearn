@@ -5,7 +5,7 @@
 !!! note
     The problem $1\| \sum C_j$ is a special case of $1\| \sum w_j C_j$ with weights $w_j = 1$. Thus, SPT is the same as WSPT when $w_j = 1$, allowing us to focus on $1\| \sum w_j C_j$.
 
-## Independence jobs [(``show_mytime``)](../../../api-reference/in-job/i-job.md)
+## Independence jobs [(``show_mytime``)](../../../api-reference/in-job/i-job.md){#independence-jobs}
 
 !!! info
     The symbol for the problem is $1 \: | \:  \: | \: \sum w_j C_j$

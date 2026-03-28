@@ -1,8 +1,9 @@
 wheel
 setuptools
 twine
-mkdocs
-mkdocs-material
+# MkDocs 2.0 will drop plugins; stay on 1.x until the ecosystem catches up.
+mkdocs>=1.6,<2
+mkdocs-material[imaging]>=9.5
 mkdocs-encryptcontent-plugin
 mkdocs-glightbox
 pandas
@@ -11,4 +12,3 @@ jinja2
 matplotlib
 pathlib
 pyarrow
-# "mkdocs-material[imaging]"

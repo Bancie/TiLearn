@@ -1,3 +1,5 @@
+# Silence Material’s MkDocs 2.0 advisory on stderr (informational only): NO_MKDOCS_2_WARNING=1 mkdocs build
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
 site_name: TiLearn
 site_url: https://bancie.github.io/TiLearn/
 site_author: Bancie
@@ -15,7 +17,7 @@ nav:
     - Running Illustrative Data: user-guide/illustrate.md
       #- Sequence jobs: user-guide/single-machine/completion/sequence.md
       #- Release jobs: user-guide/single-machine/completion/release.md
-  #- Building from source: run/index.md
+  - Building from source: building-from-source/index.md
   - API reference:
     - api-reference/index.md
     - tilearn.show_mytime: api-reference/in-job/i-job.md

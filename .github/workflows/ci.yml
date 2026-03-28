@@ -12,18 +12,24 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      # Material prints an advisory about future MkDocs 2.0 on stderr; optional to hide in CI logs.
+      NO_MKDOCS_2_WARNING: "1"
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
-          python-version: 3.x
-      - uses: actions/cache@v2
+          python-version: "3.x"
+      - name: Install Cairo (social plugin / card previews)
+        run: sudo apt-get update && sudo apt-get install -y libcairo2-dev libfreetype6-dev
+      - uses: actions/cache@v4
         with:
-          key: ${{ github.ref }}
+          key: mkdocs-${{ github.ref }}-${{ hashFiles('mkdocs.yml', 'requirements.txt', 'docs/**') }}
+          restore-keys: |
+            mkdocs-${{ github.ref }}-
           path: .cache
-      - run: pip install mkdocs-material
-      - run: pip install pillow cairosvg
-      - run: pip install mkdocs-encryptcontent-plugin
-      - run: pip install mkdocs-glightbox
-      - run: pip install "mkdocs-material[imaging]"
+      - name: Install MkDocs and plugins
+        run: |
+          pip install "mkdocs>=1.6,<2" "mkdocs-material[imaging]" \
+            mkdocs-encryptcontent-plugin mkdocs-glightbox pillow cairosvg
       - run: mkdocs gh-deploy --force
