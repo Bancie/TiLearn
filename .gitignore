@@ -123,3 +123,9 @@ Desktop.ini
 # Add any personal files/folders you want Git to ignore below:
 # notes/
 # local_config.yaml
+
+# Local / scratch tests (not for CI)
+app/tests/
+
+# MkDocs encryptcontent plugin build cache
+encryptcontent.cache
