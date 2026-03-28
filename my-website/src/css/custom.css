@@ -1,0 +1,27 @@
+/**
+ * TiLearn global theme (Infima variables). Homepage layout lives in
+ * src/components/TiLearnHomepage/styles.module.css.
+ */
+
+:root {
+  --ifm-color-primary: #4050b5;
+  --ifm-color-primary-dark: #3644a0;
+  --ifm-color-primary-darker: #324098;
+  --ifm-color-primary-darkest: #2a3580;
+  --ifm-color-primary-light: #4a5cc0;
+  --ifm-color-primary-lighter: #5264c5;
+  --ifm-color-primary-lightest: #6374cc;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --ifm-color-primary: #56b4d3;
+  --ifm-color-primary-dark: #4aa8c7;
+  --ifm-color-primary-darker: #459ebc;
+  --ifm-color-primary-darkest: #3a87a3;
+  --ifm-color-primary-light: #6abdd9;
+  --ifm-color-primary-lighter: #74c2dc;
+  --ifm-color-primary-lightest: #8ccde3;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
