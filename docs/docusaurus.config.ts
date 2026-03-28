@@ -46,7 +46,7 @@ const config: Config = {
           routeBasePath: "/",
           sidebarPath: "./sidebars.ts",
           editUrl:
-            "https://github.com/Bancie/TiLearn/tree/main/my-website/docs/",
+            "https://github.com/Bancie/TiLearn/tree/main/docs/docs/",
           remarkPlugins: [[remarkMath, { singleDollarTextMath: true }]],
           rehypePlugins: [rehypeKatex],
         },
