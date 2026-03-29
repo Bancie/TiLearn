@@ -1,11 +1,6 @@
 wheel
 setuptools
 twine
-# MkDocs 2.0 will drop plugins; stay on 1.x until the ecosystem catches up.
-mkdocs>=1.6,<2
-mkdocs-material[imaging]>=9.5
-mkdocs-encryptcontent-plugin
-mkdocs-glightbox
 pandas
 ipython
 jinja2
