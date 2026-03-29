@@ -57,11 +57,16 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
-
   themeConfig: {
     image: "img/tilearn2.png",
     colorMode: {
       respectPrefersColorScheme: true,
+    },
+    algolia: {
+      appId: "LQ3EA4SNM",
+      apiKey: "00f84aeb4ff702fb429be4608ac63a3b",
+      indexName: "tilearn-docs",
+      contextualSearch: true,
     },
     navbar: {
       logo: {
