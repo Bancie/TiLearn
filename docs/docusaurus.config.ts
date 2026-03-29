@@ -45,8 +45,7 @@ const config: Config = {
         docs: {
           routeBasePath: "/",
           sidebarPath: "./sidebars.ts",
-          editUrl:
-            "https://github.com/Bancie/TiLearn/tree/main/docs/docs/",
+          editUrl: "https://github.com/Bancie/TiLearn/tree/main/docs/docs/",
           remarkPlugins: [[remarkMath, { singleDollarTextMath: true }]],
           rehypePlugins: [rehypeKatex],
         },
@@ -140,6 +139,12 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+    metadata: [
+      {
+        name: "algolia-site-verification",
+        content: "9C0B7C8B76E40B30",
+      },
+    ],
   } satisfies Preset.ThemeConfig,
 };
 
