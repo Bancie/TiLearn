@@ -1,0 +1,82 @@
+---
+title: "tilearn.bs.basis"
+description: Core matrix helpers, factor computation, and scheduling metrics APIs.
+---
+
+# `tilearn.bs.basis`
+
+Core helpers for building and enriching job tables.
+
+## Job table schema
+
+The baseline row format is:
+
+```python
+[name, p, r, d, w]
+```
+
+Some functions append additional columns in-place.
+
+## `tilearn.list_gen(rows, cols)`
+
+Create a 2D zero-initialized matrix with shape `(rows, cols)`.
+
+## `tilearn.job_amount(a)`
+
+Return the number of jobs (rows) in `a`.
+
+## `tilearn.p_factor_nonprec(i, a)`
+
+Return the non-precedence priority factor for row `i`, computed as `w / p`.
+
+## `tilearn.p_factor_prec_tu(i, a)` and `tilearn.p_factor_prec(...)`
+
+Compatibility helpers for precedence experiments and cumulative normalization.
+
+:::note
+The precedence helpers are retained for backward compatibility and are not the
+core path for standard non-precedence workflows.
+:::
+
+## `tilearn.calculate_factor(a)`
+
+Compute all `w / p` factors without mutating `a`.
+
+Returns a one-column matrix.
+
+## `tilearn.factor_data(a)`
+
+Append one factor column (`w / p`) to each row in-place.
+
+## `tilearn.c_time(a)`
+
+Append completion time `C_j` based on current row order.
+
+## `tilearn.lateness(a)`
+
+Append lateness `L_j = C_j - d_j`.
+
+Call `c_time(a)` first when starting from base rows.
+
+## `tilearn.sum_factor(a)`
+
+Append cumulative ratio:
+
+`(w_1 + ... + w_j) / (p_1 + ... + p_j)`
+
+Used by precedence-oriented list ranking.
+
+## Example workflow
+
+```python
+import tilearn as tl
+
+jobs = [
+    ["J1", 2.0, 0, 8, 4.0],
+    ["J2", 1.0, 0, 5, 1.0],
+]
+
+jobs = tl.factor_data(jobs)  # append w/p at index 5
+jobs = tl.c_time(jobs)       # append C_j
+jobs = tl.lateness(jobs)     # append L_j
+```

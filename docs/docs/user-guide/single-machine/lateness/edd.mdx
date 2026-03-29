@@ -1,25 +1,77 @@
-# Minimization of Maximum Lateness
+# Maximum Lateness with EDD
 
-As mentioned earlier, the goal of Minimization of Maximum Lateness $(L_{\max})$ problem prioritizes tasks with the **earliest due dates**, ensuring they are completed first to reduce the chances of delays and minimize $L_{\max}$.
+The **Earliest Due Date (EDD)** rule sorts jobs by increasing due date `d_j`.
+It is a standard strategy for controlling lateness in single-machine settings.
 
-## EDD Algorithm {#edd-algorithm}
+## Objective
 
-The **EDD (Earliest Due Date)** algorithm is a popular and effective single-machine scheduling technique aimed at minimizing maximum lateness $L_{\max}$.
+EDD is commonly used for workflows where on-time completion relative to due
+dates is the main priority.
 
-## Independence jobs {#independence-jobs}
+For a sequence, lateness is:
 
-:::info
+$$
+L_j = C_j - d_j
+$$
 
-The symbol for the problem is $1 \: | \:  \: | \: L_{\max}$.
+and maximum lateness is:
 
-:::
+$$
+L_{\max} = \max_j L_j
+$$
 
-## Release jobs {#release-jobs}
+## API used in `tilearn`
 
-:::info
+- Main function: [`tilearn.edd`](/api-reference/modules/sorting)
+- Optional metric helpers:
+  - [`tilearn.c_time`](/api-reference/modules/basis)
+  - [`tilearn.lateness`](/api-reference/modules/basis)
 
-The symbol for the problem is $1 \: | \: r_j \: | \: L_{\max}$.
+## Input format
 
-:::
+```python
+[name, p, r, d, w]
+```
 
-*In development process...*
+## Minimal runnable example
+
+```python
+import tilearn as tl
+
+jobs = [
+    ["J1", 4.0, 0, 10, 1.0],
+    ["J2", 2.0, 0, 6, 2.0],
+    ["J3", 1.0, 0, 8, 1.0],
+]
+
+ordered = tl.edd(jobs)
+for row in ordered:
+    print(row)
+```
+
+## Compute lateness values after sorting
+
+```python
+import tilearn as tl
+
+jobs = tl.edd(jobs)
+jobs = tl.c_time(jobs)
+jobs = tl.lateness(jobs)
+```
+
+Final output rows include:
+
+```text
+[name, p, r, d, w, C_j, L_j]
+```
+
+## Practical notes
+
+- `edd` sorts in-place using due date column index `3`.
+- If you need deterministic tie behavior, remember Python sort is stable
+  (equal due dates keep original relative order).
+
+## Related topics
+
+- Weighted completion objective: [WSPT](/user-guide/single-machine/completion/wspt)
+- Full API details: [Sorting module](/api-reference/modules/sorting)

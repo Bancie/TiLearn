@@ -1,0 +1,76 @@
+---
+title: "tilearn.joblist.plat and tilearn.joblist.run"
+description: Multi-list orchestration APIs for mixed precedence and non-precedence workflows.
+---
+
+# `tilearn.joblist` APIs
+
+These modules orchestrate ranking and extraction across multiple CSV-backed
+lists.
+
+## `tilearn.joblist.plat.List`
+
+Represents one working CSV list.
+
+### Constructor
+
+```python
+List(backup_path, file_path, prec)
+```
+
+- `backup_path`: directory containing copied CSV files.
+- `file_path`: original file path (basename is mapped into `backup_path`).
+- `prec`: mode flag (`1` precedence, `0` non-precedence).
+
+### Methods
+
+- `info()`: read typed rows from backing CSV.
+- `check()`: return mode flag.
+- `run()`: return rows with appended ranking factor:
+  - `sum_factor` for `prec=1`
+  - `factor_data` for `prec=0`
+
+## Other `plat` helpers
+
+- `count_file(folder_path)`: count top-level CSV files.
+- `ja_all(lists, path)`: total job count across active list objects.
+- `location(lists, type)`: locate best candidate list index (`type="sub"`) or
+  row index (`type="row"`).
+
+## `run` helpers
+
+- `set_prec(...)`: copy selected prefix block for precedence mode.
+- `set(...)`: copy one selected row for non-precedence mode.
+- `set_const(...)`: dispatch copy strategy by mode.
+- `file_seek(...)`: count list sources still containing jobs.
+- `optimal_list(lists, path, backup_path)`: end-to-end sequence builder.
+
+## `tilearn.optimal_list(lists, path, backup_path)`
+
+This is the main orchestration API exposed at package level.
+
+### Workflow
+
+1. Backup source CSV files into `backup_path`.
+2. Repeatedly select the current globally best candidate row/block.
+3. Append selected jobs to output and update working CSV files.
+4. Clear temporary CSV artifacts in `backup_path`.
+
+### Output
+
+Returns the final ordered list of rows, typically with one appended factor
+column.
+
+## Example
+
+```python
+import tilearn as tl
+from tilearn import plat as pl
+
+lists = [
+    pl.List("data/backup", "data/list1.csv", prec=0),
+    pl.List("data/backup", "data/list2.csv", prec=1),
+]
+
+schedule = tl.optimal_list(lists, "data", "data/backup")
+```

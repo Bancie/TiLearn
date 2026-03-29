@@ -1,29 +1,62 @@
 ---
 title: API reference
-description: This section details API endpoints, usage, parameters, and responses for effective integration
+description: Module-by-module API documentation for tilearn.
 hide_table_of_contents: false
 ---
 
-# TiLearn reference
+# `tilearn` API reference
 
-:::info
+The `tilearn` package provides pure-Python helpers for single-machine
+scheduling workflows, including classic sequencing heuristics, factor
+calculations, and multi-CSV orchestration.
 
-- Release: 0.0.12
-- Date: August 27, 2024
+## Data model contract
 
+Most APIs operate on a **job table** represented as:
+
+```python
+[
+    [name, p, r, d, w, ...],
+    ...
+]
+```
+
+- `name`: job identifier (`str`)
+- `p`: processing time (`float`)
+- `r`: release time (`int`)
+- `d`: due date (`int`)
+- `w`: weight (`float`)
+
+Many functions append computed columns in-place (for example, `w/p`,
+completion time, or lateness).
+
+:::warning In-place mutation
+Several functions mutate rows directly. If you need to preserve your original
+input, create a deep copy before calling scheduling helpers.
 :::
 
-This reference manual offers an extensive overview of the functions, modules, and objects available in TiLearn. Each section thoroughly explains the components, including their definitions, functionalities, and practical applications within the library.
+## Module map
 
-By exploring this manual, users can gain a clear understanding of how to utilize these elements effectively in their projects. For a more in-depth exploration of the underlying concepts and advanced usage examples, please refer to the [full tutorial](/user-guide).
+- [`tilearn.bs.basis`](./modules/basis): core matrix helpers, factors, and
+  schedule metrics.
+- [`tilearn.wspt` and `tilearn.edd`](./modules/sorting): sequencing rules for
+  weighted completion and maximum lateness workflows.
+- [`tilearn.data`](./modules/data-io): CSV backup/read/update/cleanup helpers.
+- [`tilearn.joblist.plat` and `tilearn.joblist.run`](./modules/joblist):
+  multi-list orchestration APIs and end-to-end `optimal_list` pipeline.
 
-## Python API
+## Quick start
 
-- [The Total (Weighted) Completion Time](#python-api)
-  - [Independence jobs (`show_mytime`)](/api-reference/in-job/i-job)
+```python
+import tilearn as tl
 
-## Acknowledgements
+jobs = [
+    ["J1", 2.0, 0, 8, 4.0],
+    ["J2", 1.0, 0, 5, 1.0],
+]
 
-Significant portions of this manual are based on foundational texts in the field, including "Single Machine Scheduling" by Le Minh Huy and "Scheduling: Theory, Algorithms, and Systems" by Michael Pinedo. These sources provide the theoretical background and algorithms that underpin many of the scheduling concepts presented here.
+ranked = tl.wspt(jobs)
+```
 
-The reference documentation within this manual, detailing the various functions, modules, and objects available in TiLearn, has been meticulously developed by the contributors and developers of TiLearn. Each entry has been carefully written to provide [comprehensive explanations](/user-guide), practical examples, and insights into how to effectively utilize these components within scheduling and optimization projects. For more advanced topics and extended examples, users are encouraged to consult the [full references](/getting-started#references).
+For guided tutorials and theory-first explanations, see the
+[User Guide](/user-guide).

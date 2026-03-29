@@ -1,20 +1,31 @@
 ---
 title: News
-description: This page provides key updates on TiLearn's latest version releases, highlighting major changes and improvements while keeping minor updates to a minimum for clarity and simplicity.
+description: Major project and documentation updates for tilearn.
 displayed_sidebar: null
 hide_table_of_contents: true
 ---
 
-# News on Version Updates
+This page tracks major updates that affect users and contributors.
 
-This page only posts the most important information for the upgrade that I think needs attention.
+## Documentation refresh released
 
-Minor upgrades are not updated here to maintain minimalism.
+### Updated: March 2026
 
-## TiLearn 0.0.10 released
+A full documentation refresh has been published to align docs with the current
+`tilearn` API.
 
-*Released: Aug 25, 2024*
+Highlights:
 
-TiLearn 0.0.10 is the foundational version, designed to provide an easier way to organize your time and life. One of the most notable highlights of this release is:
+- API reference is now module-based and reflects actual exported functions.
+- User guides for WSPT and EDD include runnable examples.
+- Illustrative workflow was rewritten into a reproducible, concise tutorial.
+- Contributor setup pages were expanded for source builds and docs workflow.
 
-- The creation of the function [`tilearn.show_mytime()`](/api-reference/in-job/i-job).
+## Historical note
+
+Older docs referenced `show_mytime`. Current docs include a migration note and
+direct users to supported APIs such as:
+
+- [`tilearn.wspt`](/api-reference/modules/sorting)
+- [`tilearn.edd`](/api-reference/modules/sorting)
+- [`tilearn.optimal_list`](/api-reference/modules/joblist)

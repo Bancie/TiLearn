@@ -1,4 +1,4 @@
-from tilearn._bs.basis import (
+from tilearn.bs.basis import (
     list_gen,
     job_amount,
     p_factor_nonprec,
@@ -11,7 +11,7 @@ from tilearn._bs.basis import (
     sum_factor,
 )
 
-from tilearn._data._data import (
+from tilearn.data.data import (
     backup,
     path,
     read_file,
@@ -21,18 +21,18 @@ from tilearn._data._data import (
     clear,
 )
 
-from tilearn._edd._edd import (
+from tilearn.edd.edd import (
     edd,
 )
 
-from tilearn._list._plat import (
+from tilearn.joblist.plat import (
     List,
     count_file,
     ja_all,
     location,
 )
 
-from tilearn._list._run import (
+from tilearn.joblist.run import (
     set_prec,
     set,
     set_const,
@@ -40,6 +40,6 @@ from tilearn._list._run import (
     optimal_list,
 )
 
-from tilearn._wspt.wspt import (
+from tilearn.wspt.wspt import (
     wspt,
 )

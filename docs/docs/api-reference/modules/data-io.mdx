@@ -1,0 +1,68 @@
+---
+title: "tilearn.data"
+description: CSV lifecycle helpers for backup, loading, updates, and cleanup.
+---
+
+# `tilearn.data` APIs
+
+The `tilearn.data` module contains low-level file-system helpers used by
+multi-list scheduling pipelines.
+
+## Header expectation
+
+CSV files are expected to use:
+
+```text
+Name,p,r,d,w
+```
+
+## `tilearn.data.backup(src, dist)`
+
+Recursively copy all `*.csv` files from `src` into `dist`.
+
+## `tilearn.data.path(original_path, backup_path)`
+
+Return `join(backup_path, basename(original_path))`.
+
+## `tilearn.data.read_file(file_path)`
+
+Load CSV rows and coerce types:
+
+- `Name` -> `str`
+- `p`, `w` -> `float`
+- `r`, `d` -> `int`
+
+## `tilearn.data.precedence(file_path, opt_row)`
+
+Return rows after dropping indices `<= opt_row`.
+
+## `tilearn.data.none(file_path, opt_row)`
+
+Return rows after dropping exactly `opt_row`.
+
+## `tilearn.data.updated(file_path, prec, opt_row)`
+
+Rewrite a CSV in-place after selection:
+
+- `prec=1`: precedence mode (`precedence`)
+- `prec=0`: non-precedence mode (`none`)
+
+## `tilearn.data.clear(folder_path)`
+
+Delete top-level `*.csv` files in `folder_path`.
+
+:::warning Side effects
+`backup`, `updated`, and `clear` modify the file system directly. Use a
+dedicated temporary backup directory when running end-to-end workflows.
+:::
+
+## Example
+
+```python
+from tilearn import data
+
+data.backup("data/source", "data/backup")
+rows = data.read_file("data/backup/list1.csv")
+data.updated("data/backup/list1.csv", prec=0, opt_row=0)
+data.clear("data/backup")
+```

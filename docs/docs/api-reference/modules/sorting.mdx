@@ -1,0 +1,49 @@
+---
+title: "tilearn.wspt and tilearn.edd"
+description: Sequencing rules for weighted completion time and maximum lateness workflows.
+---
+
+# `tilearn` sorting APIs
+
+## `tilearn.wspt(a)`
+
+Sort jobs in-place by descending `w / p` factor.
+
+- Appends factor column first via `factor_data(a)`.
+- Best suited to weighted completion-time style objectives.
+
+### Input contract
+
+- `a` is a list of rows `[name, p, r, d, w]`.
+- `p` must be non-zero to avoid division errors.
+
+### Output contract
+
+- Returns the same list object with one appended factor column at index `5`.
+
+## `tilearn.edd(a)`
+
+Sort jobs in-place by ascending due date `d`.
+
+- Uses column index `3` as due date.
+- Useful for maximum-lateness-oriented scheduling flows.
+
+## Example
+
+```python
+import tilearn as tl
+
+jobs = [
+    ["J1", 2.0, 0, 9, 4.0],
+    ["J2", 1.0, 0, 4, 1.0],
+]
+
+wspt_ranked = tl.wspt([row[:] for row in jobs])
+edd_ranked = tl.edd([row[:] for row in jobs])
+```
+
+## Related APIs
+
+- Basis helpers: [`tilearn.bs.basis`](/api-reference/modules/basis)
+- User guide walkthrough: [WSPT](/user-guide/single-machine/completion/wspt),
+  [EDD](/user-guide/single-machine/lateness/edd)

@@ -1,48 +1,51 @@
 ---
 title: User Guide
-description: This document categorizes all the problems, detailing their foundational concepts, relevant materials, and solutions
+description: Theory-to-practice guide for scheduling workflows implemented by tilearn.
 ---
 
 import DocCardList from "@theme/DocCardList";
 
 # User Guide Overview
 
-When dealing with **single machine scheduling**, there are various types of scheduling problems to consider.
+`tilearn` currently focuses on practical **single-machine scheduling** workflows.
+This section explains which algorithm to choose, how to prepare data, and how
+to map theory to executable Python code.
 
-The list of these types is shown below, each addressing different constraints and objectives to optimize the scheduling process.
+## Core objective families
 
-## The Maximum Lateness
+### 1) Minimize maximum lateness: $L_{\max}$
 
-Basically, it prioritizes tasks with the **earliest due dates**, ensuring they are completed first to reduce the chances of delays and minimize $L_{\max}$.
+Use **EDD (Earliest Due Date)** ordering when due-date compliance is your
+primary concern.
 
-We have two specific subproblems related. Each subproblem focuses on different constraints and objectives for optimizing scheduling on a single machine, which are outlined below:
+- Primary guide: [EDD](/user-guide/single-machine/lateness/edd)
+- API entry point: [`tilearn.edd`](/api-reference/modules/sorting#tilearnedd)
 
-- [EDD algorithm](/user-guide/single-machine/lateness/edd#edd-algorithm)
-- [Independence jobs](/user-guide/single-machine/lateness/edd#independence-jobs)
-- [Release jobs](/user-guide/single-machine/lateness/edd#release-jobs)
+### 2) Minimize weighted completion behavior: $\sum w_j C_j$
 
-## The Total (Weighted) Completion Time
+Use **WSPT** ordering to prioritize higher-weight, shorter-processing jobs.
 
-This problem aim to minimize the average waiting time $\overline{W}$ and the total completion time $\sum C_j$ or $\sum w_j C_j$ (if weights $w_j$ are present) by **prioritizing tasks** with the **shortest processing times**.
+- Primary guide: [WSPT](/user-guide/single-machine/completion/wspt)
+- API entry point: [`tilearn.wspt`](/api-reference/modules/sorting#tilearnwspt)
 
-We have three specific subproblems related. Each subproblem also focuses on different constraints and objectives for optimizing scheduling on a single machine, which are outlined below:
+### 3) Mixed-list orchestration with precedence flags
 
-- [SWP/WSPT algorithm](/user-guide/single-machine/completion/wspt#wspt-algorithm)
-- [Independence jobs (`show_mytime`)](/user-guide/single-machine/completion/wspt#independence-jobs)
-- [Sequence jobs](/user-guide/single-machine/completion/wspt#sequence-jobs)
-- [Release jobs](/user-guide/single-machine/completion/wspt#release-jobs)
+Use the multi-list pipeline when your workload combines:
 
-## References
+- independent lists (`prec=0`), and
+- precedence-style lists (`prec=1`).
 
-[1] Le Minh Huy. *Single Machine Scheduling*.
+- End-to-end guide: [Illustrative workflow](/user-guide/illustrate)
+- API entry point: [`tilearn.optimal_list`](/api-reference/modules/joblist)
 
-[2] Michael Pinedo. *Scheduling: Theory, Algorithms, And Systems*. 01 2008.
+## Recommended reading order
 
-[3] M.L. Pinedo. *Planning and Scheduling in Manufacturing and Services*. Springer series in operations research. Springer New York, 2009.
-
-[4] PMI, editor. *A Guide to the Project Management Body of Knowledge (PMBOK Guide)*. Project Management Institute, Newtown Square, PA, 5th edition, 2013.
-
-[5] Krzysztof Postek, Alessandro Zocca, Joaquim Gromicho, and Jeffrey Kantor. *Hands-On Mathematical Optimization with AMPL in Python*. Online, 2024.
+1. Start with [Getting started](/getting-started).
+2. Read either [EDD](/user-guide/single-machine/lateness/edd) or
+   [WSPT](/user-guide/single-machine/completion/wspt) based on your objective.
+3. Move to [Illustrative workflow](/user-guide/illustrate) for multi-file
+   production-like pipelines.
+4. Use [API reference](/api-reference) for parameter-level details.
 
 ## Pages in this section
 

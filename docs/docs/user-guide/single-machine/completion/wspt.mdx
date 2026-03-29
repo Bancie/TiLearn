@@ -1,35 +1,81 @@
-# The Total Weighted Completion Time
+# Weighted Completion Time with WSPT
 
-## WSPT Algorithm {#wspt-algorithm}
+## WSPT algorithm
 
-:::note
+For single-machine jobs with objective $\sum w_j C_j$, the classic dispatching
+rule is to process jobs in descending order of:
 
-The problem $1\| \sum C_j$ is a special case of $1\| \sum w_j C_j$ with weights $w_j = 1$. Thus, SPT is the same as WSPT when $w_j = 1$, allowing us to focus on $1\| \sum w_j C_j$.
+$$
+\frac{w_j}{p_j}
+$$
 
-:::
+where:
 
-## Independence jobs {#independence-jobs}
+- $w_j$ is job weight (priority),
+- $p_j$ is processing time.
 
-[`show_mytime`](/api-reference/in-job/i-job)
+When all weights are equal, WSPT reduces to SPT.
 
-:::info
+## API used in `tilearn`
 
-The symbol for the problem is $1 \: | \:  \: | \: \sum w_j C_j$
+- Main function: [`tilearn.wspt`](/api-reference/modules/sorting)
+- Supporting helper: [`tilearn.factor_data`](/api-reference/modules/basis)
 
-:::
+## Input format
 
-## Sequence jobs {#sequence-jobs}
+Each row follows:
 
-:::info
+```python
+[name, p, r, d, w]
+```
 
-The symbol for the problem is $1 \: | \: prec \: | \: \sum w_j C_j$
+Example:
 
-:::
+```python
+jobs = [
+    ["J1", 2.0, 0, 8, 4.0],
+    ["J2", 1.0, 0, 5, 1.0],
+    ["J3", 3.0, 0, 6, 6.0],
+]
+```
 
-## Release jobs {#release-jobs}
+## Minimal runnable example
 
-:::info
+```python
+import tilearn as tl
 
-The symbol for the problem is $1 \: | \: r_j \: | \: \sum w_j C_j$
+jobs = [
+    ["J1", 2.0, 0, 8, 4.0],
+    ["J2", 1.0, 0, 5, 1.0],
+    ["J3", 3.0, 0, 6, 6.0],
+]
 
-:::
+ranked = tl.wspt(jobs)
+for row in ranked:
+    print(row)
+```
+
+Output shape:
+
+```text
+[name, p, r, d, w, factor]
+```
+
+The appended `factor` column is `w/p`, and rows are sorted in descending
+factor order.
+
+## Practical notes
+
+- `wspt` mutates the input table in-place.
+- Calling it repeatedly on the same data may append additional factor columns.
+- Use a copy when you need to preserve original rows:
+
+```python
+safe_jobs = [row[:] for row in jobs]
+ranked = tl.wspt(safe_jobs)
+```
+
+## Related topics
+
+- Due-date-first strategy: [EDD](/user-guide/single-machine/lateness/edd)
+- Full API details: [Sorting module](/api-reference/modules/sorting)
